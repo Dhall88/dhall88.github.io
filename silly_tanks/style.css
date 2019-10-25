@@ -1,9 +1,52 @@
 .container {
-    width: 1000px;
-    height: 500px;
+    width: 1400px;
+    height: 800px;
     background: red;
     margin: 0 auto;
     position: relative;
+}
+
+.cloud {
+    position: absolute;
+
+    width: 100px;
+    height: 75px;
+    left: -100px;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+
+.style1 {
+    background-image: url('project-imgs/cloud1.png');
+    background-size: 100% 100%;
+    animation-duration: 30s;
+    top: 50px;
+}
+.style2 {
+    background-image: url('project-imgs/cloud2.png');
+    background-size: 100% 100%;
+    animation-duration: 25s;
+    top: 100px;
+}
+.style3 {
+    background-image: url('project-imgs/cloud3.png');
+    background-size: 100% 100%;
+    animation-duration: 35s;
+    top:200px;
+}
+
+.sun {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    background-image: url('project-imgs/sun.png');
+    background-size: 100% 100%;
+    left: 1000px;
+    top: 150px;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
 }
 
 .stats {
@@ -200,6 +243,14 @@ h6 {
 h4 {
     padding:0;
     margin: 0;
+}
+
+@keyframes sunFade {
+    100% {transform:scale(1.3); opacity: 0;}
+}
+
+@keyframes cloudTranslation {
+    100% {transform:translate(1600px)}
 }
 
 @keyframes explosion{

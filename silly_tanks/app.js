@@ -51,7 +51,7 @@ const addTanks = () => {
         ,'top':`${player1.yPos-10}px`,'background-color': `${player1.color}`,'transform':`rotate(${90-player1.angle}deg)`});
     $player1 = $('<div>').addClass('tank').css({'left':`${player1.xPos-7}px`
         ,'top':`${player1.yPos}px`,'background-color': `${player1.color}`});
-    player2 = new Tank(800,Math.round(terPoints[800]-5),'red',135);
+    player2 = new Tank(width-200,Math.round(terPoints[width-200]-5),'red',135);
     $cannon2 = $('<div>').addClass('cannon').css({'left':`${player2.xPos-1}px`
         ,'top':`${player2.yPos-10}px`,'background-color': `${player2.color}`,'transform':`rotate(${90-player2.angle}deg)`});
     $player2 = $('<div>').addClass('tank').css({'left':`${player2.xPos-7}px`
@@ -75,6 +75,8 @@ const addTanks = () => {
 // Creates the board, resets all critical values if playing again
 
 const gameStart = () => {
+    $('.cloud').css('animation-name','cloudTranslation')
+    $('.sun').first().css('animation-name','sunFade');
     $('.end').hide();
     $('.instructions').hide();
     $('h5').on('click', () => {
@@ -95,7 +97,9 @@ const gameStart = () => {
     
     $('.tank').remove();
     $('.cannon').remove();
-    ctx.clearRect(0,0,1000,500);
+    ctx.clearRect(0,0,width,height);
+    let ctx2 = ctx;
+
 
     // get the points
     terPoints = terrain(width, height*1.3, height / 4, 0.45);
@@ -122,7 +126,7 @@ class Tank {
         this.xPos = xPos;
         this.yPos = yPos;
         this.color = color;
-        this.health = 10;
+        this.health = 100;
         this.power = 60;
         this.angle = angle;
         this.tScale = .1;
@@ -266,7 +270,7 @@ class Tank {
                     bananaBoolean4=false;
                     bananaBoolean5=false;
                 }  
-                    this.bombDamage(obj,$div);   
+                    this.bombDamage(obj);   
                     
                     if (ammoIndex === 1 && boolean === false) {
 
@@ -306,8 +310,8 @@ class Tank {
     // Called to calculate all projectile damage, a projectile that does 20 damage
     // that lands 10px away will do 10 damage
 
-    bombDamage (obj,$div) {
-        let projX = parseInt($div.css('left'));
+    bombDamage (obj) {
+        let projX = Math.round(obj.x);
         let damage = obj.damage;
         for(let i=0;i<=damage;i++) {
             if ((projX===player1.xPos-i) || (projX===player1.xPos+i)) {
@@ -358,8 +362,8 @@ class Projectile {
 
 let $canvas = $("#canvas")[0],
     ctx = $canvas.getContext("2d"),
-    width = 1000,
-    height = 500;
+    width = 1400,
+    height = 800;
 
 $canvas.width = width;
 $canvas.height = height;
