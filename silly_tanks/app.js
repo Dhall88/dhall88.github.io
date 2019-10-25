@@ -1,5 +1,8 @@
 $(() => {
 
+// Generates terrain, this is modified code that I pulled from
+// http://www.somethinghitme.com/2013/11/11/simple-2d-terrain-with-midpoint-displacement/
+
 const terrain = (width, height, displace, roughness) => {
     let points = [],
         // Gives us a power of 2 based on our width
@@ -28,6 +31,8 @@ const terrain = (width, height, displace, roughness) => {
     return points;
 }
 
+// Once a tank reaches zero health, creates a modal that announces the results
+// and asks if the player would like to play again.
 const win = (color) => {
     let $end = $('<div>').addClass('end');
     let $playAgain = $('<div>').addClass('playAgain').text('play again?');
@@ -37,6 +42,8 @@ const win = (color) => {
     $end.append($description).append($playAgain);
     $('.container').append($end);
 }
+
+// Adds tanks to the board with initial values
 
 const addTanks = () => {
     player1 = new Tank(200,Math.round(terPoints[200]-5),'blue',45);
@@ -51,6 +58,8 @@ const addTanks = () => {
         ,'top':`${player2.yPos}px`,'background-color': `${player2.color}`});
     $('.container').append($player1).append($player2).append($cannon1).append($cannon2);
     
+    // Adds both players initial stats to the stat board
+
     $('.health1').text(player1.health);
     $('.power1').text(player1.power);
     $('.angle1').text(player1.angle);
@@ -62,6 +71,8 @@ const addTanks = () => {
     $('.ammo1').text(`${player1.ammoType[ammoIndex1]}: ${player1.ammo[ammoIndex1]}`)
     $('.ammo2').text(`${player2.ammoType[ammoIndex2]}: ${player2.ammo[ammoIndex2]}`)
 }
+
+// Creates the board, resets all critical values if playing again
 
 const gameStart = () => {
     $('.end').hide();
@@ -122,20 +133,31 @@ class Tank {
         
     }
 
+    // Creates the appropriate projectile and modifies the accompanying div
+
     ammoSelection(num) {
         let vx = this.power*this.powerScale*Math.cos(this.angle*Math.PI/180);
         let vy = this.power*this.powerScale*Math.sin(this.angle*Math.PI/180);
+
+        // Pear Bomb
+
         if (num===0) {
             let projectile = new Projectile(this.xPos,this.yPos,vx,vy,30);
             $projectile.show().css('animation-name','');
             $projectile.removeClass('explosion').addClass('projectile')
             .css({'background-image':`url("project-imgs/pear.png")`,'background-size':'100% 100%',});
             return projectile;
+
+        // Banana Cluster
+
         } else if (num===1) {
             let projectile = new Projectile(this.xPos,this.yPos,vx,vy,25);
             $projectile.show().css('animation-name','');
             $projectile.attr('class','').addClass('projectile')
             .css({'background-image':`url("project-imgs/banana-bunch.png")`,'background-size':'100% 100%'});
+            
+            // cluster banana's that show once the initial cluster detinates
+
             banana1 = new Projectile(0,0,
                 (Math.random()*30)-15,Math.random()*10,20)
             banana2 = new Projectile(0,0,
@@ -162,18 +184,26 @@ class Tank {
             $banana5.attr('class','').css('animation-name','').addClass('projectile').hide()
             .css({'background-image':`url("project-imgs/single-banana.png")`,'background-size':'100% 100%'});
             return projectile;
+
+            // Homeing-dew Melon
+
              } else if (num===2){
             let projectile = new Projectile(this.xPos,this.yPos,vx,vy,25);
             $projectile.show().css('animation-name','');
             $projectile.removeClass('explosion').addClass('projectile')
             .css({'background-image':`url("project-imgs/melon.png")`,'background-size':'100% 100%'});
             return projectile;
+
+        // Grapes of Wrath
             
         } else if (num===3) {
             let projectile = new Projectile(this.xPos,this.yPos,vx,vy,30);
             bananaBoolean1=false;
             $projectile.show().css('animation-name','');
             $projectile.attr('class','').addClass('projectile')
+
+            // Grapes that launch upon hitting 'c'
+
             .css({'background-image':`url("project-imgs/grape-bunch.png")`,'background-size':'100% 100%'});
             $banana1.attr('class','').css('animation-name','').addClass('projectile').hide()
             .css({'background-image':`url("project-imgs/grape.png")`,'background-size':'100% 100%'});
@@ -184,6 +214,9 @@ class Tank {
             $banana4.attr('class','').css('animation-name','').addClass('projectile').hide()
             .css({'background-image':`url("project-imgs/grape.png")`,'background-size':'100% 100%'});
             return projectile;
+
+        // Nuke-terine
+
         } else {
             let projectile = new Projectile(this.xPos,this.yPos,vx,vy,75);
             $projectile.show().css('animation-name','');
@@ -193,8 +226,14 @@ class Tank {
         }         
     }
 
+    // Very big method, will make more modular in future
+    // Handles the rendering of the projectile from start to finish
+
     fire(i,obj,$div,boolean,ammoIndex) {
          setTimeout(() => {
+
+            // Specific to the Homeing-dew Melon
+
              if (obj.xO !== melonProj.xO && boolean === false) {
                  console.log('killed loop')
                  return
@@ -264,6 +303,9 @@ class Tank {
         }, 10);
     }
 
+    // Called to calculate all projectile damage, a projectile that does 20 damage
+    // that lands 10px away will do 10 damage
+
     bombDamage (obj,$div) {
         let projX = parseInt($div.css('left'));
         let damage = obj.damage;
@@ -289,6 +331,8 @@ class Tank {
     }
 }
 
+// Projectile that keeps track of all positional data
+
 class Projectile {
     constructor(xO,yO,vxO,vyO,damage){
         this.xO = xO;
@@ -310,6 +354,8 @@ class Projectile {
     }
 }
 
+// Creates the initial canvas where the random terrain will live
+
 let $canvas = $("#canvas")[0],
     ctx = $canvas.getContext("2d"),
     width = 1000,
@@ -319,6 +365,8 @@ $canvas.width = width;
 $canvas.height = height;
 $('.container').attr('width',`${width}px`);
 $('.container').attr('height',`${height}px`);
+
+// Inportant global variable declaration
 
 let $projectile = $('<div>');
 let $banana1 = $('<div>');
@@ -334,7 +382,12 @@ let bananaBoolean1,bananaBoolean2,bananaBoolean3,bananaBoolean4,bananaBoolean5;
 let $player1, $player2, player1, player2, 
 $cannon1, $cannon2, ammoIndex2, ammoIndex1, currentProjectile, melonProj,terPoints, wind;
 
+// Keystroke definitions
+
 $(document).keydown(function(e){
+
+    // 37 and 39 change the firing angle, updates the stat board, and renders the cannon
+
     if (e.which == 37) { 
         if (player === true) {
             player1.angle++
@@ -360,6 +413,9 @@ $(document).keydown(function(e){
 
             return false;
         }
+
+    // 38 and 40 adjust firing power and updates the stat board
+
     } else if (e.which == 38) {
         if (player === true) {
             player1.power++
@@ -380,11 +436,14 @@ $(document).keydown(function(e){
             $('.power2').text(player2.power);
             return false;
         }
+
+    // handles the firing, updates the currentProjectile bases on ammo selection
+    // melonProj is specific to handling the Homeing-dew Melon
+
     } else if (e.which == 32) {
         if (player === true) {
             currentProjectile=player1.ammoSelection(ammoIndex1)
             melonProj = currentProjectile;
-            console.log(bananaBoolean1)
             player1.fire(0,currentProjectile,$projectile,bananaBoolean1,ammoIndex1);
             player1.ammo[ammoIndex1]--;
             $('.ammo1').text(`${player1.ammoType[ammoIndex1]}: ${player1.ammo[ammoIndex1]}`)
@@ -400,6 +459,9 @@ $(document).keydown(function(e){
             player = !player;
             return false;
         }
+
+    // 65 and 68 handles the ammoIndex which is eventually used in the ammoSelection method
+
     } else if (e.which == 65) { 
         if (player === true) {
             ammoIndex1--;
@@ -434,6 +496,11 @@ $(document).keydown(function(e){
             $('.ammo2').text(`${player2.ammoType[ammoIndex2]}: ${player2.ammo[ammoIndex2]}`)
             return false;
         }
+
+    // specific to the Homeing-dew Melon and Grapes of Wrath
+    // adjusts boolean values and creates the Grapes of Wrath sub-projectiles
+    // based on the currentProjectiles speed and position
+
     } else if (e.which == 67) { 
         if (player===false){
             if (ammoIndex1===2) {
@@ -496,6 +563,9 @@ $(document).keydown(function(e){
                 player2.fire(0,banana4,$banana4,bananaBoolean4,3);
             } 
         }
+
+    // Handles the grease monkey rendering and stat changes
+
     } else if (e.which == 71) { 
         if (player === true) {
             if (player1.monkey >0){
