@@ -137,7 +137,7 @@ class Tank {
         this.xPos = xPos;
         this.yPos = yPos;
         this.color = color;
-        this.health = 100;
+        this.health = 5;
         this.power = 60;
         this.angle = angle;
         this.tScale = .1;

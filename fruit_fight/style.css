@@ -68,8 +68,11 @@
 }
 
 .end,.instructions {
+    display: flex;
     text-align: center;
     vertical-align: center;
+    justify-content: center;
+    font-size: 30px;
     width: 1000px;
     height: 300px;
     background-color: rgb(128, 128, 128, .3);
@@ -120,14 +123,15 @@ ul {
     left: 0%; 
 }
 .playAgain {
+    display: flex;
     text-align: center;
     vertical-align: center;
+    font-size: 20px;
     width: 100px;
     height: 60px;
-    background-color: rgba(160, 9, 9, 0.8);
     position: absolute;
-    top: 200px;
-    left: 150px;
+    top: 175px;
+    left: 450px;
 }
 
 .playAgain:hover  {
