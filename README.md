@@ -8,7 +8,7 @@ Fruit Fight takes fireing angles, power input, and a few other options to launch
 
 Two major classes, Tank and Projectile create the divs and objects that are seen in the program and house the methods responsible for almost all of the computation.
 
-Projecitle.path(time) is a recursive method that calculates the path of the projectile using classic neutonian physics equations and initial conditions passes as arguments.  
+Projecitle.path(time) calculates the path of the projectile using classic neutonian physics equations and initial conditions passed as arguments.  
 
 Tank.ammoSelection(ammoIndex) creates Projectile objects and corresponding divs based on user input.
 

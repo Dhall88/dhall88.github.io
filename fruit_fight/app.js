@@ -75,6 +75,18 @@ const addTanks = () => {
 // Creates the board, resets all critical values if playing again
 
 const gameStart = () => {
+    let win = $(window).width();
+    $('.leftBorder').css('width',`${(win-width)/2}px`);
+    $('.rightBorder').css('width',`${(win-width)/2}px`);
+    $(window).on('resize', function(){
+        let win = $(window).width()
+        console.log(win)
+        $('.leftBorder').css('width',`${(win-width)/2}px`);
+        $('.rightBorder').css('width',`${(win-width)/2}px`);
+    });
+
+    
+
     $('.cloud').css('animation-name','cloudTranslation')
     $('.sun').first().css('animation-name','sunFade');
     $('.end').hide();
@@ -98,7 +110,6 @@ const gameStart = () => {
     $('.tank').remove();
     $('.cannon').remove();
     ctx.clearRect(0,0,width,height);
-    let ctx2 = ctx;
 
 
     // get the points
@@ -148,6 +159,7 @@ class Tank {
         if (num===0) {
             let projectile = new Projectile(this.xPos,this.yPos,vx,vy,30);
             $projectile.show().css('animation-name','');
+            console.log('showed div in ammunition selector')
             $projectile.removeClass('explosion').addClass('projectile')
             .css({'background-image':`url("project-imgs/pear.png")`,'background-size':'100% 100%',});
             return projectile;
@@ -233,6 +245,21 @@ class Tank {
     // Very big method, will make more modular in future
     // Handles the rendering of the projectile from start to finish
 
+        fire(i,obj,$div,boolean,ammoIndex) {
+            if (ammoIndex===0) {
+                this.pearBomb(i,obj,$div)
+                console.log('got to pear method')
+            } else if (ammoIndex===1) {
+                this.bananaCluster(i,obj,$div,boolean)
+            } else if (ammoIndex===2) {
+                this.homeingMelon(i,obj,$div,boolean)
+            } else if (ammoIndex===3) {
+                this.grapesOfWrath(i,obj,$div,boolean) 
+            } else {
+                this.nuketerine(i,obj,$div)
+            }
+        }
+
     fire(i,obj,$div,boolean,ammoIndex) {
          setTimeout(() => {
 
@@ -307,6 +334,117 @@ class Tank {
         }, 10);
     }
 
+
+    // pearBomb (i,obj,$div) {
+    //     setTimeout(() => {
+    //         console.log('in pear bomb')
+    //         $div.show();
+    //         let coords = obj.path(i);
+    //         $div.css('left',`${coords[0]}px`);
+    //         $div.css('top',`${coords[1]}px`);
+    //         if (obj.y<terPoints[Math.round(obj.x)-5]) {
+    //             ++i;   
+    //             this.pearBomb(i,obj,$div); 
+    //         } else {
+    //             $div.attr('class','').addClass('explosion')
+    //                 .css('animation-name','explosion').delay(2000).hide(0);
+    //         }
+    //     },10);
+    //     this.bombDamage(obj);
+    // }
+        
+    // bananaCluster (i,obj,$div,boolean) {
+    //     setTimeout(() => {
+    //         let coords = obj.path(i);
+    //         $div.css('left',`${coords[0]}px`);
+    //         $div.css('top',`${coords[1]}px`);
+    //         if (obj.y<terPoints[Math.round(obj.x)-5]) {
+    //             ++i;   
+    //             this.bananaCluster(i,obj,$div,boolean); 
+    //         } else if (boolean === false) {
+    //             $div.attr('class','').addClass('explosion')
+    //                 .css('animation-name','explosion').delay(2000).hide(0);
+    //         } else {
+    //             $div.attr('class','').addClass('explosion')
+    //                 .css('animation-name','small-explosion').delay(2000).hide(0);
+    //         }
+    //             if (boolean === false) {
+    //                     bananaBoolean1 = bananaBoolean2 = bananaBoolean3 = 
+    //                     bananaBoolean4 = bananaBoolean5 = true;
+    //                     $banana1.show().css({'left':`${obj.x}px`,'top':`${obj.y+5}`})
+    //                     $banana2.show().css({'left':`${obj.x}px`,'top':`${obj.y+5}`})
+    //                     $banana3.show().css({'left':`${obj.x}px`,'top':`${obj.y+5}`})
+    //                     $banana4.show().css({'left':`${obj.x}px`,'top':`${obj.y+5}`})
+    //                     $banana5.show().css({'left':`${obj.x}px`,'top':`${obj.y+5}`})
+    //                     banana1.xO = banana2.xO = banana3.xO = banana4.xO = banana5.xO = obj.x; 
+    //                     banana1.yO = banana2.yO = banana3.yO = banana4.yO = banana5.yO = obj.y-20;
+    //                     this.bananaCluster(0,banana1,$banana1,bananaBoolean1)
+    //                     this.bananaCluster(0,banana2,$banana2,bananaBoolean2)
+    //                     this.bananaCluster(0,banana3,$banana3,bananaBoolean3)
+    //                     this.bananaCluster(0,banana4,$banana4,bananaBoolean4)
+    //                     this.bananaCluster(0,banana5,$banana5,bananaBoolean5)
+    //                 } else {
+    //                     boolean = false;
+    //                 }
+    //             }, 10)
+    //         this.bombDamage(obj);
+    // }
+
+    // homeingMelon (i,obj,$div,boolean) {
+    //     setTimeout(() => {
+    //         if (boolean)
+    //             return
+    //         let coords = obj.path(i);
+    //         $div.css('left',`${coords[0]}px`);
+    //         $div.css('top',`${coords[1]}px`);
+    //         if (obj.y<terPoints[Math.round(obj.x)-5]) {
+    //             ++i;   
+    //             this.homeingMelon(i,obj,$div,boolean); 
+    //         } else {
+    //             $div.attr('class','').addClass('explosion')
+    //                 .css('animation-name','explosion').delay(2000).hide(0);
+    //         }
+    //         },10)
+    //         this.bombDamage(obj);
+    // }
+
+    // grapesOfWrath (i,obj,$div,boolean) {
+    //     setTimeout(() => {
+            
+    //         let coords = obj.path(i);
+    //         $div.css('left',`${coords[0]}px`);
+    //         $div.css('top',`${coords[1]}px`);
+    //         if (obj.y<terPoints[Math.round(obj.x)-5]) {
+    //             ++i;   
+    //             this.homeingMelon(i,obj,$div,boolean); 
+    //         } else if (boolean === true) {
+    //             $div.attr('class','').addClass('explosion')
+    //                 .css('animation-name','small-explosion').delay(2000).hide(0);
+    //         } else {
+    //             $div.attr('class','').addClass('explosion')
+    //                 .css('animation-name','explosion').delay(2000).hide(0);
+    //         }
+            
+    //     },10)
+    //     this.bombDamage(obj);
+    // }
+    
+    // nuketerine (i,obj,$div) {
+    //     setTimeout(() => {
+    //         let coords = projectile.path(i);
+    //         $div.css('left',`${coords[0]}px`);
+    //         $div.css('top',`${coords[1]}px`);
+    //         if (obj.y<terPoints[Math.round(obj.x)-5]) {
+    //             ++i;   
+    //             this.fire(i,obj,$div,boolean); 
+    //         } else {
+    //             $div.attr('class','').addClass('explosion')
+    //                 .css('animation-name','nuke').delay(2000).hide(0);
+    //         }
+    //     },10);
+    //     this.bombDamage(obj);
+    // }
+
     // Called to calculate all projectile damage, a projectile that does 20 damage
     // that lands 10px away will do 10 damage
 
@@ -362,8 +500,8 @@ class Projectile {
 
 let $canvas = $("#canvas")[0],
     ctx = $canvas.getContext("2d"),
-    width = 1400,
-    height = 800;
+    width = 1200,
+    height = 700;
 
 $canvas.width = width;
 $canvas.height = height;
@@ -446,14 +584,22 @@ $(document).keydown(function(e){
 
     } else if (e.which == 32) {
         if (player === true) {
-            currentProjectile=player1.ammoSelection(ammoIndex1)
+            if (player1.ammo[ammoIndex1]<=0) {
+                return false;
+            }
+            
+            currentProjectile=player1.ammoSelection(ammoIndex1);
             melonProj = currentProjectile;
             player1.fire(0,currentProjectile,$projectile,bananaBoolean1,ammoIndex1);
             player1.ammo[ammoIndex1]--;
             $('.ammo1').text(`${player1.ammoType[ammoIndex1]}: ${player1.ammo[ammoIndex1]}`)
             player = !player;
             return false;
+            
         } else {
+            if (player2.ammo[ammoIndex2]<=0) {
+                return false;
+            }
             currentProjectile=player2.ammoSelection(ammoIndex2)
             melonProj = currentProjectile;
             player2.fire(0,currentProjectile,$projectile,bananaBoolean1,ammoIndex2);
@@ -462,6 +608,7 @@ $(document).keydown(function(e){
             $('.ammo2').text(`${player2.ammoType[ammoIndex2]}: ${player2.ammo[ammoIndex2]}`)
             player = !player;
             return false;
+            
         }
 
     // 65 and 68 handles the ammoIndex which is eventually used in the ammoSelection method
@@ -500,12 +647,13 @@ $(document).keydown(function(e){
             $('.ammo2').text(`${player2.ammoType[ammoIndex2]}: ${player2.ammo[ammoIndex2]}`)
             return false;
         }
+    }
 
     // specific to the Homeing-dew Melon and Grapes of Wrath
     // adjusts boolean values and creates the Grapes of Wrath sub-projectiles
     // based on the currentProjectiles speed and position
 
-    } else if (e.which == 67) { 
+     else if (e.which == 67) { 
         if (player===false){
             if (ammoIndex1===2) {
                 melonProj = new Projectile(currentProjectile.x,currentProjectile.y,
@@ -567,6 +715,69 @@ $(document).keydown(function(e){
                 player2.fire(0,banana4,$banana4,bananaBoolean4,3);
             } 
         }
+    // else if (e.which == 67) { 
+    //     if (player===false){
+    //         if (ammoIndex1===2) {
+    //             currentProjectile.vxO = currentProjectile.vx;
+    //             currentProjectile.vyO = currentProjectile.vy;
+    //             player1.fire(0,currentProjecitle,$projectile,true,ammoIndex1);
+    //             return false;
+    //         } else if (ammoIndex1===3) {
+    //         bananaBoolean1=true;
+    //         bananaBoolean2=true;
+    //         bananaBoolean3=true;
+    //         bananaBoolean4=true;
+    //         $banana1.show().css({'left':`${currentProjectile.x}px`,'top':`${currentProjectile.y}`})
+    //         $banana2.show().css({'left':`${currentProjectile.x}px`,'top':`${currentProjectile.y}`})
+    //         $banana3.show().css({'left':`${currentProjectile.x}px`,'top':`${currentProjectile.y}`})
+    //         $banana4.show().css({'left':`${currentProjectile.x}px`,'top':`${currentProjectile.y}`})
+    //         banana1 = new Projectile(currentProjectile.x,currentProjectile.y,
+    //             currentProjectile.vx+(Math.random()*10-5),currentProjectile.vy+(Math.random()*10-5),20)
+    //         banana2 = new Projectile(currentProjectile.x,currentProjectile.y,
+    //             currentProjectile.vx+(Math.random()*10-5),currentProjectile.vy+(Math.random()*10-5),20)
+    //         banana3 = new Projectile(currentProjectile.x,currentProjectile.y,
+    //             currentProjectile.vx+(Math.random()*10-5),currentProjectile.vy+(Math.random()*10-5),20)
+    //         banana4 = new Projectile(currentProjectile.x,currentProjectile.y,
+    //             currentProjectile.vx+(Math.random()*10-5),currentProjectile.vy+(Math.random()*10-5),20)
+
+    //             melonProj=currentProjectile;
+    //             player1.fire(0,banana1,$banana1,bananaBoolean1,3);
+    //             player1.fire(0,banana2,$banana2,bananaBoolean2,3);
+    //             player1.fire(0,banana3,$banana3,bananaBoolean3,3);
+    //             player1.fire(0,banana4,$banana4,bananaBoolean4,3);
+    //                     }
+    //     } else { 
+    //         if (ammoIndex2===2) {
+    //             currentProjectile.vxO = currentProjectile.vx;
+    //             currentProjectile.vyO = currentProjectile.vy;
+    //             player1.fire(0,currentProjecitle,$projectile,true,ammoIndex1);
+    //             return false;
+    //         } else if (ammoIndex2===3) {
+    //             bananaBoolean1=true;
+    //         bananaBoolean2=true;
+    //         bananaBoolean3=true;
+    //         bananaBoolean4=true;
+    //         $banana1.show().css({'left':`${currentProjectile.x}px`,'top':`${currentProjectile.y}`})
+    //         $banana2.show().css({'left':`${currentProjectile.x}px`,'top':`${currentProjectile.y}`})
+    //         $banana3.show().css({'left':`${currentProjectile.x}px`,'top':`${currentProjectile.y}`})
+    //         $banana4.show().css({'left':`${currentProjectile.x}px`,'top':`${currentProjectile.y}`})
+    //         banana1 = new Projectile(currentProjectile.x,currentProjectile.y,
+    //             currentProjectile.vx+(Math.random()*10-5),currentProjectile.vy+(Math.random()*10-5),20)
+    //         banana2 = new Projectile(currentProjectile.x,currentProjectile.y,
+    //             currentProjectile.vx+(Math.random()*10-5),currentProjectile.vy+(Math.random()*10-5),20)
+    //         banana3 = new Projectile(currentProjectile.x,currentProjectile.y,
+    //             currentProjectile.vx+(Math.random()*10-5),currentProjectile.vy+(Math.random()*10-5),20)
+    //         banana4 = new Projectile(currentProjectile.x,currentProjectile.y,
+    //             currentProjectile.vx+(Math.random()*10-5),currentProjectile.vy+(Math.random()*10-5),20)
+
+    //             melonProj=currentProjectile;
+    //             player2.fire(0,banana1,$banana1,bananaBoolean1,3);
+    //             player2.fire(0,banana2,$banana2,bananaBoolean2,3);
+    //             player2.fire(0,banana3,$banana3,bananaBoolean3,3);
+    //             player2.fire(0,banana4,$banana4,bananaBoolean4,3);
+    //         } 
+    //     }
+
 
     // Handles the grease monkey rendering and stat changes
 
@@ -604,6 +815,9 @@ $(document).keydown(function(e){
         }
     }
 });
+
+
+
 
 gameStart();
 
