@@ -1,4 +1,5 @@
 .container {
+    font-family: fantasy;
     display: block;
     width: 1200px;
     height: 700px;
@@ -68,23 +69,22 @@
 }
 
 .end,.instructions {
-    display: flex;
     text-align: center;
-    vertical-align: center;
-    justify-content: center;
-    font-size: 30px;
     width: 1000px;
-    height: 300px;
+    height: 400px;
     background-color: rgb(128, 128, 128, .3);
     position: absolute;
     top: 100px;
     left: 100px;
     z-index: 6;
 }
+.end {
+    font-size: 30px;
+}
 
 .instructions>div>div {
     border: 1px solid black;
-    width: 60px;
+    width: 80px;
     display: inline-block;
 }
 
@@ -125,7 +125,7 @@ ul {
 .playAgain {
     display: flex;
     text-align: center;
-    vertical-align: center;
+    align-items: center;
     font-size: 20px;
     width: 100px;
     height: 60px;
@@ -157,7 +157,8 @@ h6 {
     display:inline-block;
     padding: 0;
     margin: 0;
-    font-size: 15px;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 
