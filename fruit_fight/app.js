@@ -245,20 +245,20 @@ class Tank {
     // Very big method, will make more modular in future
     // Handles the rendering of the projectile from start to finish
 
-        fire(i,obj,$div,boolean,ammoIndex) {
-            if (ammoIndex===0) {
-                this.pearBomb(i,obj,$div)
-                console.log('got to pear method')
-            } else if (ammoIndex===1) {
-                this.bananaCluster(i,obj,$div,boolean)
-            } else if (ammoIndex===2) {
-                this.homeingMelon(i,obj,$div,boolean)
-            } else if (ammoIndex===3) {
-                this.grapesOfWrath(i,obj,$div,boolean) 
-            } else {
-                this.nuketerine(i,obj,$div)
-            }
-        }
+        // fire(i,obj,$div,boolean,ammoIndex) {
+        //     if (ammoIndex===0) {
+        //         this.pearBomb(i,obj,$div)
+        //         console.log('got to pear method')
+        //     } else if (ammoIndex===1) {
+        //         this.bananaCluster(i,obj,$div,boolean)
+        //     } else if (ammoIndex===2) {
+        //         this.homeingMelon(i,obj,$div,boolean)
+        //     } else if (ammoIndex===3) {
+        //         this.grapesOfWrath(i,obj,$div,boolean) 
+        //     } else {
+        //         this.nuketerine(i,obj,$div)
+        //     }
+        // }
 
     fire(i,obj,$div,boolean,ammoIndex) {
          setTimeout(() => {
