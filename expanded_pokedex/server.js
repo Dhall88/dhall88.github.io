@@ -15,7 +15,7 @@ mongoose.connection.once('open', () => {
     console.log('connected to mongo')
 })
 
-app.use('/pokedex', fruitsController);
+app.use('/pokedex', pokemonController);
 
 app.listen(3000, ()=>{
     console.log('listening');

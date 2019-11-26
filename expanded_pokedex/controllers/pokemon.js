@@ -1,6 +1,29 @@
 const express = require('express');
 const router = express.Router();
 const Pokemon = require('../models/pokemon.js')
+const P = require('pokedex-promise-v2');
+const Pokedex = new P();
+
+const pop = async() => {
+for(let i =1;i<11;i++) {
+await Pokedex.getPokemonByName(i) // with Promise
+.then((response) => {
+    Pokemon.create(
+        {name: response.name}
+     , (err, data)=>{
+        console.log(data)
+    })
+})
+.catch(function(error) {
+  console.log('There was an ERROR: ', error);
+})
+}
+}
+
+// pop();
+
+
+
 
 router.get('/new', (req, res)=>{
     res.render('New');
