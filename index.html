@@ -86,7 +86,7 @@ function render() {
         p.rotation.z -=0.001;
       });
 
-      if(Math.random() > 0.95) {
+      if(Math.random() > 0.9 && blueLight.power<100) {
 
           blueLight.position.set(
             Math.random()*400,
