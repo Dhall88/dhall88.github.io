@@ -39,7 +39,7 @@ let orangeLight = new THREE.PointLight(0xcc6600,50,450,1.7);
 orangeLight.position.set(200,300,100);
 scene.add(orangeLight);
 let redLight = new THREE.PointLight(0xd8547e,50,450,1.7);
-redLight.position.set(100,300,100);
+redLight.position.set(400,300,100);
 scene.add(redLight);
 let blueLight = new THREE.PointLight(0x3677ac,50,450,1.7);
 blueLight.position.set(300,300,50);
@@ -63,7 +63,7 @@ scene.add(blueLight);
     cloud.position.set(
       Math.random()*400 -200,
       500,
-      Math.random()*250-250
+      Math.random()*250-300
     );
     cloud.rotation.x = 1.16;
     cloud.rotation.y = -0.12;
