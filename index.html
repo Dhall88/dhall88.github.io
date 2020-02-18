@@ -42,7 +42,7 @@ let redLight = new THREE.PointLight(0xd8547e,50,450,1.7);
 redLight.position.set(400,300,100);
 scene.add(redLight);
 let blueLight = new THREE.PointLight(0x3677ac,50,450,1.7);
-blueLight.position.set(300,300,50);
+blueLight.position.set(700,300,50);
 scene.add(blueLight);
       renderer = new THREE.WebGLRenderer({alpha: true});
       renderer.setSize(window.innerWidth/2,window.innerHeight/2);
@@ -80,7 +80,7 @@ render();
 }
 function render() {
   cloudParticles.forEach(p => {
-        p.rotation.z -=0.001;
+        p.rotation.z -=0.003;
       });
 renderer.render(scene,camera)
 requestAnimationFrame(render);
