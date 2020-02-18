@@ -84,13 +84,15 @@ function render() {
       });
 
       if(Math.random() > 0.93 || blueLight.power > 100) {
-  if(blueLight.power < 100)
+  if(blueLight.power < 100) {
     blueLight.position.set(
       Math.random()*400,
       300 + Math.random() *200,
       100
     );
-  blueLight.power = 50 + Math.random() * 500;
+    blueLight.power+=Math.random()*500 + 80;
+  }
+  blueLight.power = 30;
 }
 
 renderer.render(scene,camera)
