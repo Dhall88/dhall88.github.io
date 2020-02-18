@@ -87,12 +87,12 @@ function render() {
   if(blueLight.power < 100) {
     blueLight.position.set(
       Math.random()*400,
-      300 + Math.random() *200,
+      100 + Math.random() *200,
       100
     );
     blueLight.power=Math.random()*600 + 102;
-  }
-  blueLight.power = 0;
+  } else blueLight.power = 0;
+
 }
 
 renderer.render(scene,camera)
