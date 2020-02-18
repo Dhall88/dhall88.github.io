@@ -6,15 +6,10 @@
 
   </head>
   <body>
-    <!-- <script src="three.min.js"></script>
-    <script src="postprocessing.js"></script> -->
+    <script src="three.min.js"></script>
     <script>
 
-    import * from THREE from 'three'
-
-    import { BloomEffect, EffectComposer, EffectPass, RenderPass } from "postprocessing";
-
-    let scene, camera, renderer, composer;
+    let scene, camera, renderer;
     let cloudParticles = [];
     function init() {
       scene = new THREE.Scene();
@@ -70,14 +65,6 @@ scene.add(blueLight);
   }
 });
 
-const bloomEffect = new POSTPROCESSING.BloomEffect({
-      blendFunction: POSTPROCESSING.BlendFunction.COLOR_DODGE,
-      kernelSize: POSTPROCESSING.KernelSize.SMALL,
-      useLuminanceFilter: true,
-      luminanceThreshold: 0.3,
-      luminanceSmoothing: 0.75
-    });
-bloomEffect.blendMode.opacity.value = 1.5;
 
 
 render();
@@ -86,7 +73,7 @@ function render() {
   cloudParticles.forEach(p => {
         p.rotation.z -=0.001;
       });
-composer.render(0.1)
+renderer.render(scene,camera)
 requestAnimationFrame(render);
 }
 init();
