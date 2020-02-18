@@ -58,7 +58,7 @@ scene.add(blueLight);
     map:texture,
     transparent: true
   });
-  for(let p=0; p<50; p++) {
+  for(let p=0; p<40; p++) {
     let cloud = new THREE.Mesh(cloudGeo, cloudMaterial);
     cloud.position.set(
       Math.random()*400 -200,
@@ -83,14 +83,14 @@ function render() {
         p.rotation.z -=0.002;
       });
 
-      if(Math.random() > 0.93 || blueLight.power > 100) {
+      if(Math.random() > 0.95 || blueLight.power > 100) {
   if(blueLight.power < 100) {
     blueLight.position.set(
       Math.random()*400,
       300 + Math.random() *200,
       100
     );
-    blueLight.power+=Math.random()*600 + 100;
+    blueLight.power=Math.random()*600 + 102;
   }
   blueLight.power = 0;
 }
