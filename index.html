@@ -45,7 +45,7 @@ blueLight = new THREE.PointLight(0x3677ac,25,450,1.7);
 blueLight.position.set(700,300,50);
 scene.add(blueLight);
       renderer = new THREE.WebGLRenderer({alpha: true});
-      renderer.setSize(window.innerWidth/2,window.innerHeight/2);
+      renderer.setSize(window.innerWidth/2,window.innerHeight);
       renderer.setClearColor(0x000000,0);
       document.getElementById("nebula").appendChild(renderer.domElement);
 
@@ -90,9 +90,9 @@ function render() {
       300 + Math.random() *200,
       100
     );
-    blueLight.power+=Math.random()*500 + 80;
+    blueLight.power+=Math.random()*600 + 80;
   }
-  blueLight.power = 30;
+  blueLight.power = 0;
 }
 
 renderer.render(scene,camera)
