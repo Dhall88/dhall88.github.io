@@ -3,9 +3,19 @@
   <head>
     <meta charset="utf-8">
     <title>Profile</title>
-
+      <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body background-image: url('background.jpg')>
+
+    <style>
+    body {
+      background-image: url('background.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+    }
+    </style>
+    <div id='nebula' />
     <script src="three.min.js"></script>
     <script>
 
@@ -35,10 +45,10 @@ let blueLight = new THREE.PointLight(0x3677ac,50,450,1.7);
 blueLight.position.set(300,300,200);
 scene.add(blueLight);
       renderer = new THREE.WebGLRenderer();
-      renderer.setSize(window.innerWidth,window.innerHeight);
+      renderer.setSize(window.innerWidth/3,window.innerHeight/3);
       scene.fog = new THREE.FogExp2(0x03544e, 0.001);
       renderer.setClearColor(scene.fog.color);
-      document.body.appendChild(renderer.domElement);
+      document.getElementById("nebula").appendChild(renderer.domElement);
 
       let loader = new THREE.TextureLoader();
       // loader.crossOrigin='anonomys';
