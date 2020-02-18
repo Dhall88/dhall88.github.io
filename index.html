@@ -19,7 +19,7 @@
     <script src="three.min.js"></script>
     <script>
 
-    let scene, camera, renderer;
+    let scene, camera, renderer, blueLight;
     let cloudParticles = [];
     function init() {
       scene = new THREE.Scene();
@@ -80,7 +80,7 @@ render();
 }
 function render() {
   cloudParticles.forEach(p => {
-        p.rotation.z -=0.003;
+        p.rotation.z -=0.002;
       });
 
       if(Math.random() > 0.93 || blueLight.power > 100) {
