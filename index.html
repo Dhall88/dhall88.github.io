@@ -46,9 +46,9 @@ blueLight.position.set(300,300,200);
 scene.add(blueLight);
       renderer = new THREE.WebGLRenderer();
       renderer.setSize(window.innerWidth/3,window.innerHeight/3);
-      scene.fog = new THREE.FogExp2(0x03544e, 0.001);
-      renderer.setClearColor(scene.fog.color);
-      document.getElementById("nebula").appendChild(renderer.domElement);
+      // scene.fog = new THREE.FogExp2(0x03544e, 0.001);
+      // renderer.setClearColor(scene.fog.color);
+      document.getElementById("nebulaz").appendChild(renderer.domElement);
 
       let loader = new THREE.TextureLoader();
       // loader.crossOrigin='anonomys';
