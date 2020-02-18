@@ -26,8 +26,8 @@
       document.body.appendChild(renderer.domElement);
 
       let loader = new THREE.TextureLoader();
-      loader.crossOrigin='anonomys';
-      loader.load("https://redstapler.co/wp-content/uploads/2019/05/smoke-1.png", function(texture){
+      // loader.crossOrigin='anonomys';
+      loader.load("smoke-1.png", function(texture){
   //texture is loaded
   cloudGeo = new THREE.PlaneBufferGeometry(500,500);
   cloudMaterial = new THREE.MeshLambertMaterial({
