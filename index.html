@@ -53,7 +53,7 @@ scene.add(blueLight);
       // loader.crossOrigin='anonomys';
       loader.load("smoke-1.png", function(texture){
   //texture is loaded
-  cloudGeo = new THREE.PlaneBufferGeometry(200,200);
+  cloudGeo = new THREE.PlaneBufferGeometry(300,300);
   cloudMaterial = new THREE.MeshLambertMaterial({
     map:texture,
     transparent: true
@@ -63,7 +63,7 @@ scene.add(blueLight);
     cloud.position.set(
       Math.random()*400 -200,
       500,
-      Math.random()*250-300
+      Math.random()*250-400
     );
     cloud.rotation.x = 1.16;
     cloud.rotation.y = -0.12;
