@@ -35,13 +35,13 @@
 directionalLight.position.set(0,0,1);
 scene.add(directionalLight);
 
-let orangeLight = new THREE.PointLight(0xcc6600,50,450,1.7);
+let orangeLight = new THREE.PointLight(0xcc6600,25,450,1.7);
 orangeLight.position.set(200,300,100);
 scene.add(orangeLight);
-let redLight = new THREE.PointLight(0xd8547e,50,450,1.7);
+let redLight = new THREE.PointLight(0xd8547e,25,450,1.7);
 redLight.position.set(400,300,100);
 scene.add(redLight);
-let blueLight = new THREE.PointLight(0x3677ac,50,450,1.7);
+let blueLight = new THREE.PointLight(0x3677ac,25,450,1.7);
 blueLight.position.set(700,300,50);
 scene.add(blueLight);
       renderer = new THREE.WebGLRenderer({alpha: true});
@@ -68,7 +68,7 @@ scene.add(blueLight);
     cloud.rotation.x = 1.16;
     cloud.rotation.y = -0.12;
     cloud.rotation.z = Math.random()*2*Math.PI;
-    cloud.material.opacity = 0.4;
+    cloud.material.opacity = 0.3;
     cloudParticles.push(cloud);
     scene.add(cloud);
   }
