@@ -45,7 +45,7 @@ blueLight = new THREE.PointLight(0x3677ac,25,450,1.7);
 blueLight.position.set(700,300,50);
 scene.add(blueLight);
       renderer = new THREE.WebGLRenderer({alpha: true});
-      renderer.setSize(window.innerWidth/2,window.innerHeight);
+      renderer.setSize(window.innerWidth/1.3,window.innerHeight/1.3);
       renderer.setClearColor(0x000000,0);
       document.getElementById("nebula").appendChild(renderer.domElement);
 
@@ -68,7 +68,7 @@ scene.add(blueLight);
     cloud.rotation.x = 1.16;
     cloud.rotation.y = -0.12;
     cloud.rotation.z = Math.random()*2*Math.PI;
-    cloud.material.opacity = 0.3;
+    cloud.material.opacity = 0.2;
     cloudParticles.push(cloud);
     scene.add(cloud);
   }
@@ -90,7 +90,7 @@ function render() {
       300 + Math.random() *200,
       100
     );
-    blueLight.power+=Math.random()*600 + 80;
+    blueLight.power+=Math.random()*600 + 100;
   }
   blueLight.power = 0;
 }
