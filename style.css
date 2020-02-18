@@ -1,4 +1,28 @@
-#nebula {
+/* #nebula {
   height: 50%;
   width: 50%;
+} */
+
+div {
+  color: white;
+  /* width: 50%; */
+  text-align: center;
+  font-size: 40px;
+  margin: 0 auto;
+}
+
+.name {
+  display: inline-block;
+  color: red;
+  margin: 0;
+  padding: 0;
+
+}
+
+footer {
+  display: flex;
+}
+
+p {
+  padding-right: 10px;
 }
