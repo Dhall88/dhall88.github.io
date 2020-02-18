@@ -45,7 +45,7 @@ let blueLight = new THREE.PointLight(0x3677ac,50,450,1.7);
 blueLight.position.set(300,300,200);
 scene.add(blueLight);
       renderer = new THREE.WebGLRenderer({alpha: true});
-      renderer.setSize(window.innerWidth/3,window.innerHeight/3);
+      renderer.setSize(window.innerWidth/2,window.innerHeight/2);
       renderer.setClearColor(0x000000,0);
       document.getElementById("nebula").appendChild(renderer.domElement);
 
@@ -53,12 +53,12 @@ scene.add(blueLight);
       // loader.crossOrigin='anonomys';
       loader.load("smoke-1.png", function(texture){
   //texture is loaded
-  cloudGeo = new THREE.PlaneBufferGeometry(500,500);
+  cloudGeo = new THREE.PlaneBufferGeometry(200,200);
   cloudMaterial = new THREE.MeshLambertMaterial({
     map:texture,
     transparent: true
   });
-  for(let p=0; p<50; p++) {
+  for(let p=0; p<30; p++) {
     let cloud = new THREE.Mesh(cloudGeo, cloudMaterial);
     cloud.position.set(
       Math.random()*800 -400,
@@ -68,7 +68,7 @@ scene.add(blueLight);
     cloud.rotation.x = 1.16;
     cloud.rotation.y = -0.12;
     cloud.rotation.z = Math.random()*2*Math.PI;
-    cloud.material.opacity = 0.55;
+    cloud.material.opacity = 0.40;
     cloudParticles.push(cloud);
     scene.add(cloud);
   }
