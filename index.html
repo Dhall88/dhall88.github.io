@@ -86,17 +86,17 @@ function render() {
         p.rotation.z -=0.001;
       });
 
-      if(Math.random() > 0.95 || blueLight.power > 100) {
-  if(blueLight.power < 100) {
-    blueLight.position.set(
-      Math.random()*400,
-      100 + Math.random() *200,
-      100
-    );
-    blueLight.power=Math.random()*600 + 102;
-  }
+      if(Math.random() > 0.9) {
 
-} else blueLight.power = 0;
+          blueLight.position.set(
+            Math.random()*400,
+            100 + Math.random() *200,
+            100
+          );
+          blueLight.power=Math.random()*600 + 102;
+
+
+      } else blueLight.power = 0;
 
 renderer.render(scene,camera)
 requestAnimationFrame(render);
