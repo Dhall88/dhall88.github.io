@@ -44,6 +44,7 @@ p {
 }
 
 .greeting {
+  display: inline-block;
   margin-left: 70%;
   width: 30%;
   text-align: left;
