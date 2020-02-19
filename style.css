@@ -53,4 +53,5 @@ p {
 .flex{
   display:flex;
   justify-content: space-between;
+  height: 50%;
 }
