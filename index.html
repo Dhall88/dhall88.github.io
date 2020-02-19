@@ -93,10 +93,10 @@ function render() {
             100 + Math.random() *200,
             100
           );
-          blueLight.power=Math.random()*600 + 102;
+          blueLight.power=(Math.random()*600 + 102);
 
 
-      } else blueLight.power = 0;
+      } else {blueLight.power = 0;}
 
 renderer.render(scene,camera)
 requestAnimationFrame(render);
