@@ -80,7 +80,7 @@ scene.add(nebCenter);
     cloud.rotation.x = 1.16;
     cloud.rotation.y = -0.12;
     cloud.rotation.z = Math.random()*2*Math.PI;
-    cloud.material.opacity = 0.15;
+    cloud.material.opacity = 0.2;
     cloudParticles.push(cloud);
     scene.add(cloud);
   }
@@ -107,7 +107,8 @@ function render() {
           console.log(blueLight.power);
 
 
-      } else {blueLight.power = 10;}
+      }
+       blueLight.power = 10;
 
 renderer.render(scene,camera)
 requestAnimationFrame(render);
