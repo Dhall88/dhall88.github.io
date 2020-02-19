@@ -21,8 +21,29 @@ div {
 
 footer {
   display: flex;
+  position: absolute;
+  bottom: 0;
 }
 
 p {
   padding-right: 10px;
+  color: white;
+  font-size: 30px;
+}
+
+.button {
+  display: inline-block;
+  width: 200px;
+  margin: auto;
+  border: solid 2px white;
+  font-size: 20px;
+  /* margin: 0;
+  padding: 0; */
+
+}
+
+.greeting {
+  margin-left: 70%;
+  width: 30%;
+  text-align: left;
 }
