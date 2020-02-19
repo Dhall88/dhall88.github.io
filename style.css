@@ -2,6 +2,7 @@
   display: inline-block;
   height: 50%;
   width: 50%;
+  margin: 0;
 }
 
 div {
@@ -44,6 +45,7 @@ p {
 }
 
 .greeting {
+  margin-top: 50%;
   display: inline-block;
   width: 30%;
   text-align: left;
