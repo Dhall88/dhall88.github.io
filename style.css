@@ -1,6 +1,6 @@
 #nebula {
   display: inline-block;
-  height: 50%;
+  height: 400px;
   width: 50%;
 }
 
@@ -45,7 +45,10 @@ p {
 
 .greeting {
   display: inline-block;
-  margin-left: 70%;
   width: 30%;
   text-align: left;
+}
+.flex{
+  display:flex;
+  justify-content: space-between;
 }
