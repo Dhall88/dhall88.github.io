@@ -8,10 +8,12 @@ min-height: 100vh;
 }
 
 #nebula {
-  display: inline-block;
-  height: 50%;
-  width: 50%;
+  /* display: inline-block; */
+  position: absolute;
+  /* height: 400px;
+  width: 400px; */
   margin: 0;
+  /* background-color: red; */
 }
 
 div {
@@ -78,8 +80,10 @@ a {
 }
 
 #greeting {
+  position:absolute;
+  right: 50px;
   margin-top: 5%;
-  display: inline-block;
+  /* display: inline-block; */
   width: 30%;
   text-align: left;
 }
@@ -89,13 +93,14 @@ a {
   height: 50%;
 }
 .content{
-  position: absolute;
+  /* position: absolute; */
   top: 30px;
   width: 75%;
   display: flex;
   flex-direction: column;
   border-radius: 25px;
   background-color: rgba(192,175,199,.4);
+  /* left: 12.5%; */
 
 }
 
