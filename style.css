@@ -89,6 +89,8 @@ a {
   height: 50%;
 }
 .content{
+  position: absolute;
+  top: 30px;
   width: 75%;
   display: flex;
   flex-direction: column;
