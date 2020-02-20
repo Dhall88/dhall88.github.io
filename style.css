@@ -9,7 +9,7 @@ min-height: 100vh;
 
 #nebula {
   /* display: inline-block; */
-  position: absolute;
+  position: fixed;
   /* height: 400px;
   width: 400px; */
   margin: 0;
