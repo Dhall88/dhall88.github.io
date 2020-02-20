@@ -1,3 +1,12 @@
+.app-container {
+  position: relative;
+min-height: 100vh;
+}
+
+.content-wrap {
+  padding-bottom: 4.5rem;
+}
+
 #nebula {
   display: inline-block;
   height: 50%;
@@ -18,13 +27,26 @@ div {
   color: red;
   margin: 0;
   padding: 0;
-
 }
+
+.links>a {
+  color: rgba(244,241,246);
+  text-decoration: none;
+  transition: transform .2s;
+  padding: 15px;
+}
+
+.links>a:hover {
+  transform: scale(1.05)
+}
+
 
 footer {
   display: flex;
   position: absolute;
   bottom: 0;
+  width: 100%;
+  height: 3.5rem;
 }
 
 p {
@@ -44,7 +66,7 @@ p {
 
 }
 
-.greeting {
+#greeting {
   margin-top: 5%;
   display: inline-block;
   width: 30%;
@@ -54,4 +76,17 @@ p {
   display:flex;
   justify-content: space-between;
   height: 50%;
+}
+#portfolio{
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 25px;
+  background-color: rgba(192,175,199,.4)
+
+}
+
+.links {
+  display: flex;
+  justify-content: center;
 }

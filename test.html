@@ -14,24 +14,83 @@
       background-size: 100% 100%;
     }
     </style>
-
-        <div class='flex'>
+    <div class="app-container">
+      <div class="content-wrap">
+    <div class='flex'>
 
     <div id='nebula' backgroundColor='red'></div>
 
-    <div class='greeting'>
+    <div id='greeting'>
       Hi. I'm <div class='name'>David Hall</div> </br>
       I'm a Full Stack Web-Developer. </br>
-      <div class='button'>View my work &#8594;</div>
+      <div onClick="showPortfolio()" class='button'>View my work &#8594;</div>
     </div>
   </div>
 
-    <footer>
-      <p>Home</p>
-      <p>About</p>
-      <p>Portfolio</p>
-      <p>Contact</p>
-    </footer>
 
+    <div id="portfolio">
+        <div class="project">
+          <h2>Fruit Fight</h2>
+          <p>A tank artillary game built with Jquery.  Use funky fruit weaponry to destroy your opponent before they destroy you!<p>
+          <div class="links">
+            <a target="_blank" href=https://fruitfight.herokuapp.com/>fruitfight.herokuapp.com</a>
+            <a target="_blank" href=https://github.com/Dhall88/fruit_fight>github.com/Dhall88/fruit_fight</a>
+        </div>
+        </div>
+        <div class="project">
+          <h2>Expanded Pokedex</h2>
+          <p>Pokedex built using Poke API, MongoDB and React. Pull detailed information for each and every pokemon and build your dream team.</p>
+          <div class="links">
+            <a target="_blank" href=https://fruitfight.herokuapp.com/>Fruit Fight on Heroku</a>
+            <a target="_blank" href=https://github.com/Dhall88/fruit_fight>Github Repository</a>
+        </div>
+        </div>
+        <div class="project">
+          <h2>Plot Master</h2>
+          <p>Garden plot planning app built with Rails and React. Make an account and start planning your vegetable garden</p>
+          <div class="links">
+            <a target="_blank" href=https://plot-master.herokuapp.com/#/>Plot Master on Herkou</a>
+            <a target="_blank" href=https://github.com/Dhall88/plot-master>Github Repository</a>
+        </div>
+        </div>
+        <div class="project">
+          <h2>Better Recipes</h2>
+          <p>All in one cooking app made with Rails and React. Search from an enormous database, display all recipe instructions, ingredients and amounts in one place,
+            and create and remove timers as needed.
+          <div class="links">
+            <a target="_blank" href=https://blooming-wildwood-95672.herokuapp.com/>betterrecipes.herokuapp.com</a>
+            <a target="_blank" href=https://github.com/Dhall88/better-recipe-app>API Repository</a>
+            <a target="_blank" href=https://github.com/Dhall88/better-recipe-app-client>Frontend Repository</a>
+        </div>
+        </div>
+        <div class="project">
+          <h2>Wirhal Family Utilities</h2>
+          <p>A suite of applications inspired by and designed for my family. Built with Rails, React and ThreeJS.</p>
+          <div class="links">
+            <a target="_blank" href=https://fruitfight.herokuapp.com/>fruitfight.herokuapp.com</a>
+            <a target="_blank" href=https://github.com/Dhall88/fruit_fight>repository</a>
+        </div>
+        </div>
+    </div>
+
+    <div id="about">
+      Physicist turned web developer, I deeply enjoy problem solving and working on the backend.  I'm currently finishing up a full stack engineering course with
+      General Assembly and cannot wait to put rubber to the road.
+    </div>
+
+    <div id="contact">
+      <p>Email: DavidCHall388@gmail.com</p>
+      <p>LinkedIn: <a href=#></a></p>
+      <p>Github: <a href=#></a></p>
+    </div>
+  </div>
+  <footer>
+    <p onClick="showHome()">Home</p>
+    <p onClick="showAbout()">About</p>
+    <p onClick="showPortfolio()">Portfolio</p>
+    <p onClick="showContact()">Contact</p>
+  </footer>
+  </div>
+    <script src="app.js"></script>
   </body>
 </html>
