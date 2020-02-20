@@ -30,7 +30,7 @@ div {
 }
 
 .links>a {
-  color: rgba(244,241,246);
+  color: rgba(215,236,219);
   text-decoration: none;
   transition: transform .2s;
   padding: 15px;
@@ -44,15 +44,21 @@ div {
 footer {
   display: flex;
   position: absolute;
-  bottom: 0;
+  bottom: 2rem;
   width: 100%;
   height: 3.5rem;
 }
 
+
 p {
+  color: rgba(215,236,219);
   padding-right: 10px;
-  color: white;
+  margin-bottom: 0;
   font-size: 30px;
+}
+
+footer>p {
+  font-size: 2.5rem;
 }
 
 .button {
@@ -66,6 +72,11 @@ p {
 
 }
 
+a {
+  font-size: 1.5rem;
+  color: rgba(215,236,219);
+}
+
 #greeting {
   margin-top: 5%;
   display: inline-block;
@@ -77,16 +88,24 @@ p {
   justify-content: space-between;
   height: 50%;
 }
-#portfolio{
+.content{
   width: 75%;
   display: flex;
   flex-direction: column;
   border-radius: 25px;
-  background-color: rgba(192,175,199,.4)
+  background-color: rgba(192,175,199,.4);
 
 }
 
 .links {
   display: flex;
   justify-content: center;
+}
+
+h2, h4 {
+  color: rgba(215,236,219);
+}
+
+h4 {
+  margin-bottom: 1rem;
 }

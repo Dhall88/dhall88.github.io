@@ -16,15 +16,6 @@
     }
     </style>
 
-    <div class='flex'>
-      <div id='nebula'></div>
-      <div class='greeting'>
-        Hi. I'm <div class='name'>David Hall</div> </br>
-        I'm a Full Stack Web-Developer. </br>
-        <div class='button'>View my work &#8594;</div>
-      </div>
-    </div>
-
     <script src="three.min.js"></script>
     <script>
 
@@ -120,12 +111,80 @@ init();
 
 
 
-    <footer>
-      <p>Home</p>
-      <p>About</p>
-      <p>Portfolio</p>
-      <p>Contact</p>
-    </footer>
+    <div id='greeting'>
+      Hi. I'm <div class='name'>David Hall</div> </br>
+      I'm a Full Stack Web-Developer. </br>
+      <div onClick="showPortfolio()" class='button'>View my work &#8594;</div>
+    </div>
+  </div>
+
+    <div id="portfolio" class=content>
+      <h2>Projects</h2>
+        <div class="project">
+          <h4>Fruit Fight</h4>
+          <p>A tank artillary game built with Jquery.  Use funky fruit weaponry to destroy your opponent before they destroy you!</p>
+          <div class="links">
+            <a target="_blank" href=https://fruitfight.herokuapp.com/>fruitfight.herokuapp.com</a>
+            <a target="_blank" href=https://github.com/Dhall88/fruit_fight>github.com/Dhall88/fruit_fight</a>
+        </div>
+        </div>
+        <div class="project">
+          <h4>Expanded Pokedex</h4>
+          <p>Pokedex built using Poke API, MongoDB and React. Pull detailed information for each and every pokemon and build your dream team.</p>
+          <div class="links">
+            <a target="_blank" href=https://fruitfight.herokuapp.com/>Fruit Fight on Heroku</a>
+            <a target="_blank" href=https://github.com/Dhall88/fruit_fight>Github Repository</a>
+        </div>
+        </div>
+        <div class="project">
+          <h4>Plot Master</h4>
+          <p>Garden plot planning app built with Rails and React. Make an account and start planning your vegetable garden</p>
+          <div class="links">
+            <a target="_blank" href=https://plot-master.herokuapp.com/#/>Plot Master on Herkou</a>
+            <a target="_blank" href=https://github.com/Dhall88/plot-master>Github Repository</a>
+        </div>
+        </div>
+        <div class="project">
+          <h4>Better Recipes</h4>
+          <p>All in one cooking app made with Rails and React. Search from an enormous database, display all recipe instructions, ingredients and amounts in one place,
+            and create and remove timers as needed.</p>
+          <div class="links">
+            <a target="_blank" href=https://blooming-wildwood-95672.herokuapp.com/>betterrecipes.herokuapp.com</a>
+            <a target="_blank" href=https://github.com/Dhall88/better-recipe-app>API Repository</a>
+            <a target="_blank" href=https://github.com/Dhall88/better-recipe-app-client>Frontend Repository</a>
+        </div>
+        </div>
+        <div class="project">
+          <h4>Wirhal Family Utilities</h4>
+          <p>A suite of applications inspired by and designed for my family. Built with Rails, React and ThreeJS.</p>
+          <div class="links">
+            <a target="_blank" href=https://fruitfight.herokuapp.com/>fruitfight.herokuapp.com</a>
+            <a target="_blank" href=https://github.com/Dhall88/fruit_fight>repository</a>
+        </div>
+        </div>
+    </div>
+
+    <div id="about" class="content">
+      <h2>About Me</h2>
+      <p>Physicist turned web developer, I deeply enjoy problem solving and working on the backend.  I'm currently finishing up a full stack engineering course with
+      General Assembly and cannot wait to put rubber to the road. Since begining the course, I've enjoyed picking up new langauges and frameworks.  That little lightning
+      storm in space was built using ThreeJS for example.</p>
+      <p>When I'm not studying on up on new frameworks and methods, I'm building carpentry and DIY projects for my family. Building things appears consistent
+    </div>
+
+    <div id="contact" class="content">
+      <h2>Contacts and External Links</h2>
+      <p>Email: DavidCHall388@gmail.com</p>
+      <p>LinkedIn: <a href=#></a></p>
+      <p>Github: <a href=#></a></p>
+    </div>
+  </div>
+  <footer>
+    <p onClick="showHome()">Home</p>
+    <p onClick="showAbout()">About</p>
+    <p onClick="showPortfolio()">Portfolio</p>
+    <p onClick="showContact()">Contact</p>
+  </footer>
 
 
   </body>
