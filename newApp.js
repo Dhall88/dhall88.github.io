@@ -55,7 +55,7 @@ $(() => {
   cloud.rotation.x = 1.16;
   cloud.rotation.y = -0.12;
   cloud.rotation.z = Math.random()*2*Math.PI;
-  cloud.material.opacity = 0.2;
+  cloud.material.opacity = 0;
   cloudParticles.push(cloud);
   scene.add(cloud);
   }
@@ -66,7 +66,15 @@ $(() => {
   render();
   }
   function render() {
-  cloudParticles.forEach(p => {
+  cloudParticles.forEach((p,index) => {
+    let windowHeight=$(window).height();
+    if ($(window).scrollTop()<windowHeight){
+      if(index===0) {
+        p.material.opacity=0.2
+      }
+    } else if ($(window).scrollTop()>windowHeight) {
+      p.material.opacity=0.2
+    }
       p.rotation.z -=0.001;
     });
 
@@ -86,11 +94,4 @@ $(() => {
   }
   init();
 
-  $(window).scroll(function (event) {
-      var scroll = $(window).scrollTop();
-      if (scroll>$(window).height()) {
-        currentCloudNum=40
-        console.log('more clouds?');
-      }
-  });
 })
