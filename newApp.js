@@ -90,7 +90,7 @@ $(() => {
     let scrollPosition=$(window).scrollTop();
     if(cloudParticles[0]!=undefined & scrollPosition<windowHeight) {
       console.log(Math.floor(scrollPosition/windowHeight)*40);
-    cloudParticles[Math.floor(scrollPosition/windowHeight)*40].material.opacity=0.2
+    cloudParticles[Math.floor(scrollPosition/windowHeight*40)].material.opacity=0.2
   }
     // cloudParticles.forEach((cloud,index) => {
     //   cloud.material.opacity=scrollPosition/windowHeight*0.2
