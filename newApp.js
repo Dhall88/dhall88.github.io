@@ -75,6 +75,7 @@ $(() => {
 
     } else {
       console.log(cloudParticles[0].material);
+      cloudParticles[0].material.opacity=0.2;
     }
 
     if(Math.random() > 0.95 && blueLight.power<100) {
