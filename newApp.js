@@ -1,8 +1,9 @@
 
 $(() => {
 
-  let scene, camera, renderer, blueLight, currentCloudNum, BlueLightPower, bluePurpleLightPower;
+  let scene, camera, renderer, blueLight, currentCloudNum, BlueLightPower, bluePurpleLightPower, cloud;
   let cloudParticles = [];
+
   function init() {
     currentCloudNum=1;
     scene = new THREE.Scene();
@@ -46,7 +47,7 @@ $(() => {
   transparent: true
   });
   for(let p=0; p<40; p++) {
-  let cloud = new THREE.Mesh(cloudGeo, cloudMaterial);
+  cloud = new THREE.Mesh(cloudGeo, cloudMaterial);
   cloud.position.set(
     Math.random()*400 -200,
     500,
