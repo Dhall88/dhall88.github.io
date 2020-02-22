@@ -68,13 +68,15 @@ $(() => {
   function render() {
   cloudParticles.forEach((p,index) => {
     let windowHeight=$(window).height();
-    if ($(window).scrollTop()<windowHeight){
-      if(index===0) {
-        p.material.opacity=0.2
-      }
-    } else if ($(window).scrollTop()>windowHeight) {
+    // if ($(window).scrollTop()<windowHeight){
+      console.log(windowHeight);
+    //   if(index===0) {
+    //     p.material.opacity=0.2
+    //   }
+
+    // } else if ($(window).scrollTop()>windowHeight) {
       p.material.opacity=0.2
-    }
+    // }
       p.rotation.z -=0.001;
     });
 
