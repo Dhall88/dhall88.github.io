@@ -88,7 +88,8 @@ $(() => {
   function render() {
     let windowHeight=$(window).height();
     let scrollPosition=$(window).scrollTop();
-    if(cloudParticles!=undefined) {
+    if(cloudParticles[0]!=undefined) {
+      console.log('in if');
     cloudParticles[0].material.opacity=0.2
   }
     // cloudParticles.forEach((cloud,index) => {
