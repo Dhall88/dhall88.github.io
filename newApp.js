@@ -73,7 +73,7 @@ $(() => {
   cloud2.rotation.x = 1.16;
   cloud2.rotation.y = -0.12;
   cloud2.rotation.z = Math.random()*2*Math.PI;
-  cloud2.material.opacity = 0.2;
+  cloud2.material.opacity = 0;
   cloudParticles2.push(cloud2);
   scene.add(cloud2);
   }
