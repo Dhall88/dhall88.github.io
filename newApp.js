@@ -73,7 +73,7 @@ $(() => {
     if (scrollPosition<windowHeight){
       console.log(index);
       if(index==undefined) {
-        break
+        return
       }else if(index===0) {
       p.material.opacity=0.2
     }
