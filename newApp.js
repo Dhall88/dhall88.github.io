@@ -1,8 +1,9 @@
 
 $(() => {
 
-  let scene, camera, renderer, blueLight, currentCloudNum, BlueLightPower, bluePurpleLightPower, cloud;
+  let scene, camera, renderer, blueLight, currentCloudNum, BlueLightPower, bluePurpleLightPower, cloud, boolean;
   let cloudParticles = [];
+  let uuid=[];
 
   function init() {
     currentCloudNum=1;
@@ -46,7 +47,7 @@ $(() => {
   map:texture,
   transparent: true
   });
-  for(let p=0; p<40; p++) {
+  for(let p=0; p<1; p++) {
   cloud = new THREE.Mesh(cloudGeo, cloudMaterial);
   cloud.position.set(
     Math.random()*400 -200,
@@ -56,7 +57,7 @@ $(() => {
   cloud.rotation.x = 1.16;
   cloud.rotation.y = -0.12;
   cloud.rotation.z = Math.random()*2*Math.PI;
-  cloud.material.opacity = 0;
+  cloud.material.opacity = 0.2;
   cloudParticles.push(cloud);
   scene.add(cloud);
   }
@@ -69,30 +70,23 @@ $(() => {
   function render() {
     let windowHeight=$(window).height();
     let scrollPosition=$(window).scrollTop();
-  // cloudParticles.forEach((p,index) => {
-  //   if (scrollPosition<windowHeight){
-  //     console.log(index);
-      if(cloudParticles[0]==undefined) {
-
-      }else {
-        console.log('in else');
-        cloudParticles[0].material.opacity=0.2
-      // p.material.opacity=0.2
+    if (scrollPosition>windowHeight && boolean!==true) {
+      for(let p=0; p<1; p++) {
+      cloud = new THREE.Mesh(cloudGeo, cloudMaterial);
+      cloud.position.set(
+        Math.random()*400 -200,
+        500,
+        Math.random()*300-400
+      );
+      cloud.rotation.x = 1.16;
+      cloud.rotation.y = -0.12;
+      cloud.rotation.z = Math.random()*2*Math.PI;
+      cloud.material.opacity = 0.2;
+      cloudParticles.push(cloud);
+      scene.add(cloud);
       }
-      console.log(cloudParticles);
-  //
-  //   }
-    // else if (scrollPosition>windowHeight) {
-    //   console.log('in else if');
-    //   p.material.opacity=0.2
-    // }
-    //   p.rotation.z -=0.001;
-    // });
-    // console.log(cloudParticles);
-    // console.log(cloudParticles[0]);
-    // cloud = cloudParticles[0];
-    // cloud.material.opacity=0.2;
-    // console.log(cloud);
+      boolean=true;
+    }
 
     if(Math.random() > 0.95 && blueLight.power<100) {
 
