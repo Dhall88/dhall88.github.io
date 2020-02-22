@@ -73,6 +73,7 @@ $(() => {
     let scrollPosition=$(window).scrollTop();
     cloudParticles.forEach((cloud,index) => {
         if(index===0) {
+          console.log(cloudParticles);
           cloud.material.opacity=0.2;
         }
         cloud.rotation.z -=0.001;
