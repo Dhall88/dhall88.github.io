@@ -44,12 +44,12 @@ $(() => {
     // loader.crossOrigin='anonomys';
     loader.load("smoke-1.png", function(texture){
   //texture is loaded
-  });
-  for(let p=0; p<40; p++) {
-    cloudGeo = new THREE.PlaneBufferGeometry(400,400);
+  cloudGeo = new THREE.PlaneBufferGeometry(400,400);
+  for(let p=0; p<1; p++) {
     cloudMaterial = new THREE.MeshLambertMaterial({
       map:texture,
       transparent: true
+    });
   cloud = new THREE.Mesh(cloudGeo, cloudMaterial);
   cloud.position.set(
     Math.random()*400 -200,
@@ -63,20 +63,20 @@ $(() => {
   cloudParticles.push(cloud);
   scene.add(cloud);
   }
-  // for(let p=0; p<39; p++) {
-  // cloud2 = new THREE.Mesh(cloudGeo, cloudMaterial);
-  // cloud2.position.set(
-  //   Math.random()*400 -200,
-  //   500,
-  //   Math.random()*300-400
-  // );
-  // cloud2.rotation.x = 1.16;
-  // cloud2.rotation.y = -0.12;
-  // cloud2.rotation.z = Math.random()*2*Math.PI;
-  // cloud2.material.opacity = 0;
-  // cloudParticles2.push(cloud2);
-  // scene.add(cloud2);
-  // }
+  for(let p=0; p<39; p++) {
+  cloud2 = new THREE.Mesh(cloudGeo, cloudMaterial);
+  cloud2.position.set(
+    Math.random()*400 -200,
+    500,
+    Math.random()*300-400
+  );
+  cloud2.rotation.x = 1.16;
+  cloud2.rotation.y = -0.12;
+  cloud2.rotation.z = Math.random()*2*Math.PI;
+  cloud2.material.opacity = 0;
+  cloudParticles2.push(cloud2);
+  scene.add(cloud2);
+  }
   });
 
 
