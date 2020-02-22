@@ -71,7 +71,11 @@ $(() => {
   function render() {
     let windowHeight=$(window).height();
     let scrollPosition=$(window).scrollTop();
-    console.log(cloudParticles[0].materials);
+    if(cloudParticles[0]==undefined){
+
+    } else {
+      console.log(cloudParticles[0].materials);
+    }
 
     if(Math.random() > 0.95 && blueLight.power<100) {
 
