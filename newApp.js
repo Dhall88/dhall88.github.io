@@ -70,7 +70,7 @@ $(() => {
     let windowHeight=$(window).height();
     let scrollPosition=$(window).scrollTop();
     if (scrollPosition<windowHeight){
-      console.log(windowHeight);
+      console.log(scrollPosition);
       if(index===0) {
         p.material.opacity=0.2
       }
