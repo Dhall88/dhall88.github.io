@@ -45,7 +45,7 @@ $(() => {
   map:texture,
   transparent: true
   });
-  for(let p=0; p<currentCloudNum; p++) {
+  for(let p=0; p<40; p++) {
   let cloud = new THREE.Mesh(cloudGeo, cloudMaterial);
   cloud.position.set(
     Math.random()*400 -200,
@@ -68,14 +68,14 @@ $(() => {
   function render() {
   cloudParticles.forEach((p,index) => {
     let windowHeight=$(window).height();
-    let scrollPostion=$(window).scrollTop();
-    if (scrollPostion<windowHeight){
+    let scrollPosition=$(window).scrollTop();
+    if (scrollPosition<windowHeight){
       console.log(windowHeight);
       if(index===0) {
         p.material.opacity=0.2
       }
 
-    } else if (scrollPostion>windowHeight) {
+    } else if (scrollPosition>windowHeight) {
       console.log('in else if');
       p.material.opacity=0.2
     }
