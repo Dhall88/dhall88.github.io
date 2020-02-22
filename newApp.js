@@ -90,7 +90,7 @@ $(() => {
     let scrollPosition=$(window).scrollTop();
     var lastScrollTop = 0;
     $(window).scroll(function(event){
-       if (scrollPosition > lastScrollTop){
+       if (scrollPosition >= lastScrollTop){
            // downscroll code
            if(cloudParticles[0]!=undefined & scrollPosition<windowHeight) {
              console.log(Math.floor(scrollPosition/windowHeight)*40);
