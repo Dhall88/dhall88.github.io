@@ -75,10 +75,10 @@ $(() => {
         p.material.opacity=0.2
       }
 
-    } else if (scrollPosition>windowHeight) {
-      console.log('in else if');
-      p.material.opacity=0.2
-    }
+    // } else if (scrollPosition>windowHeight) {
+    //   console.log('in else if');
+    //   p.material.opacity=0.2
+    // }
       p.rotation.z -=0.001;
     });
 
