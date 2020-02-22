@@ -72,11 +72,12 @@ $(() => {
   // cloudParticles.forEach((p,index) => {
   //   if (scrollPosition<windowHeight){
   //     console.log(index);
-  //     if(index==undefined) {
-  //       return
-  //     }else if(index===0) {
-  //     p.material.opacity=0.2
-  //     }
+      if(index==undefined) {
+        return
+      }else {
+        cloudParticles[0].material.opacity=0.2
+      // p.material.opacity=0.2
+      }
   //
   //   }
     // else if (scrollPosition>windowHeight) {
