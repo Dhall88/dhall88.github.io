@@ -69,25 +69,27 @@ $(() => {
   function render() {
     let windowHeight=$(window).height();
     let scrollPosition=$(window).scrollTop();
-  // cloudParticles.forEach((p,index) => {
-  //   if (scrollPosition<windowHeight){
-  //     console.log(index);
-  //     if(index===0) {
-  //       p.material.opacity=0.2
-  //     }
-  //
-  //   }
-    // else if (scrollPosition>windowHeight) {
-    //   console.log('in else if');
-    //   p.material.opacity=0.2
-    // }
-    //   p.rotation.z -=0.001;
-    // });
+  cloudParticles.forEach((p,index) => {
+    if (scrollPosition<windowHeight){
+      console.log(index);
+      if(index==undefined) {
+        break
+      }else if(index===0) {
+      p.material.opacity=0.2
+    }
+
+    }
+    else if (scrollPosition>windowHeight) {
+      console.log('in else if');
+      p.material.opacity=0.2
+    }
+      p.rotation.z -=0.001;
+    });
     // console.log(cloudParticles);
     // console.log(cloudParticles[0]);
-    cloud = cloudParticles[0];
-    cloud.material.opacity=0.2;
-    console.log(cloud);
+    // cloud = cloudParticles[0];
+    // cloud.material.opacity=0.2;
+    // console.log(cloud);
 
     if(Math.random() > 0.95 && blueLight.power<100) {
 
