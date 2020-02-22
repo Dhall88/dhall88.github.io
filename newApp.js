@@ -66,22 +66,24 @@ $(() => {
   render();
   }
   function render() {
-  cloudParticles.forEach((p,index) => {
     let windowHeight=$(window).height();
     let scrollPosition=$(window).scrollTop();
-    if (scrollPosition<windowHeight){
-      console.log(index);
-      if(index===0) {
-        p.material.opacity=0.2
-      }
-
-    }
+  // cloudParticles.forEach((p,index) => {
+  //   if (scrollPosition<windowHeight){
+  //     console.log(index);
+  //     if(index===0) {
+  //       p.material.opacity=0.2
+  //     }
+  //
+  //   }
     // else if (scrollPosition>windowHeight) {
     //   console.log('in else if');
     //   p.material.opacity=0.2
     // }
-      p.rotation.z -=0.001;
-    });
+    //   p.rotation.z -=0.001;
+    // });
+
+    cloudParticles[0].material.opacity=0.2
 
     if(Math.random() > 0.95 && blueLight.power<100) {
 
