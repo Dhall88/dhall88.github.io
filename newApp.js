@@ -63,8 +63,6 @@ $(() => {
   cloudParticles.push(cloud);
   scene.add(cloud);
   }
-  });
-
   for(let p=0; p<39; p++) {
   cloud2 = new THREE.Mesh(cloudGeo, cloudMaterial);
   cloud2.position.set(
@@ -79,6 +77,9 @@ $(() => {
   cloudParticles2.push(cloud2);
   scene.add(cloud2);
   }
+  });
+
+
 
 
 
@@ -87,10 +88,10 @@ $(() => {
   function render() {
     let windowHeight=$(window).height();
     let scrollPosition=$(window).scrollTop();
-    cloudParticles.forEach((cloud,index) => {
-      cloud.material.opacity=scrollPosition/windowHeight*0.2
-        cloud.rotation.z -=0.001;
-      });
+    // cloudParticles.forEach((cloud,index) => {
+    //   cloud.material.opacity=scrollPosition/windowHeight*0.2
+    //     cloud.rotation.z -=0.001;
+    //   });
 
     if(Math.random() > 0.95 && blueLight.power<100) {
 
