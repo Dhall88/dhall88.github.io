@@ -75,7 +75,8 @@ $(() => {
         p.material.opacity=0.2
       }
 
-    // } else if (scrollPosition>windowHeight) {
+    }
+    // else if (scrollPosition>windowHeight) {
     //   console.log('in else if');
     //   p.material.opacity=0.2
     // }
