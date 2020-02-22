@@ -73,12 +73,13 @@ $(() => {
   //   if (scrollPosition<windowHeight){
   //     console.log(index);
       if(cloudParticles[0]==undefined) {
-        
+
       }else {
         console.log('in else');
         cloudParticles[0].material.opacity=0.2
       // p.material.opacity=0.2
       }
+      console.log(cloudParticles);
   //
   //   }
     // else if (scrollPosition>windowHeight) {
