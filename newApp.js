@@ -75,6 +75,7 @@ $(() => {
       if(index==undefined) {
         return
       }else {
+        console.log('in else');
         cloudParticles[0].material.opacity=0.2
       // p.material.opacity=0.2
       }
