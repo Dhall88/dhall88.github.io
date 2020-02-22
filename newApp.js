@@ -100,8 +100,9 @@ $(() => {
           // upscroll code
        }
        lastScrollTop = scrollPosition;
-    });
-  }
+    }
+  });
+
     // cloudParticles.forEach((cloud,index) => {
     //   cloud.material.opacity=scrollPosition/windowHeight*0.2
     //     cloud.rotation.z -=0.001;
