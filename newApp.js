@@ -74,7 +74,7 @@ $(() => {
     if(cloudParticles[0]==undefined){
 
     } else {
-      console.log(cloudParticles[0].materials);
+      console.log(cloudParticles[0]);
     }
 
     if(Math.random() > 0.95 && blueLight.power<100) {
