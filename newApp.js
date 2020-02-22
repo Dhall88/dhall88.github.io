@@ -59,7 +59,7 @@ $(() => {
   cloud.rotation.x = 1.16;
   cloud.rotation.y = -0.12;
   cloud.rotation.z = Math.random()*2*Math.PI;
-  cloud.material.opacity = 0.2;
+  cloud.material.opacity = 0;
   cloudParticles.push(cloud);
   scene.add(cloud);
   }
@@ -88,6 +88,7 @@ $(() => {
   function render() {
     let windowHeight=$(window).height();
     let scrollPosition=$(window).scrollTop();
+    cloudParticles[0].material.opacity=0.2
     // cloudParticles.forEach((cloud,index) => {
     //   cloud.material.opacity=scrollPosition/windowHeight*0.2
     //     cloud.rotation.z -=0.001;
