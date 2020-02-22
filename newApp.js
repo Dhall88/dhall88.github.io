@@ -1,9 +1,10 @@
 
 $(() => {
 
-  let scene, camera, renderer, blueLight, currentCloudNum, BlueLightPower, bluePurpleLightPower, cloud;
+  let scene, camera, renderer, blueLight, currentCloudNum, BlueLightPower, bluePurpleLightPower, cloud, cloud2;
   let boolean=false;
   let cloudParticles = [];
+  let cloudParticles2 = [];
   let uuid=[];
 
   function init() {
@@ -48,7 +49,7 @@ $(() => {
   map:texture,
   transparent: true
   });
-  for(let p=0; p<40; p++) {
+  for(let p=0; p<1; p++) {
   cloud = new THREE.Mesh(cloudGeo, cloudMaterial);
   cloud.position.set(
     Math.random()*400 -200,
@@ -58,11 +59,26 @@ $(() => {
   cloud.rotation.x = 1.16;
   cloud.rotation.y = -0.12;
   cloud.rotation.z = Math.random()*2*Math.PI;
-  cloud.material.opacity = 0;
+  cloud.material.opacity = 0.2;
   cloudParticles.push(cloud);
   scene.add(cloud);
   }
   });
+
+  for(let p=0; p<39; p++) {
+  cloud2 = new THREE.Mesh(cloudGeo, cloudMaterial);
+  cloud2.position.set(
+    Math.random()*400 -200,
+    500,
+    Math.random()*300-400
+  );
+  cloud2.rotation.x = 1.16;
+  cloud2.rotation.y = -0.12;
+  cloud2.rotation.z = Math.random()*2*Math.PI;
+  cloud2.material.opacity = 0.2;
+  cloudParticles2.push(cloud2);
+  scene.add(cloud2);
+  }
 
 
 
