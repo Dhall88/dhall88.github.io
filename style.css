@@ -55,7 +55,7 @@ footer {
 
 p {
   color: rgba(215,236,219);
-  padding-right: 10px;
+  padding: 0 1em 0 1em;
   margin-bottom: 0;
   font-size: 30px;
 }
@@ -101,7 +101,7 @@ a {
   flex-direction: column;
   border-radius: 25px;
   background-color: rgba(192,175,199,.4);
-  z-index:5;
+  /* transform: scaleX(0) */
   /* left: 12.5%; */
 
 }
@@ -118,3 +118,49 @@ h2, h4 {
 h4 {
   margin-bottom: 1rem;
 }
+
+/* .fade-in {
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 2s;
+}
+
+.fade-out {
+	animation-name: fadeOutOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 2s;
+}
+
+.spread-screen {
+  animation-name: spreadScreen;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 2s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeOutOpacity {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes spreadScreen {
+  0% {-webkit-transform: scaleX(.05) scaleY(0)}
+  40% {-webkit-transform: scaleX(.05) scaleY(1)}
+  90% {-webkit-transform: scaleX(.98) scaleY(1)}
+  100% {-webkit-transform: scaleX(1) scaleY(1)}
+} */
