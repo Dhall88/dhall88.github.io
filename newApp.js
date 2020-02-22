@@ -72,7 +72,7 @@ $(() => {
   // cloudParticles.forEach((p,index) => {
   //   if (scrollPosition<windowHeight){
   //     console.log(index);
-      if(index==undefined) {
+      if(cloudParticles[0]==undefined) {
         return
       }else {
         console.log('in else');
