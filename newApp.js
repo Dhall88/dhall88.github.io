@@ -22,16 +22,16 @@ $(() => {
   directionalLight.position.set(0,0,1);
   scene.add(directionalLight);
 
-  let purpleLight = new THREE.PointLight(0x6a2a78,25,450,1.7);
+  // let purpleLight = new THREE.PointLight(0x6a2a78,25,450,1.7);
   // purpleLight.position.set(200,300,100);
-  purpleLight.position.set(150,350,100);
-  scene.add(purpleLight);
-  let bluePurpleLight = new THREE.PointLight(0x5a42f5,25,450,1.7);
-  bluePurpleLight.position.set(50,550,100);
-  scene.add(bluePurpleLight);
-  blueLight = new THREE.PointLight(0x3677ac,25,450,1.7);
-  blueLight.position.set(700,300,50);
-  scene.add(blueLight);
+  // purpleLight.position.set(150,350,100);
+  // scene.add(purpleLight);
+  // let bluePurpleLight = new THREE.PointLight(0x5a42f5,25,450,1.7);
+  // bluePurpleLight.position.set(50,550,100);
+  // scene.add(bluePurpleLight);
+  // blueLight = new THREE.PointLight(0x3677ac,25,450,1.7);
+  // blueLight.position.set(700,300,50);
+  // scene.add(blueLight);
   // let nebCenter = new THREE.PointLight(0x3677ac,5,450,1.7);
   // nebCenter.position.set(0,400,0);
   // scene.add(nebCenter);
@@ -89,7 +89,7 @@ $(() => {
     let windowHeight=$(window).height();
     let scrollPosition=$(window).scrollTop();
     if(cloudParticles[0]!=undefined & scrollPosition<windowHeight) {
-      console.log('in if');
+      console.log(Math.floor(scrollPosition/windowHeight)*40);
     cloudParticles[Math.floor(scrollPosition/windowHeight)*40].material.opacity=0.2
   }
     // cloudParticles.forEach((cloud,index) => {
@@ -97,16 +97,16 @@ $(() => {
     //     cloud.rotation.z -=0.001;
     //   });
 
-    if(Math.random() > 0.95 && blueLight.power<100) {
-
-        blueLight.position.set(
-          Math.random()*400,
-          100 + Math.random() *200,
-          100 + Math.random() *100
-        );
-        blueLight.power=(Math.random()*300 + 300);
-    }
-     setTimeout(()=>{blueLight.power = 10;},Math.random()*100)
+    // if(Math.random() > 0.95 && blueLight.power<100) {
+    //
+    //     blueLight.position.set(
+    //       Math.random()*400,
+    //       100 + Math.random() *200,
+    //       100 + Math.random() *100
+    //     );
+    //     blueLight.power=(Math.random()*300 + 300);
+    // }
+    //  setTimeout(()=>{blueLight.power = 10;},Math.random()*100)
 
   renderer.render(scene,camera)
   requestAnimationFrame(render);
