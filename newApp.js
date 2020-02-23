@@ -26,12 +26,12 @@ $(() => {
   // purpleLight.position.set(200,300,100);
   // purpleLight.position.set(150,350,100);
   // scene.add(purpleLight);
-  // let bluePurpleLight = new THREE.PointLight(0x5a42f5,25,450,1.7);
-  // bluePurpleLight.position.set(50,550,100);
-  // scene.add(bluePurpleLight);
-  // blueLight = new THREE.PointLight(0x3677ac,25,450,1.7);
-  // blueLight.position.set(700,300,50);
-  // scene.add(blueLight);
+  let bluePurpleLight = new THREE.PointLight(0x5a42f5,bluePurpleLightPower,450,1.7);
+  bluePurpleLight.position.set(50,550,100);
+  scene.add(bluePurpleLight);
+  blueLight = new THREE.PointLight(0x3677ac,0,450,1.7);
+  blueLight.position.set(700,300,50);
+  scene.add(blueLight);
   // let nebCenter = new THREE.PointLight(0x3677ac,5,450,1.7);
   // nebCenter.position.set(0,400,0);
   // scene.add(nebCenter);
@@ -59,6 +59,9 @@ $(() => {
   cloud.rotation.x = 1.16;
   cloud.rotation.y = -0.12;
   cloud.rotation.z = Math.random()*2*Math.PI;
+  if(p===0){
+    cloud.material.opacity=0.2
+  }
   cloud.material.opacity = 0;
   cloudParticles.push(cloud);
   scene.add(cloud);
@@ -90,16 +93,42 @@ $(() => {
     let scrollPosition=$(window).scrollTop();
     var lastScrollTop = 0;
     $(window).scroll(function(event){
-       if (scrollPosition >= lastScrollTop){
+       // if (scrollPosition >= lastScrollTop){
            // downscroll code
-           if(cloudParticles[0]!=undefined && scrollPosition<windowHeight) {
-             console.log(Math.floor(scrollPosition/windowHeight)*40);
-             cloudParticles[Math.floor(scrollPosition/windowHeight*40)].material.opacity=((40*scrollPosition/windowHeight)-Math.floor(scrollPosition/windowHeight *40))*.2
-       }
-    } else {
-         cloudParticles[Math.floor(scrollPosition/windowHeight*40)].material.opacity=0
-       // upscroll code
-    }
+           if(cloudParticles[0]!=undefined && scrollPosition<2*windowHeight && scrollPosition>windowHeight/20) {
+             console.log(Math.floor(scrollPosition/windowHeight)*20);
+             cloudParticles[Math.floor(scrollPosition/windowHeight*20)].material.opacity=((20*scrollPosition/windowHeight)-Math.floor(scrollPosition/windowHeight *20))*.2
+           }
+           if (scrollPosition>2*windowHeight) {
+             cloudParticles.forEach(cloud => {
+                 cloud.rotation.z -=0.001;
+               });
+           }
+           if (scrollPosition>3*windowHeight&&scrollPosition<4*windowHeight) {
+             bluePurpleLight.power=25;
+           }
+           if (scrollPosition>4*windowHeight) {
+             if(Math.random() > 0.95 && blueLight.power<100) {
+
+                 blueLight.position.set(
+                   Math.random()*400,
+                   100 + Math.random() *200,
+                   100 + Math.random() *100
+                 );
+                 blueLight.power=(Math.random()*300 + 300);
+             }
+              setTimeout(()=>{blueLight.power = 1;},Math.random()*100)
+           }
+           if(scrollPosition>5*windowHeight) {
+              $("body").mousemove(function(event){
+                var relPageCoords = vent.pageY
+                console.log(relPageCoords);
+           }
+    // }
+    // else {
+    //      cloudParticles[Math.floor(scrollPosition/windowHeight*40)].material.opacity=0
+    //    // upscroll code
+    // }
     lastScrollTop = scrollPosition;
   });
 
