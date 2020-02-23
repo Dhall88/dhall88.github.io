@@ -39,8 +39,6 @@ $(() => {
   // let nebCenter = new THREE.PointLight(0x3677ac,5,450,1.7);
   // nebCenter.position.set(0,400,0);
   // scene.add(nebCenter);
-  console.log(purpleLight.intensity);
-  purpleLight.intensity=100;
     renderer = new THREE.WebGLRenderer({alpha: true});
     renderer.setSize(window.innerWidth/1.5,window.innerHeight/1.5);
     renderer.setClearColor(0x000000,0);
@@ -112,9 +110,9 @@ $(() => {
            console.log('in rotation if');
          }
          if (scrollPosition>3*windowHeight&&scrollPosition<4*windowHeight) {
-           backLight=true;
            console.log('in backlight if');
-           console.log(purpleLight.power);
+           purpleLight.intensity=25;
+           bluePurpleLight.intensity=25;
          }
          if (scrollPosition>4*windowHeight&&scrollPosition<5*windowHeight) {
           lightningBoolean=true;
