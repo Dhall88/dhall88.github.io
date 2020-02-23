@@ -139,12 +139,12 @@ $(() => {
         cloud.rotation.z -= cloudRotation
       });
 
-   //  if(backLight===true) {
-   //    blueLight.power=100;
-   //    bluePurpleLight.power=100;
-   //    console.log('in backlight render');
-   //    console.log(blueLight.power);
-   //  }
+    if(backLight===true) {
+      purpleLight.power=100;
+      bluePurpleLight.power=100;
+      console.log('in backlight render');
+      console.log(blueLight.power);
+    }
    //
    //  if(lightningBoolean===true) {
    //    console.log('in lightning render');
