@@ -30,7 +30,7 @@ $(() => {
   scene.add(purpleLight);
 
   greenLight = new THREE.PointLight(0x32a852,1,450,1.7);
-  greenLight.position.set(-200,300,200);
+  greenLight.position.set(0,500,200);
   scene.add(greenLight);
 
   lightning = new THREE.PointLight(0x3677ac,0,450,1.7);
