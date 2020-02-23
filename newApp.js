@@ -177,6 +177,7 @@ $(() => {
   }
   setTimeout(()=>{
     if(disco) {
+      disco=false;
       if(!firstPass) {
         purpleLight.color.setHex(discoPurple);
         greenLight.color.setHex(discoGreen);
@@ -191,6 +192,7 @@ $(() => {
         greenLight.color.setHex(redLight.color.getHex());
         redLight.color.setHex(temp)
         console.log('in disco lights');
+        disco=true;
       },500)
 
   }
