@@ -39,6 +39,7 @@ $(() => {
   // let nebCenter = new THREE.PointLight(0x3677ac,5,450,1.7);
   // nebCenter.position.set(0,400,0);
   // scene.add(nebCenter);
+  console.log(purpleLight.power);
     renderer = new THREE.WebGLRenderer({alpha: true});
     renderer.setSize(window.innerWidth/1.5,window.innerHeight/1.5);
     renderer.setClearColor(0x000000,0);
@@ -132,19 +133,11 @@ $(() => {
 
   function render() {
 
-    purpleLight.power=100;
-    bluePurpleLight.power=100;
+    console.log(purpleLight.power);
 
     cloudParticles.forEach((cloud,index) => {
         cloud.rotation.z -= cloudRotation
       });
-
-    if(backLight===true) {
-      purpleLight.power=100;
-      bluePurpleLight.power=100;
-      console.log('in backlight render');
-      console.log(blueLight.power);
-    }
    //
    //  if(lightningBoolean===true) {
    //    console.log('in lightning render');
