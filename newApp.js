@@ -122,7 +122,7 @@ $(() => {
            if(scrollPosition>5*windowHeight) {
               $("body").mousemove(function(event){
                 var relPageCoords = vent.pageY
-                console.log(relPageCoords);
+                console.log(relPageCoordsz);
            }
     // }
     // else {
