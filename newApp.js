@@ -27,7 +27,7 @@ $(() => {
   // purpleLight.position.set(200,300,100);
   // purpleLight.position.set(150,350,100);
   // scene.add(purpleLight);
-  bluePurpleLight = new THREE.PointLight(0x5a42f5,bluePurpleLightPower,450,1.7);
+  bluePurpleLight = new THREE.PointLight(0x5a42f5,1,450,1.7);
   bluePurpleLight.position.set(50,550,100);
   scene.add(bluePurpleLight);
   blueLight = new THREE.PointLight(0x3677ac,0,450,1.7);
@@ -107,17 +107,17 @@ $(() => {
            console.log('in rotation if');
          }
          if (scrollPosition>3*windowHeight&&scrollPosition<4*windowHeight) {
-           bluePurpleLight.power=25;
+           bluePurpleLight.power=50;
            console.log('in backlight if');
          }
-         if (scrollPosition>4*windowHeight) {
+         if (scrollPosition>4*windowHeight&&scrollPosition<5*windowHeight) {
           lightningBoolean=true;
           console.log('in lightning if');
          }
          if(scrollPosition>5*windowHeight) {
             $("body").mousemove(function(event){
               var relPageCoords = event.pageY
-              console.log(relPageCoordsz);
+              console.log(relPageCoords);
          })
          console.log('in final if');
        }
