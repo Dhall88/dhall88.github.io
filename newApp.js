@@ -27,7 +27,6 @@ $(() => {
 
   purpleLight = new THREE.PointLight(0x6a2a78,1,450,1.7);
   purpleLight.position.set(200,300,100);
-  purpleLight.position.set(150,350,100);
   scene.add(purpleLight);
   bluePurpleLight = new THREE.PointLight(0x5a42f5,1,450,1.7);
   bluePurpleLight.position.set(50,550,100);
@@ -128,14 +127,11 @@ $(() => {
 
        lastScrollTop = scrollPosition;
      });
-let testBool=true
+
   function render() {
 
-    while (testBool) {
-    blueLight.power=100;
+    purpleLight.power=100;
     bluePurpleLight.power=100;
-    testBool=false;
-  }
 
     cloudParticles.forEach((cloud,index) => {
         cloud.rotation.z -= cloudRotation
