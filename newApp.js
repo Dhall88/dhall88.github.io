@@ -128,11 +128,14 @@ $(() => {
 
        lastScrollTop = scrollPosition;
      });
-
+let testBool=true
   function render() {
 
+    while (testBool) {
     blueLight.power=100;
     bluePurpleLight.power=100;
+    testBool=false;
+  }
 
     cloudParticles.forEach((cloud,index) => {
         cloud.rotation.z -= cloudRotation
