@@ -111,6 +111,7 @@ $(() => {
          if (scrollPosition>3*windowHeight&&scrollPosition<4*windowHeight) {
            backLight=true;
            console.log('in backlight if');
+           console.log(blueLight.power);
          }
          if (scrollPosition>4*windowHeight&&scrollPosition<5*windowHeight) {
           lightningBoolean=true;
@@ -135,10 +136,12 @@ $(() => {
     cloudParticles.forEach((cloud,index) => {
         cloud.rotation.z -= cloudRotation
       });
+
     if(backLight===true) {
       blueLight.power=100;
       bluePurpleLight.power=100;
       console.log('in backlight render');
+      console.log(blueLight.power);
     }
 
     if(lightningBoolean===true) {
