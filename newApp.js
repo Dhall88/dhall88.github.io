@@ -110,7 +110,7 @@ $(() => {
          if (scrollPosition>3*windowHeight&&scrollPosition<4*windowHeight) {
            backLight=true;
            console.log('in backlight if');
-           console.log(blueLight.power);
+           console.log(purpleLight.power);
          }
          if (scrollPosition>4*windowHeight&&scrollPosition<5*windowHeight) {
           lightningBoolean=true;
