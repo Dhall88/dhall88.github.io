@@ -3,6 +3,7 @@ $(() => {
 
   let scene, camera, renderer, blueLight, currentCloudNum, BlueLightPower, greenLightPower, cloud, cloud2, greenLight, purpleLight, redLight
   let lightningBoolean=false;
+  let disco=false;
   let backLight=false;
   let cloudRotation=0;
   let boolean=false;
@@ -137,6 +138,11 @@ $(() => {
         xCoord = event.pageX;
         console.log(xCoord);
         console.log(windowWidth);
+        if(xCoord>windowWidth-30&&yCoord>5*windowHeight) {
+          disco=true;
+        } else {
+          disco=false
+        }
    })
 
  //   if (xCoord>windowWidth-20) {
@@ -160,6 +166,15 @@ $(() => {
               );
       lightning.intensity = 50 + Math.random() * 200;
     }
+  }
+
+  if(disco) {
+    disco=false;
+    let temp;
+    console.log(purpleLight.color);
+    // setTimeout(()=> {
+    //   temp=purpleLight.color
+    // })
   }
 
    //
