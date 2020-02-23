@@ -40,6 +40,7 @@ $(() => {
   // nebCenter.position.set(0,400,0);
   // scene.add(nebCenter);
   console.log(purpleLight.intensity);
+  purpleLight.intensity=100;
     renderer = new THREE.WebGLRenderer({alpha: true});
     renderer.setSize(window.innerWidth/1.5,window.innerHeight/1.5);
     renderer.setClearColor(0x000000,0);
@@ -133,7 +134,7 @@ $(() => {
 
   function render() {
 
-    console.log(purpleLight.power);
+    console.log(purpleLight.intensity);
 
     cloudParticles.forEach((cloud,index) => {
         cloud.rotation.z -= cloudRotation
