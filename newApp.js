@@ -1,7 +1,7 @@
 
 $(() => {
 
-  let scene, camera, renderer, blueLight, currentCloudNum, BlueLightPower, bluePurpleLightPower, cloud, cloud2, bluePurpleLight, purpleLight
+  let scene, camera, renderer, blueLight, currentCloudNum, BlueLightPower, greenLightPower, cloud, cloud2, greenLight, purpleLight
   let lightningBoolean=false;
   let backLight=false;
   let cloudRotation=0;
@@ -29,13 +29,13 @@ $(() => {
   purpleLight.position.set(200,300,100);
   scene.add(purpleLight);
 
-  bluePurpleLight = new THREE.PointLight(0x5a42f5,1,450,1.7);
-  bluePurpleLight.position.set(50,550,100);
-  scene.add(bluePurpleLight);
+  greenLight = new THREE.PointLight(0x32a852,1,450,1.7);
+  greenLight.position.set(50,550,100);
+  scene.add(greenLight);
 
-  blueLight = new THREE.PointLight(0x3677ac,0,450,1.7);
-  blueLight.position.set(700,300,50);
-  scene.add(blueLight);
+  lightning = new THREE.PointLight(0x3677ac,0,450,1.7);
+  lightning.position.set(700,300,50);
+  scene.add(lightning);
   // let nebCenter = new THREE.PointLight(0x3677ac,5,450,1.7);
   // nebCenter.position.set(0,400,0);
   // scene.add(nebCenter);
@@ -111,8 +111,8 @@ $(() => {
          }
          if (scrollPosition>3*windowHeight&&scrollPosition<4*windowHeight) {
            console.log('in backlight if');
-           purpleLight.intensity=25;
-           bluePurpleLight.intensity=25;
+           // purpleLight.intensity=(scrollPosition-3*windowHeight)/windowHeight*25;
+           greenLight.intensity=25;
          }
          if (scrollPosition>4*windowHeight&&scrollPosition<5*windowHeight) {
           lightningBoolean=true;
