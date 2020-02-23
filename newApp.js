@@ -175,7 +175,9 @@ $(() => {
       lightning.intensity = 50 + Math.random() * 100;
     }
   }
-  setTimeout(()=>{
+
+
+
     if(disco) {
       disco=false;
       if(!firstPass) {
@@ -184,8 +186,7 @@ $(() => {
         redLight.color.setHex(discoRed);
         firstPass=true;
       }
-
-      setTimeout(()=> {
+      setTimeout(()=>{
 
         let temp = purpleLight.color.getHex();
         purpleLight.color.setHex(greenLight.color.getHex())
@@ -193,10 +194,10 @@ $(() => {
         redLight.color.setHex(temp)
         console.log('in disco lights');
         disco=true;
-      },500)
 
-  }
-},5)
+      },1000)
+    }
+
 
 
     // setTimeout(()=> {
