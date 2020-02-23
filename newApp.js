@@ -100,6 +100,7 @@ $(() => {
 
   $(window).scroll(function(event){
     let windowHeight=$(window).height();
+    let windowWidth=$(window).width();
     let scrollPosition=$(window).scrollTop();
     var lastScrollTop = 0;
      // if (scrollPosition >= lastScrollTop){
@@ -125,11 +126,14 @@ $(() => {
           console.log('in lightning if');
          }
          if(scrollPosition>5*windowHeight) {
+           let yCoord, xCoord
             $("body").mousemove(function(event){
-              var relPageCoords = event.pageY
-              console.log(relPageCoords);
+              yCoord = event.pageY;
+              xCoord = event.pageX;
          })
-         console.log('in final if');
+         if (xCoord>windowWidth-20)
+         console.log(yCoord);
+         console.log(5*windowHeight);
        }
 
 
@@ -149,7 +153,7 @@ $(() => {
                  100 + Math.random() *200,
                  100 - Math.random() *100
               );
-      lightning.intensity = 50 + Math.random() * 500;
+      lightning.intensity = 50 + Math.random() * 200;
     }
   }
 
