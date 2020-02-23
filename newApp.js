@@ -10,6 +10,13 @@ $(() => {
   let cloudParticles = [];
   let cloudParticles2 = [];
   let uuid=[];
+  let firstPass=false
+  let originalPurple=0x5b4870;
+  let originalGreen=0x487053;
+  let originalRed=0x875d54;
+  let discoPurple=0x6a2a78;
+  let discoGreen=0x32a852;
+  let discoRed=0xfc0f03;
 
   function init() {
     currentCloudNum=1;
@@ -26,15 +33,15 @@ $(() => {
   directionalLight.position.set(0,0,1);
   scene.add(directionalLight);
 
-  purpleLight = new THREE.PointLight(0x5b4870,1,450,1.7);
+  purpleLight = new THREE.PointLight(originalPurple,1,450,1.7);
   purpleLight.position.set(50,300,100);
   scene.add(purpleLight);
 
-  greenLight = new THREE.PointLight(0x487053,1,450,1.7);
+  greenLight = new THREE.PointLight(originalGreen,1,450,1.7);
   greenLight.position.set(50,500,-100);
   scene.add(greenLight);
 
-  redLight = new THREE.PointLight(0x875d54,1,450,1.7);
+  redLight = new THREE.PointLight(originalRed,1,450,1.7);
   redLight.position.set(300,300,-100);
   scene.add(redLight);
 
@@ -141,7 +148,8 @@ $(() => {
         if(xCoord>windowWidth-30&&yCoord>5*windowHeight) {
           disco=true;
         } else {
-          disco=false
+          disco=false;
+          firstPass=false;
         }
    })
 
@@ -168,15 +176,23 @@ $(() => {
     }
   }
 
-  // 6a2a78 vibrant purple
-  // 32a852 vibrant green
-  // fc0f03 vibrant red
-
   if(disco) {
     disco=false;
-    let temp = purpleLight.color.getHex();
-    greenLight.color.setHex(0x6a2a78);
-    redLight.color.setHex(0x6a2a78)
+    if(!firstPass) {
+      purpleLight.color.setHex(discoPurple);
+      greenLight.color.setHex(discoGreen);
+      redLight.color.setHex(discoRed);
+      firstPass=true;
+    }
+
+    setTimeout(()=> {
+
+      let temp = purpleLight.color.getHex();
+      perpleLight.color.setHex(greenLight.color.getHex())
+      greenLight.color.setHex(redLight.color.getHex());
+      redLight.color.setHex(temp)
+    },500)
+
 
     // setTimeout(()=> {
     //   temp=purpleLight.color
