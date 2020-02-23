@@ -125,7 +125,6 @@ $(() => {
           lightningBoolean=true;
           console.log('in lightning if');
          }
-         if(scrollPosition>5*windowHeight) {
 
 
 
