@@ -135,15 +135,15 @@ $(() => {
       $(document).mousemove(function(event){
         yCoord = event.pageY;
         xCoord = event.pageX;
+        console.log(xCoord);
+        console.log(windowWidth);
    })
 
-   console.log(xCoord);
-   console.log(windowWidth);
  //   if (xCoord>windowWidth-20) {
  //   console.log(yCoord);
  //   console.log(5*windowHeight);
  // }
- }
+ 
 
   function render() {
 
