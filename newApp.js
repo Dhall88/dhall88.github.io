@@ -91,10 +91,10 @@ $(() => {
   render();
   }
 
-  let windowHeight=$(window).height();
-  let scrollPosition=$(window).scrollTop();
-  var lastScrollTop = 0;
   $(window).scroll(function(event){
+    let windowHeight=$(window).height();
+    let scrollPosition=$(window).scrollTop();
+    var lastScrollTop = 0;
      // if (scrollPosition >= lastScrollTop){
          // downscroll code
          if(cloudParticles[0]!=undefined && scrollPosition<2*windowHeight && scrollPosition>windowHeight/20) {
