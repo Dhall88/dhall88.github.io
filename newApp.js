@@ -1,7 +1,7 @@
 
 $(() => {
 
-  let scene, camera, renderer, blueLight, currentCloudNum, BlueLightPower, bluePurpleLightPower, cloud, cloud2;
+  let scene, camera, renderer, blueLight, currentCloudNum, BlueLightPower, bluePurpleLightPower, cloud, cloud2, bluePurpleLight, lightningBoolean
   let boolean=false;
   let cloudParticles = [];
   let cloudParticles2 = [];
@@ -26,7 +26,7 @@ $(() => {
   // purpleLight.position.set(200,300,100);
   // purpleLight.position.set(150,350,100);
   // scene.add(purpleLight);
-  let bluePurpleLight = new THREE.PointLight(0x5a42f5,bluePurpleLightPower,450,1.7);
+  bluePurpleLight = new THREE.PointLight(0x5a42f5,bluePurpleLightPower,450,1.7);
   bluePurpleLight.position.set(50,550,100);
   scene.add(bluePurpleLight);
   blueLight = new THREE.PointLight(0x3677ac,0,450,1.7);
@@ -100,30 +100,20 @@ $(() => {
              cloudParticles[Math.floor(scrollPosition/windowHeight*20)].material.opacity=((20*scrollPosition/windowHeight)-Math.floor(scrollPosition/windowHeight *20))*.2
            }
            if (scrollPosition>2*windowHeight) {
-             cloudParticles.forEach(cloud => {
-                 cloud.rotation.z -=0.001;
-               });
+             cloudRotation=0.001
            }
            if (scrollPosition>3*windowHeight&&scrollPosition<4*windowHeight) {
              bluePurpleLight.power=25;
            }
            if (scrollPosition>4*windowHeight) {
-             if(Math.random() > 0.95 && blueLight.power<100) {
-
-                 blueLight.position.set(
-                   Math.random()*400,
-                   100 + Math.random() *200,
-                   100 + Math.random() *100
-                 );
-                 blueLight.power=(Math.random()*300 + 300);
-             }
-              setTimeout(()=>{blueLight.power = 1;},Math.random()*100)
+            lightningBoolean=true;
            }
            if(scrollPosition>5*windowHeight) {
               $("body").mousemove(function(event){
                 var relPageCoords = vent.pageY
                 console.log(relPageCoordsz);
            })
+           console.log('in final if');
          }
     // }
     // else {
@@ -133,21 +123,23 @@ $(() => {
     lastScrollTop = scrollPosition;
   });
 
-    // cloudParticles.forEach((cloud,index) => {
-    //   cloud.material.opacity=scrollPosition/windowHeight*0.2
-    //     cloud.rotation.z -=0.001;
-    //   });
+    cloudParticles.forEach((cloud,index) => {
+      cloud.material.opacity=scrollPosition/windowHeight*0.2
+        cloud.rotation.z -= cloudRotation
+      });
 
-    // if(Math.random() > 0.95 && blueLight.power<100) {
-    //
-    //     blueLight.position.set(
-    //       Math.random()*400,
-    //       100 + Math.random() *200,
-    //       100 + Math.random() *100
-    //     );
-    //     blueLight.power=(Math.random()*300 + 300);
-    // }
-    //  setTimeout(()=>{blueLight.power = 10;},Math.random()*100)
+    if(lightningBoolean===true) {
+      if(Math.random() > 0.95 && blueLight.power<100) {
+
+        blueLight.position.set(
+          Math.random()*400,
+          100 + Math.random() *200,
+          100 + Math.random() *100
+        );
+        blueLight.power=(Math.random()*300 + 300);
+    }
+     setTimeout(()=>{blueLight.power = 10;},Math.random()*100)
+   }
 
   renderer.render(scene,camera)
   requestAnimationFrame(render);
