@@ -124,6 +124,7 @@ $(() => {
                 var relPageCoords = vent.pageY
                 console.log(relPageCoordsz);
            }
+         }
     // }
     // else {
     //      cloudParticles[Math.floor(scrollPosition/windowHeight*40)].material.opacity=0
