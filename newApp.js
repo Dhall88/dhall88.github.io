@@ -98,9 +98,9 @@ $(() => {
   render();
   }
 
+  let windowHeight=$(window).height();
+  let windowWidth=$(window).width();
   $(window).scroll(function(event){
-    let windowHeight=$(window).height();
-    let windowWidth=$(window).width();
     let scrollPosition=$(window).scrollTop();
     var lastScrollTop = 0;
      // if (scrollPosition >= lastScrollTop){
@@ -143,7 +143,7 @@ $(() => {
  //   console.log(yCoord);
  //   console.log(5*windowHeight);
  // }
- 
+
 
   function render() {
 
