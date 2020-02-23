@@ -175,31 +175,31 @@ $(() => {
       lightning.intensity = 50 + Math.random() * 100;
     }
   }
+  setTimeout(()=>{
+    if(disco) {
+      if(!firstPass) {
+        purpleLight.color.setHex(discoPurple);
+        greenLight.color.setHex(discoGreen);
+        redLight.color.setHex(discoRed);
+        firstPass=true;
+      }
 
-  if(disco) {
-    disco=false;
-    if(!firstPass) {
-      purpleLight.color.setHex(discoPurple);
-      greenLight.color.setHex(discoGreen);
-      redLight.color.setHex(discoRed);
-      firstPass=true;
-    }
+      setTimeout(()=> {
 
-    setTimeout(()=> {
+        let temp = purpleLight.color.getHex();
+        purpleLight.color.setHex(greenLight.color.getHex())
+        greenLight.color.setHex(redLight.color.getHex());
+        redLight.color.setHex(temp)
+        console.log('in disco lights');
+      },500)
 
-      let temp = purpleLight.color.getHex();
-      purpleLight.color.setHex(greenLight.color.getHex())
-      greenLight.color.setHex(redLight.color.getHex());
-      redLight.color.setHex(temp)
-      disco=true;
-      console.log('in disco lights');
-    },500)
+  }
+},5)
 
 
     // setTimeout(()=> {
     //   temp=purpleLight.color
     // })
-  }
 
    //
    //  if(lightningBoolean===true) {
