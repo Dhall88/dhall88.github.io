@@ -146,7 +146,12 @@ $(() => {
         console.log(xCoord);
         console.log(windowWidth);
         if(xCoord>windowWidth-30&&yCoord>5*windowHeight) {
-          disco=true;
+          if(firstPass===true){
+
+          }else {
+            disco=true;
+
+          }
         } else {
           disco=false;
           firstPass=false;
