@@ -175,8 +175,8 @@ $(() => {
   if(disco) {
     disco=false;
     let temp = purpleLight.color.getHex();
-    greenLight.color.setHex(temp);
-    redLight.color.setHex(temp)
+    greenLight.color.setHex(0x6a2a78);
+    redLight.color.setHex(0x6a2a78)
 
     // setTimeout(()=> {
     //   temp=purpleLight.color
