@@ -117,9 +117,9 @@ $(() => {
          }
          if (scrollPosition>3*windowHeight&&scrollPosition<4*windowHeight) {
            console.log('in backlight if');
-           purpleLight.intensity=(scrollPosition-3*windowHeight)/windowHeight*25;
-           greenLight.intensity=(scrollPosition-3*windowHeight)/windowHeight*25;
-           redLight.intensity=(scrollPosition-3*windowHeight)/windowHeight*25;
+           purpleLight.intensity=(scrollPosition-3*windowHeight)/windowHeight*10;
+           greenLight.intensity=(scrollPosition-3*windowHeight)/windowHeight*10;
+           redLight.intensity=(scrollPosition-3*windowHeight)/windowHeight*10;
            // (scrollPosition-3*windowHeight)/windowHeight*
          }
          if (scrollPosition>4*windowHeight&&scrollPosition<5*windowHeight) {
@@ -157,14 +157,14 @@ $(() => {
         cloud.rotation.z -= cloudRotation
       });
       if(lightningBoolean===true) {
-      if(Math.random() > 0.93 || lightning.intensity > 100) {
+      if(Math.random() > 0.93 || lightning.intensity > 60) {
         if(lightning.intensity < 100)
         lightning.position.set(
                  Math.random()*400,
                  100 + Math.random() *200,
                  100 - Math.random() *100
               );
-      lightning.intensity = 50 + Math.random() * 200;
+      lightning.intensity = 50 + Math.random() * 100;
     }
   }
 
