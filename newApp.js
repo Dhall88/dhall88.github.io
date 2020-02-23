@@ -121,16 +121,17 @@ $(() => {
        //   })
        //   console.log('in final if');
        // }
+       // }
+       // else {
+       //      cloudParticles[Math.floor(scrollPosition/windowHeight*40)].material.opacity=0
+       //    // upscroll code
+       // }
+       lastScrollTop = scrollPosition;
+     });
 
   function render() {
 
-    // }
-    // else {
-    //      cloudParticles[Math.floor(scrollPosition/windowHeight*40)].material.opacity=0
-    //    // upscroll code
-    // }
-    lastScrollTop = scrollPosition;
-  });
+
 
     cloudParticles.forEach((cloud,index) => {
       cloud.material.opacity=scrollPosition/windowHeight*0.2
