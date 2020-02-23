@@ -110,7 +110,7 @@ $(() => {
            cloudParticles[Math.floor(scrollPosition/windowHeight*20)].material.opacity=((20*scrollPosition/windowHeight)-Math.floor(scrollPosition/windowHeight *20))*.2
            console.log('in cloud particle if');
          }
-         if (scrollPosition>2*windowHeight) {
+         if (scrollPosition>2*windowHeight&&scrollPosition<3*windowHeight) {
            cloudRotation=0.001
            console.log('in rotation if');
          }
@@ -127,7 +127,7 @@ $(() => {
          }
          if(scrollPosition>5*windowHeight) {
            let yCoord, xCoord
-            $("body").mousemove(function(event){
+            $(document).mousemove(function(event){
               yCoord = event.pageY;
               xCoord = event.pageX;
          })
