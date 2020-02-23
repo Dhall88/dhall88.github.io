@@ -2,6 +2,7 @@
 $(() => {
 
   let scene, camera, renderer, blueLight, currentCloudNum, BlueLightPower, bluePurpleLightPower, cloud, cloud2, bluePurpleLight, lightningBoolean
+  let cloudRotation=0;
   let boolean=false;
   let cloudParticles = [];
   let cloudParticles2 = [];
