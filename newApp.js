@@ -90,37 +90,40 @@ $(() => {
 
   render();
   }
-  function render() {
-    let windowHeight=$(window).height();
-    let scrollPosition=$(window).scrollTop();
-    var lastScrollTop = 0;
-    $(window).scroll(function(event){
-       // if (scrollPosition >= lastScrollTop){
-           // downscroll code
-           if(cloudParticles[0]!=undefined && scrollPosition<2*windowHeight && scrollPosition>windowHeight/20) {
-             console.log(Math.floor(scrollPosition/windowHeight)*20);
-             cloudParticles[Math.floor(scrollPosition/windowHeight*20)].material.opacity=((20*scrollPosition/windowHeight)-Math.floor(scrollPosition/windowHeight *20))*.2
-             console.log('in cloud particle if');
-           }
-           if (scrollPosition>2*windowHeight) {
-             cloudRotation=0.001
-             console.log('in rotation if');
-           }
-           if (scrollPosition>3*windowHeight&&scrollPosition<4*windowHeight) {
-             bluePurpleLight.power=25;
-             console.log('in backlight if');
-           }
-           if (scrollPosition>4*windowHeight) {
-            lightningBoolean=true;
-            console.log('in lightning if');
-           }
-           if(scrollPosition>5*windowHeight) {
-              $("body").mousemove(function(event){
-                var relPageCoords = event.pageY
-                console.log(relPageCoordsz);
-           })
-           console.log('in final if');
+
+  let windowHeight=$(window).height();
+  let scrollPosition=$(window).scrollTop();
+  var lastScrollTop = 0;
+  $(window).scroll(function(event){
+     // if (scrollPosition >= lastScrollTop){
+         // downscroll code
+         if(cloudParticles[0]!=undefined && scrollPosition<2*windowHeight && scrollPosition>windowHeight/20) {
+           console.log(Math.floor(scrollPosition/windowHeight)*20);
+           cloudParticles[Math.floor(scrollPosition/windowHeight*20)].material.opacity=((20*scrollPosition/windowHeight)-Math.floor(scrollPosition/windowHeight *20))*.2
+           console.log('in cloud particle if');
          }
+       //   if (scrollPosition>2*windowHeight) {
+       //     cloudRotation=0.001
+       //     console.log('in rotation if');
+       //   }
+       //   if (scrollPosition>3*windowHeight&&scrollPosition<4*windowHeight) {
+       //     bluePurpleLight.power=25;
+       //     console.log('in backlight if');
+       //   }
+       //   if (scrollPosition>4*windowHeight) {
+       //    lightningBoolean=true;
+       //    console.log('in lightning if');
+       //   }
+       //   if(scrollPosition>5*windowHeight) {
+       //      $("body").mousemove(function(event){
+       //        var relPageCoords = event.pageY
+       //        console.log(relPageCoordsz);
+       //   })
+       //   console.log('in final if');
+       // }
+
+  function render() {
+
     // }
     // else {
     //      cloudParticles[Math.floor(scrollPosition/windowHeight*40)].material.opacity=0
