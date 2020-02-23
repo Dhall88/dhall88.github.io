@@ -136,8 +136,8 @@ $(() => {
         cloud.rotation.z -= cloudRotation
       });
     if(backLight===true) {
-      blueLight.power=25;
-      bluePurpleLight.power=25;
+      blueLight.power=100;
+      bluePurpleLight.power=100;
       console.log('in backlight render');
     }
 
