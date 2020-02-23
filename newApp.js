@@ -138,11 +138,21 @@ $(() => {
 
   function render() {
 
-    console.log(purpleLight.intensity);
-
     cloudParticles.forEach((cloud,index) => {
         cloud.rotation.z -= cloudRotation
       });
+      if(lightningBoolean===true) {
+      if(Math.random() > 0.93 || lightning.intensity > 100) {
+        if(lightning.intensity < 100)
+        lightning.position.set(
+                 Math.random()*400,
+                 100 + Math.random() *200,
+                 100 - Math.random() *100
+              );
+      lightning.intensity = 50 + Math.random() * 500;
+    }
+  }
+
    //
    //  if(lightningBoolean===true) {
    //    console.log('in lightning render');
