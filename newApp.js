@@ -192,6 +192,7 @@ $(() => {
       greenLight.color.setHex(redLight.color.getHex());
       redLight.color.setHex(temp)
       disco=true;
+      console.log('in disco lights');
     },500)
 
 
