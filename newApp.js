@@ -188,9 +188,10 @@ $(() => {
     setTimeout(()=> {
 
       let temp = purpleLight.color.getHex();
-      perpleLight.color.setHex(greenLight.color.getHex())
+      purpleLight.color.setHex(greenLight.color.getHex())
       greenLight.color.setHex(redLight.color.getHex());
       redLight.color.setHex(temp)
+      disco=true;
     },500)
 
 
