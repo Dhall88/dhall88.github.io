@@ -25,12 +25,14 @@ $(() => {
   directionalLight.position.set(0,0,1);
   scene.add(directionalLight);
 
-  purpleLight = new THREE.PointLight(0x6a2a78,1,450,1.7);
+  purpleLight = new THREE.PointLight(0x6a2a78,100,450,1.7);
   purpleLight.position.set(200,300,100);
   scene.add(purpleLight);
+
   bluePurpleLight = new THREE.PointLight(0x5a42f5,1,450,1.7);
   bluePurpleLight.position.set(50,550,100);
   scene.add(bluePurpleLight);
+
   blueLight = new THREE.PointLight(0x3677ac,0,450,1.7);
   blueLight.position.set(700,300,50);
   scene.add(blueLight);
