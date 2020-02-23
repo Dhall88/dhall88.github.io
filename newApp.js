@@ -126,23 +126,25 @@ $(() => {
           console.log('in lightning if');
          }
          if(scrollPosition>5*windowHeight) {
-           let yCoord, xCoord
-            $(document).mousemove(function(event){
-              yCoord = event.pageY;
-              xCoord = event.pageX;
-         })
 
-         console.log(xCoord);
-         console.log(windowWidth);
-       //   if (xCoord>windowWidth-20) {
-       //   console.log(yCoord);
-       //   console.log(5*windowHeight);
-       // }
-       }
 
 
        lastScrollTop = scrollPosition;
      });
+
+     let yCoord, xCoord
+      $(document).mousemove(function(event){
+        yCoord = event.pageY;
+        xCoord = event.pageX;
+   })
+
+   console.log(xCoord);
+   console.log(windowWidth);
+ //   if (xCoord>windowWidth-20) {
+ //   console.log(yCoord);
+ //   console.log(5*windowHeight);
+ // }
+ }
 
   function render() {
 
