@@ -150,7 +150,7 @@ $(() => {
 
           }else {
             disco=true;
-            $('#audio').trigger('play')
+            $('#audio').play()
 
           }
         } else {
