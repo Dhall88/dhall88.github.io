@@ -138,9 +138,11 @@ $(() => {
     if(backLight===true) {
       blueLight.power=25;
       bluePurpleLight.power=25;
+      console.log('in backlight render');
     }
 
     if(lightningBoolean===true) {
+      console.log('in lightning render');
       if(Math.random() > 0.95 && blueLight.power<100) {
 
         blueLight.position.set(
