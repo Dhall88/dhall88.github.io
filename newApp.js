@@ -123,7 +123,7 @@ $(() => {
            // (scrollPosition-3*windowHeight)/windowHeight*
          }
          if (scrollPosition>4*windowHeight&&scrollPosition<5*windowHeight) {
-          lightningBoolean=true;
+          // lightningBoolean=true;
           console.log('in lightning if');
          }
 
@@ -174,8 +174,10 @@ $(() => {
 
   if(disco) {
     disco=false;
-    let temp;
-    console.log(purpleLight.color.getHex());
+    let temp = purpleLight.color.getHex();
+    greenLight.color.setHex(temp);
+    redLight.color.setHex(temp)
+
     // setTimeout(()=> {
     //   temp=purpleLight.color
     // })
