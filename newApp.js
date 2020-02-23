@@ -92,15 +92,15 @@ $(() => {
     $(window).scroll(function(event){
        if (scrollPosition >= lastScrollTop){
            // downscroll code
-           if(cloudParticles[0]!=undefined & scrollPosition<windowHeight) {
+           if(cloudParticles[0]!=undefined && scrollPosition<windowHeight) {
              console.log(Math.floor(scrollPosition/windowHeight)*40);
-             cloudParticles[Math.floor(scrollPosition/windowHeight*40)].material.opacity=0.2
-       } else {
-            cloudParticles[Math.floor(scrollPosition/windowHeight*40)].material.opacity=0
-          // upscroll code
+             cloudParticles[Math.floor(scrollPosition/windowHeight*40)].material.opacity=((40*scrollPosition/windowHeight)-Math.floor(scrollPosition/windowHeight *40))*.2
        }
-       lastScrollTop = scrollPosition;
+    } else {
+         cloudParticles[Math.floor(scrollPosition/windowHeight*40)].material.opacity=0
+       // upscroll code
     }
+    lastScrollTop = scrollPosition;
   });
 
     // cloudParticles.forEach((cloud,index) => {
