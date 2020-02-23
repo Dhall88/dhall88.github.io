@@ -26,15 +26,15 @@ $(() => {
   directionalLight.position.set(0,0,1);
   scene.add(directionalLight);
 
-  purpleLight = new THREE.PointLight(0x6a2a78,1,450,1.7);
+  purpleLight = new THREE.PointLight(0x5b4870,1,450,1.7);
   purpleLight.position.set(50,300,100);
   scene.add(purpleLight);
 
-  greenLight = new THREE.PointLight(0x32a852,1,450,1.7);
+  greenLight = new THREE.PointLight(0x487053,1,450,1.7);
   greenLight.position.set(50,500,-100);
   scene.add(greenLight);
 
-  redLight = new THREE.PointLight(0xfc0f03,1,450,1.7);
+  redLight = new THREE.PointLight(0x875d54,1,450,1.7);
   redLight.position.set(300,300,-100);
   scene.add(redLight);
 
@@ -112,14 +112,14 @@ $(() => {
            console.log('in cloud particle if');
          }
          if (scrollPosition>2*windowHeight&&scrollPosition<3*windowHeight) {
-           cloudRotation=0.001
+           cloudRotation=(scrollPosition-2*windowHeight)/windowHeight*0.003
            console.log('in rotation if');
          }
          if (scrollPosition>3*windowHeight&&scrollPosition<4*windowHeight) {
            console.log('in backlight if');
-           purpleLight.intensity=25;
-           greenLight.intensity=25;
-           redLight.intensity=25;
+           purpleLight.intensity=(scrollPosition-3*windowHeight)/windowHeight*25;
+           greenLight.intensity=(scrollPosition-3*windowHeight)/windowHeight*25;
+           redLight.intensity=(scrollPosition-3*windowHeight)/windowHeight*25;
            // (scrollPosition-3*windowHeight)/windowHeight*
          }
          if (scrollPosition>4*windowHeight&&scrollPosition<5*windowHeight) {
@@ -167,6 +167,10 @@ $(() => {
       lightning.intensity = 50 + Math.random() * 200;
     }
   }
+
+  // 6a2a78 vibrant purple
+  // 32a852 vibrant green
+  // fc0f03 vibrant red
 
   if(disco) {
     disco=false;
