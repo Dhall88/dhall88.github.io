@@ -25,11 +25,11 @@ $(() => {
   directionalLight.position.set(0,0,1);
   scene.add(directionalLight);
 
-  purpleLight = new THREE.PointLight(0x6a2a78,0,450,1.7);
+  purpleLight = new THREE.PointLight(0x6a2a78,100,450,1.7);
   purpleLight.position.set(200,300,100);
   purpleLight.position.set(150,350,100);
   scene.add(purpleLight);
-  bluePurpleLight = new THREE.PointLight(0x5a42f5,0,450,1.7);
+  bluePurpleLight = new THREE.PointLight(0x5a42f5,100,450,1.7);
   bluePurpleLight.position.set(50,550,100);
   scene.add(bluePurpleLight);
   blueLight = new THREE.PointLight(0x3677ac,0,450,1.7);
@@ -137,26 +137,26 @@ $(() => {
         cloud.rotation.z -= cloudRotation
       });
 
-    if(backLight===true) {
-      blueLight.power=100;
-      bluePurpleLight.power=100;
-      console.log('in backlight render');
-      console.log(blueLight.power);
-    }
-
-    if(lightningBoolean===true) {
-      console.log('in lightning render');
-      if(Math.random() > 0.95 && blueLight.power<100) {
-
-        blueLight.position.set(
-          Math.random()*400,
-          100 + Math.random() *200,
-          100 + Math.random() *100
-        );
-        blueLight.power=(Math.random()*300 + 300);
-    }
-     setTimeout(()=>{blueLight.power = 10;},Math.random()*100)
-   }
+   //  if(backLight===true) {
+   //    blueLight.power=100;
+   //    bluePurpleLight.power=100;
+   //    console.log('in backlight render');
+   //    console.log(blueLight.power);
+   //  }
+   //
+   //  if(lightningBoolean===true) {
+   //    console.log('in lightning render');
+   //    if(Math.random() > 0.95 && blueLight.power<100) {
+   //
+   //      blueLight.position.set(
+   //        Math.random()*400,
+   //        100 + Math.random() *200,
+   //        100 + Math.random() *100
+   //      );
+   //      blueLight.power=(Math.random()*300 + 300);
+   //  }
+   //   setTimeout(()=>{blueLight.power = 10;},Math.random()*100)
+   // }
 
   renderer.render(scene,camera)
   requestAnimationFrame(render);
