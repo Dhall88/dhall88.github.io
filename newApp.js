@@ -134,7 +134,6 @@ $(() => {
 
 
     cloudParticles.forEach((cloud,index) => {
-      cloud.material.opacity=scrollPosition/windowHeight*0.2
         cloud.rotation.z -= cloudRotation
       });
 
