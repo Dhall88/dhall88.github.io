@@ -116,9 +116,9 @@ audioElement.setAttribute('src', 'macho_man.mp3');
     var lastScrollTop = 0;
      // if (scrollPosition >= lastScrollTop){
          // downscroll code
-         if(cloudParticles[0]!=undefined && scrollPosition<2*windowHeight && scrollPosition>windowHeight/20) {
-           console.log(Math.floor(scrollPosition/windowHeight)*20);
-           cloudParticles[Math.floor(scrollPosition/windowHeight*20)].material.opacity=((20*scrollPosition/windowHeight)-Math.floor(scrollPosition/windowHeight *20))*.2
+         if(cloudParticles[0]!=undefined && scrollPosition>windowHeight && scrollPosition<2*windowHeight) {
+           console.log(Math.floor(scrollPosition/windowHeight)*40);
+           cloudParticles[Math.floor(scrollPosition/windowHeight*40)].material.opacity=((40*scrollPosition/windowHeight)-Math.floor(scrollPosition/windowHeight *40))*.2
            console.log('in cloud particle if');
          }
          if (scrollPosition>2*windowHeight&&scrollPosition<3*windowHeight) {
