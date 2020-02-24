@@ -19,7 +19,7 @@ $(() => {
   let discoRed=0xfc0f03;
 var audioElement = document.createElement('audio');
 audioElement.setAttribute('src', 'macho_man.mp3');
-audioElement.play();
+
 
   function init() {
     currentCloudNum=1;
@@ -153,7 +153,7 @@ audioElement.play();
 
           }else {
             disco=true;
-            macho.play()
+            audioElement.play();
 
           }
         } else {
