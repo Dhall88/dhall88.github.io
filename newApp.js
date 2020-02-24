@@ -119,14 +119,11 @@ audioElement.setAttribute('src', 'macho_man.mp3');
          if(cloudParticles[0]!=undefined && scrollPosition>windowHeight && scrollPosition<2*windowHeight) {
            console.log(Math.floor(scrollPosition/windowHeight)*40);
            cloudParticles[Math.floor((scrollPosition-windowHeight)/windowHeight*40)].material.opacity=((40*scrollPosition/windowHeight)-Math.floor(scrollPosition/windowHeight *40))*.2
-           console.log('in cloud particle if');
          }
          if (scrollPosition>2*windowHeight&&scrollPosition<3*windowHeight) {
            cloudRotation=(scrollPosition-2*windowHeight)/windowHeight*0.003
-           console.log('in rotation if');
          }
          if (scrollPosition>3*windowHeight&&scrollPosition<4*windowHeight) {
-           console.log('in backlight if');
            purpleLight.intensity=(scrollPosition-3*windowHeight)/windowHeight*10;
            greenLight.intensity=(scrollPosition-3*windowHeight)/windowHeight*10;
            redLight.intensity=(scrollPosition-3*windowHeight)/windowHeight*10;
@@ -153,14 +150,19 @@ audioElement.setAttribute('src', 'macho_man.mp3');
 
           }else {
             disco=true;
+            lightningBoolean=false;
             audioElement.play();
 
           }
         } else {
           disco=false;
           firstPass=false;
-          audioElement.pause();
-          audioElement.prop("currentTime",0);
+          lightningBoolean=true;
+          purpleLight.color.setHex(originalPurple);
+          greenLight.color.setHex(originalGreen);
+          redLight.color.setHex(originalRed)
+          // audioElement.pause();
+          // audioElement.prop("currentTime",0);
         }
    })
 
@@ -176,7 +178,6 @@ audioElement.setAttribute('src', 'macho_man.mp3');
         cloud.rotation.z -= cloudRotation
       });
       if(lightningBoolean===true) {
-        console.log('lightning boolean true');
       if(Math.random() > 0.95 || lightning.intensity > 30) {
         if(lightning.intensity < 30)
         lightning.position.set(
