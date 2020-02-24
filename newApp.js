@@ -176,14 +176,14 @@ audioElement.setAttribute('src', 'macho_man.mp3');
         cloud.rotation.z -= cloudRotation
       });
       if(lightningBoolean===true) {
-      if(Math.random() > 0.93 || lightning.intensity > 30) {
-        if(lightning.intensity < 100)
+      if(Math.random() > 0.95 || lightning.intensity > 30) {
+        if(lightning.intensity < 30)
         lightning.position.set(
                  Math.random()*400,
                  100 + Math.random() *200,
                  100 - Math.random() *100
               );
-      lightning.intensity = 50 + Math.random() * 5000;
+      lightning.intensity = 50 + Math.random() * 50;
     }
   }
 
