@@ -79,7 +79,11 @@ audioElement.setAttribute('src', 'macho_man.mp3');
   cloud.rotation.y = -0.12;
   cloud.rotation.z = Math.random()*2*Math.PI;
     cloud.material.opacity=0.2
-  cloud.material.opacity = 0;
+    if(p===0) {
+      cloud.material.opacity=0.2
+    } else {
+      cloud.material.opacity = 0;
+    }
   cloudParticles.push(cloud);
   scene.add(cloud);
   }
