@@ -17,9 +17,9 @@ $(() => {
   let discoPurple=0x6a2a78;
   let discoGreen=0x32a852;
   let discoRed=0xfc0f03;
-  const macho = new Audio("macho_man.mp3");
-  macho.play();
-  console.log(macho);
+var audioElement = document.createElement('audio');
+audioElement.setAttribute('src', 'macho_man.mp3');
+audioElement.play();
 
   function init() {
     currentCloudNum=1;
