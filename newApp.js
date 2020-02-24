@@ -1,7 +1,7 @@
 
 $(() => {
 
-  let scene, camera, renderer, blueLight, currentCloudNum, BlueLightPower, greenLightPower, cloud, cloud2, greenLight, purpleLight, redLight, ambient, directionalLight
+  let scene, camera, renderer, blueLight, currentCloudNum, BlueLightPower, greenLightPower, cloud, cloud2, greenLight, purpleLight, redLight, ambient, directionalLight, discoCounter=0;
   let lightningBoolean=false;
   let disco=false;
   let backLight=false;
@@ -190,9 +190,6 @@ audioElement.setAttribute('src', 'macho_man_snippet.mp3');
     }
   }
 
-
-    let discoTimer=940;
-    let discoCounter=0
     if(disco) {
       disco=false;
       if(!firstPass) {
@@ -205,14 +202,14 @@ audioElement.setAttribute('src', 'macho_man_snippet.mp3');
         discoCounter++;
         firstPass=true;
       }
-      if(discoCounter>1&&discoCounter<4) {
-        discoTimer=470;
-      } else {
-        discoTimer=940;
-      }
       setTimeout(()=>{
-        console.log(discoCounter);
         discoCounter++;
+        if(discoCounter>1&&discoCounter<4) {
+          discoTimer=470;
+        } else {
+          discoTimer=940;
+        }
+        console.log(discoCounter);
 
         if(killDisco){
           console.log('in kill disco');
