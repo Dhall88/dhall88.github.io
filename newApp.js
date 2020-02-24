@@ -191,7 +191,7 @@ audioElement.setAttribute('src', 'macho_man_snippet.mp3');
   }
 
 
-    let discoTimer=950;
+    let discoTimer=940;
     let discoCounter=0
     if(disco) {
       disco=false;
@@ -206,11 +206,12 @@ audioElement.setAttribute('src', 'macho_man_snippet.mp3');
         firstPass=true;
       }
       if(discoCounter>1&&discoCounter<4) {
-        discoTimer=475;
+        discoTimer=470;
       } else {
-        discoTimer=950;
+        discoTimer=940;
       }
       setTimeout(()=>{
+        console.log(discoCounter);
         discoCounter++;
 
         if(killDisco){
