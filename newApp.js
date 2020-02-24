@@ -191,7 +191,8 @@ audioElement.setAttribute('src', 'macho_man_snippet.mp3');
   }
 
 
-
+    let discoTimer=950;
+    let discoCounter=0
     if(disco) {
       disco=false;
       if(!firstPass) {
@@ -201,9 +202,15 @@ audioElement.setAttribute('src', 'macho_man_snippet.mp3');
         purpleLight.intensity=25;
         greenLight.intensity=25;
         redLight.intensity=25;
+        discoCounter++;
+        discoTimer=950;
         firstPass=true;
       }
+      if(discoCounter>1&&discoCounter<4) {
+        discoTimer=475;
+      }
       setTimeout(()=>{
+        discoCounter++;
 
         if(killDisco){
           console.log('in kill disco');
@@ -226,7 +233,7 @@ audioElement.setAttribute('src', 'macho_man_snippet.mp3');
         disco=true;
       }
 
-    },900)
+    },discoTimer)
     }
 
 
