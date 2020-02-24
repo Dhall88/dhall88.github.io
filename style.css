@@ -16,7 +16,7 @@ div {
   position: fixed;
   width: calc(70vw);
   height: calc(105vw);
-  top: 10px;
+  top: -20px;
   right: 0;
   background: rgb(181,170,170);
 }
