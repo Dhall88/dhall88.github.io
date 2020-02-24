@@ -36,6 +36,9 @@ a{
   color: rgba(215,236,219);
   text-decoration: none;
   transition: transform .2s;
+  font-size: 16px;
+  font-family: 'Simonetta', sans-serif;
+  padding: 0 1em 0 1em;
 }
 
 a:hover{
