@@ -11,9 +11,9 @@ $(() => {
   let cloudParticles2 = [];
   let uuid=[];
   let firstPass=false
-  let originalPurple=0x5b4870;
-  let originalGreen=0x487053;
-  let originalRed=0x875d54;
+  let originalPurple=0x341440;
+  let originalGreen=0x174524;
+  let originalRed=0x6b231e;
   let discoPurple=0x6a2a78;
   let discoGreen=0x32a852;
   let discoRed=0xfc0f03;
@@ -118,7 +118,7 @@ audioElement.setAttribute('src', 'macho_man.mp3');
            cloudParticles[0].material.opacity=(scrollPosition-windowHeight/2)/(windowHeight/2)*0.2
          }
          if(scrollPosition>1.5*windowHeight && scrollPosition<2*windowHeight) {
-           cloudParticles[Math.floor((scrollPosition-(windowHeight*1.5))/windowHeight/2*40)].material.opacity=.2
+           cloudParticles[Math.floor((scrollPosition-(windowHeight*1.5))/(windowHeight/2)*40)].material.opacity=.2
            console.log(Math.floor((scrollPosition-(windowHeight*1.5))/windowHeight/2*40));
          }
          if (scrollPosition>2*windowHeight&&scrollPosition<3*windowHeight) {
@@ -209,6 +209,9 @@ audioElement.setAttribute('src', 'macho_man.mp3');
           disco=false;
           firstPass=false;
           killDisco=false;
+          purpleLight.color.setHex(originalPurple);
+          greenLight.color.setHex(originalGreen);
+          redLight.color.setHex(originalRed);
         }else {
         disco=true;
       }
