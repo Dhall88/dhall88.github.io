@@ -3,7 +3,7 @@
 aside {
   position: absolute;
   width: calc(30vw);
-  height: calc(700vh);
+  height: calc(6200vh);
   background-color: #179E9E;
 }
 
@@ -41,6 +41,7 @@ a {
   font-size: 20px;
   font-family: 'Simonetta', sans-serif;
   margin: 0 1em 0 2em;
+  min-width: 30%;
   width: auto;
 }
 
