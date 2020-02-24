@@ -65,7 +65,8 @@ a:hover{
 }
 
 .contacts>p {
-  margin: 0 0 .5em 2em;
+  margin:0;
+  padding: 0 0 .5em 1em;
 }
 /* .audios {
   display:none;
