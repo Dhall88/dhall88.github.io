@@ -146,19 +146,18 @@ audioElement.setAttribute('src', 'macho_man.mp3');
         xCoord = event.pageX;
         console.log(scrollPosition);
         console.log(windowHeight);
-        if(scrollPosition>4.5*windowHeight) {
-          console.log('in disco scroll if');
           if(xCoord>windowWidth-30&&yCoord>5*windowHeight) {
+            console.log('in disco turn on');
             if(firstPass===true){
 
             }else {
               disco=true;
               lightningBoolean=false;
               audioElement.play();
-
             }
           }
-          else {
+          else if(xCoord<windowWidth-30&&yCoord<5*windowHeight&&yCoord>4*windowHeight) {
+            console.log('in disco turn off');
             disco=false;
             firstPass=false;
             lightningBoolean=true
