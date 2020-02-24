@@ -1,7 +1,7 @@
 aside {
   position: absolute;
   width: calc(30vw);
-  background-color: red;
+  background-color: blue;
 }
 
 div {
@@ -16,6 +16,16 @@ div {
   height: calc(100vw);
   right: 0;
   background: rgb(181,170,170);
+}
+aside>div {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  red
+}
+div>p {
+  font-size: 16px;
+  color: white;
 }
 /* .audios {
   display:none;

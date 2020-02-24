@@ -78,11 +78,8 @@ audioElement.setAttribute('src', 'macho_man.mp3');
   cloud.rotation.x = 1.16;
   cloud.rotation.y = -0.12;
   cloud.rotation.z = Math.random()*2*Math.PI;
-  if(p===0){
     cloud.material.opacity=0.2
-  } else {
   cloud.material.opacity = 0;
-}
   cloudParticles.push(cloud);
   scene.add(cloud);
   }
@@ -116,9 +113,12 @@ audioElement.setAttribute('src', 'macho_man.mp3');
     var lastScrollTop = 0;
      // if (scrollPosition >= lastScrollTop){
          // downscroll code
-         if(cloudParticles[0]!=undefined && scrollPosition>windowHeight && scrollPosition<2*windowHeight) {
+         if(cloudParticles[0]!=undefined&&scrollPosition>windowHeight/2) {
+           cloudParticles[0].material.opacity=(scrollposition-windowHeight/2)/(windowHeight/2)*0.2
+         }
+         if(scrollPosition>(windowHeight+(windowHeight/40)) && scrollPosition<2*windowHeight) {
            console.log(Math.floor(scrollPosition/windowHeight)*40);
-           cloudParticles[Math.floor((scrollPosition-windowHeight)/windowHeight*40)].material.opacity=((40*scrollPosition/windowHeight)-Math.floor(scrollPosition/windowHeight *40))*.2
+           cloudParticles[Math.floor((scrollPosition-windowHeight)/windowHeight*39)+1].material.opacity=((40*scrollPosition/windowHeight)-Math.floor(scrollPosition/windowHeight *40))*.2
          }
          if (scrollPosition>2*windowHeight&&scrollPosition<3*windowHeight) {
            cloudRotation=(scrollPosition-2*windowHeight)/windowHeight*0.003
@@ -154,7 +154,7 @@ audioElement.setAttribute('src', 'macho_man.mp3');
             audioElement.play();
 
           }
-        } else {
+        } else if (xCoord<windowWidth-30||yCoord<5*windowHeight){
           disco=false;
           firstPass=false;
           lightningBoolean=true;
