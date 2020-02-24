@@ -204,7 +204,7 @@ audioElement.setAttribute('src', 'macho_man_snippet.mp3');
       }
       setTimeout(()=>{
         discoCounter++;
-        if(discoCounter>2&&discoCounter<6) {
+        if(discoCounter>2&&discoCounter<5) {
           discoTimer=470;
         } else {
           discoTimer=940;
