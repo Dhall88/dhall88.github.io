@@ -113,14 +113,14 @@ audioElement.setAttribute('src', 'macho_man.mp3');
     var lastScrollTop = 0;
      // if (scrollPosition >= lastScrollTop){
          // downscroll code
-         if(cloudParticles[0]!=undefined&&scrollPosition>windowHeight/2) {
+         if(cloudParticles[0]!=undefined&&scrollPosition>windowHeight/2&&scrollPosition<windowHeight) {
            cloudParticles[0].material.opacity=(scrollPosition-windowHeight/2)/(windowHeight/2)*0.2
          }
-         if(scrollPosition>(windowHeight+(windowHeight/40)) && scrollPosition<2*windowHeight) {
-           console.log(Math.floor(scrollPosition/windowHeight)*40);
-           cloudParticles[Math.floor((scrollPosition-windowHeight)/windowHeight*39)+1].material.opacity=((40*scrollPosition/windowHeight)-Math.floor(scrollPosition/windowHeight *40))*.2
+         if(scrollPosition>1.5*windowHeight && scrollPosition<2*windowHeight) {
+           cloudParticles[Math.floor((scrollPosition-windowHeight*1.5)/windowHeight/2*40)].material.opacity=((40*scrollPosition/windowHeight)-Math.floor(scrollPosition/windowHeight *40))*.2
          }
          if (scrollPosition>2*windowHeight&&scrollPosition<3*windowHeight) {
+           
            cloudRotation=(scrollPosition-2*windowHeight)/windowHeight*0.003
          }
          if (scrollPosition>3*windowHeight&&scrollPosition<4*windowHeight) {
@@ -129,7 +129,7 @@ audioElement.setAttribute('src', 'macho_man.mp3');
            redLight.intensity=(scrollPosition-3*windowHeight)/windowHeight*10;
            // (scrollPosition-3*windowHeight)/windowHeight*
          }
-         if (scrollPosition>4*windowHeight&&scrollPosition<5*windowHeight) {
+         if (scrollPosition>(4*windowHeight+(windowHeight/2))&&scrollPosition<5*windowHeight) {
           lightningBoolean=true;
           // console.log('in lightning if');
          }
