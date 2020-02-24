@@ -11,9 +11,9 @@ $(() => {
   let cloudParticles2 = [];
   let uuid=[];
   let firstPass=false
-  let originalPurple=0x341440;
-  let originalGreen=0x174524;
-  let originalRed=0x6b231e;
+  let originalPurple=0x28023d;
+  let originalGreen=0x023d07;
+  let originalRed=0x420703;
   let discoPurple=0x6a2a78;
   let discoGreen=0x32a852;
   let discoRed=0xfc0f03;
@@ -179,14 +179,14 @@ audioElement.setAttribute('src', 'macho_man.mp3');
       });
             lightning.intensity = 0;
       if(lightningBoolean===true) {
-      if(Math.random() > 0.95 || lightning.intensity > 30) {
-        if(lightning.intensity < 30)
+      if(Math.random() > 0.95 || lightning.intensity > 20) {
+        if(lightning.intensity < 20)
         lightning.position.set(
                  Math.random()*400,
                  100 + Math.random() *200,
                  100 - Math.random() *100
               );
-      lightning.intensity = 10 + Math.random() * 50;
+      lightning.intensity = 5 + Math.random() * 50;
     }
   }
 
