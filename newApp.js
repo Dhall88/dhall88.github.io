@@ -114,7 +114,7 @@ audioElement.setAttribute('src', 'macho_man.mp3');
      // if (scrollPosition >= lastScrollTop){
          // downscroll code
          if(cloudParticles[0]!=undefined&&scrollPosition>windowHeight/2) {
-           cloudParticles[0].material.opacity=(scrollposition-windowHeight/2)/(windowHeight/2)*0.2
+           cloudParticles[0].material.opacity=(scrollPosition-windowHeight/2)/(windowHeight/2)*0.2
          }
          if(scrollPosition>(windowHeight+(windowHeight/40)) && scrollPosition<2*windowHeight) {
            console.log(Math.floor(scrollPosition/windowHeight)*40);
