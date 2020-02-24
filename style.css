@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Simonetta&display=swap');
+
 aside {
   position: absolute;
   width: calc(30vw);
@@ -24,8 +26,9 @@ aside>div {
   red
 }
 div>p {
-  font-size: 16px;
+  font-size: 26px;
   color: white;
+  font-family: 'Simonetta', sans-serif;
 }
 /* .audios {
   display:none;

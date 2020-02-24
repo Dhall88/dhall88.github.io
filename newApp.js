@@ -210,6 +210,7 @@ audioElement.setAttribute('src', 'macho_man.mp3');
           purpleLight.color.setHex(originalPurple);
           greenLight.color.setHex(originalGreen);
           redLight.color.setHex(originalRed);
+          audioElement.pause();
         }else {
           console.log('in run disco');
           let temp = purpleLight.color.getHex();
