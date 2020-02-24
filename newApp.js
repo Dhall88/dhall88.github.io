@@ -200,7 +200,6 @@ audioElement.setAttribute('src', 'macho_man_snippet.mp3');
         purpleLight.intensity=25;
         greenLight.intensity=25;
         redLight.intensity=25;
-        discoCounter++;
         firstPass=true;
       }
       setTimeout(()=>{
@@ -211,6 +210,7 @@ audioElement.setAttribute('src', 'macho_man_snippet.mp3');
           discoTimer=940;
         }
         console.log(discoCounter);
+        console.log(discoTimer);
 
         if(killDisco){
           console.log('in kill disco');
