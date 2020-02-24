@@ -31,6 +31,16 @@ div>p {
   font-family: 'Simonetta', sans-serif;
   padding:1em;
 }
+
+a{
+  color: rgba(215,236,219);
+  text-decoration: none;
+  transition: transform .2s;
+}
+
+a:hover{
+    transform: scale(1.05)
+}
 /* .audios {
   display:none;
 } */
