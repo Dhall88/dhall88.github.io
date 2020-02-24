@@ -144,7 +144,7 @@ audioElement.setAttribute('src', 'macho_man.mp3');
       $(document).mousemove(function(event){
         yCoord = event.pageY;
         xCoord = event.pageX;
-        console.log(xCoord);
+        console.log(scrollPosition);
         console.log(windowWidth);
         if(scrollPosition>4.5*windowHeight) {
           console.log('in disco scroll if');
