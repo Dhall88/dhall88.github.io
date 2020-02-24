@@ -41,6 +41,14 @@ a{
 a:hover{
     transform: scale(1.05)
 }
+
+.intro {
+  position: absolute;
+  height: calc(100vh);
+  width: calc(100vw);
+  background-color: #179E9E;
+  z-index: 5;
+}
 /* .audios {
   display:none;
 } */
