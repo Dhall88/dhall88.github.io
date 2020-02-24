@@ -1,7 +1,7 @@
 
 $(() => {
 
-  let scene, camera, renderer, blueLight, currentCloudNum, BlueLightPower, greenLightPower, cloud, cloud2, greenLight, purpleLight, redLight, ambient
+  let scene, camera, renderer, blueLight, currentCloudNum, BlueLightPower, greenLightPower, cloud, cloud2, greenLight, purpleLight, redLight, ambient, directionalLight
   let lightningBoolean=false;
   let disco=false;
   let backLight=false;
@@ -32,7 +32,7 @@ audioElement.setAttribute('src', 'macho_man.mp3');
     ambient = new THREE.AmbientLight(0x555555,1);
     scene.add(ambient);
 
-    let directionalLight = new THREE.DirectionalLight(0xff8c19);
+    directionalLight = new THREE.DirectionalLight(0xff8c19,1);
   directionalLight.position.set(0,0,1);
   scene.add(directionalLight);
 
@@ -198,7 +198,8 @@ audioElement.setAttribute('src', 'macho_man.mp3');
         purpleLight.color.setHex(discoPurple);
         greenLight.color.setHex(discoGreen);
         redLight.color.setHex(discoRed);
-        ambient.intensity=0;1
+        ambient.intensity=0;
+        directionalLight.intensity=0;
         firstPass=true;
       }
       setTimeout(()=>{
@@ -221,7 +222,7 @@ audioElement.setAttribute('src', 'macho_man.mp3');
         disco=true;
       }
 
-      },1000)
+    },900)
     }
 
 
