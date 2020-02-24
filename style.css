@@ -51,6 +51,7 @@ a:hover{
 }
 
 .intro {
+  font-size: 10em;
   position: absolute;
   height: calc(100vh);
   width: calc(100vw);
