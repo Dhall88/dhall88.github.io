@@ -158,7 +158,7 @@ audioElement.setAttribute('src', 'macho_man.mp3');
               audioElement.play();
             }
           }
-          else if(xCoord<windowWidth-30&&yCoord<6*windowHeight&&yCoord>4*windowHeight) {
+          else if(xCoord<windowWidth-100&&yCoord<6*windowHeight&&yCoord>5*windowHeight) {
             console.log('in disco turn off');
             killDisco=true;
             lightningBoolean=true
@@ -198,7 +198,7 @@ audioElement.setAttribute('src', 'macho_man.mp3');
         purpleLight.color.setHex(discoPurple);
         greenLight.color.setHex(discoGreen);
         redLight.color.setHex(discoRed);
-        ambient.intensity=0;
+        ambient.intensity=0;1
         firstPass=true;
       }
       setTimeout(()=>{
