@@ -118,7 +118,8 @@ audioElement.setAttribute('src', 'macho_man.mp3');
            cloudParticles[0].material.opacity=(scrollPosition-windowHeight/2)/(windowHeight/2)*0.2
          }
          if(scrollPosition>1.5*windowHeight && scrollPosition<2*windowHeight) {
-           cloudParticles[Math.floor((scrollPosition-windowHeight*1.5)/windowHeight/2*40)].material.opacity=.2
+           cloudParticles[Math.floor((scrollPosition-(windowHeight*1.5))/windowHeight/2*40)].material.opacity=.2
+           console.log(Math.floor((scrollPosition-(windowHeight*1.5))/windowHeight/2*40));
          }
          if (scrollPosition>2*windowHeight&&scrollPosition<3*windowHeight) {
 
@@ -156,7 +157,7 @@ audioElement.setAttribute('src', 'macho_man.mp3');
               audioElement.play();
             }
           }
-          else if(xCoord<windowWidth-30&&yCoord<5*windowHeight&&yCoord>4*windowHeight) {
+          else if(xCoord<windowWidth-30&&yCoord<6*windowHeight&&yCoord>4*windowHeight) {
             console.log('in disco turn off');
             disco=false;
             firstPass=false;
