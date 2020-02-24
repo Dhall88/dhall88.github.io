@@ -29,7 +29,7 @@ audioElement.setAttribute('src', 'macho_man.mp3');
     camera.rotation.x = 1.16;
     camera.rotation.y = -0.12;
     camera.rotation.z = 0.27;
-    let ambient = new THREE.AmbientLight(0x555555);
+    let ambient = new THREE.AmbientLight(0x555555,1);
     scene.add(ambient);
 
     let directionalLight = new THREE.DirectionalLight(0xff8c19);
@@ -198,6 +198,7 @@ audioElement.setAttribute('src', 'macho_man.mp3');
         purpleLight.color.setHex(discoPurple);
         greenLight.color.setHex(discoGreen);
         redLight.color.setHex(discoRed);
+        ambient.intensity=0;
         firstPass=true;
       }
       setTimeout(()=>{
