@@ -29,10 +29,10 @@ audioElement.setAttribute('src', 'macho_man.mp3');
     camera.rotation.x = 1.16;
     camera.rotation.y = -0.12;
     camera.rotation.z = 0.27;
-    ambient = new THREE.AmbientLight(0x555555,1);
+    ambient = new THREE.AmbientLight(0x555555,0);
     scene.add(ambient);
 
-    directionalLight = new THREE.DirectionalLight(0xff8c19,1);
+    directionalLight = new THREE.DirectionalLight(0xff8c19,0);
   directionalLight.position.set(0,0,1);
   scene.add(directionalLight);
 
