@@ -41,7 +41,7 @@ a {
   transition: transform .2s;
   font-size: 20px;
   font-family: 'Simonetta', sans-serif;
-  margin: 0 1em 0 2em;
+  margin: 0 1em 1em 2em;
   min-width: 30%;
   width: 50%;
 }
