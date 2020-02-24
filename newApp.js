@@ -134,7 +134,7 @@ audioElement.setAttribute('src', 'macho_man.mp3');
          }
          if (scrollPosition>4*windowHeight&&scrollPosition<5*windowHeight) {
           lightningBoolean=true;
-          console.log('in lightning if');
+          // console.log('in lightning if');
          }
 
 
@@ -176,6 +176,7 @@ audioElement.setAttribute('src', 'macho_man.mp3');
         cloud.rotation.z -= cloudRotation
       });
       if(lightningBoolean===true) {
+        console.log('lightning boolean true');
       if(Math.random() > 0.95 || lightning.intensity > 30) {
         if(lightning.intensity < 30)
         lightning.position.set(
@@ -183,7 +184,7 @@ audioElement.setAttribute('src', 'macho_man.mp3');
                  100 + Math.random() *200,
                  100 - Math.random() *100
               );
-      lightning.intensity = 50 + Math.random() * 50;
+      lightning.intensity = 10 + Math.random() * 50;
     }
   }
 
