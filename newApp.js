@@ -19,9 +19,6 @@ $(() => {
   let discoRed=0xfc0f03;
 var audioElement = document.createElement('audio');
 audioElement.setAttribute('src', 'macho_man.mp3');
-$( "#target" ).click(function() {
-  audioElement.play();
-});
 
 
   function init() {
