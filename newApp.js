@@ -158,7 +158,7 @@ audioElement.setAttribute('src', 'macho_man_snippet.mp3');
               audioElement.play();
             }
           }
-          else if(xCoord<windowWidth-100&&yCoord<6*windowHeight&&yCoord>5*windowHeight) {
+          else if(xCoord<windowWidth-100||yCoord<6*windowHeight&&yCoord>5*windowHeight) {
             console.log('in disco turn off');
             killDisco=true;
             lightningBoolean=true
