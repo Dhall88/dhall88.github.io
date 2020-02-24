@@ -55,7 +55,7 @@ audioElement.setAttribute('src', 'macho_man.mp3');
   // nebCenter.position.set(0,400,0);
   // scene.add(nebCenter);
     renderer = new THREE.WebGLRenderer({alpha: true});
-    renderer.setSize(window.innerWidth/1.5,window.innerHeight/1.5);
+    renderer.setSize(window.innerWidth/1.2,window.innerHeight/1.2);
     renderer.setClearColor(0x000000,0);
     document.getElementById("nebula").appendChild(renderer.domElement);
 
