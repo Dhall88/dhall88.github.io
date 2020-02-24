@@ -154,6 +154,7 @@ audioElement.setAttribute('src', 'macho_man.mp3');
             }else {
               disco=true;
               lightningBoolean=false;
+              killDisco=false;
               audioElement.play();
             }
           }
