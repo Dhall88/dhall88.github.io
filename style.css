@@ -51,14 +51,17 @@ a:hover{
 }
 
 .intro {
-  font-size: 60px;
   position: absolute;
   height: calc(100vh);
   width: calc(100vw);
   top:-20px;
-  padding: 0 200px 0 200px;
   background-color: #179E9E;
   z-index: 5;
+}
+
+.intro>p {
+  font-size: 60px;
+  margin: 0 150px 0 150px;
 }
 /* .audios {
   display:none;
