@@ -108,9 +108,10 @@ audioElement.setAttribute('src', 'macho_man.mp3');
 
   let windowHeight=$(window).height();
   let windowWidth=$(window).width();
+  let scrollPosition;
   $(window).scroll(function(event){
-    let scrollPosition=$(window).scrollTop();
     var lastScrollTop = 0;
+      let scrollPosition=$(window).scrollTop();
      // if (scrollPosition >= lastScrollTop){
          // downscroll code
          if(cloudParticles[0]!=undefined&&scrollPosition>windowHeight/2&&scrollPosition<windowHeight) {
@@ -145,25 +146,24 @@ audioElement.setAttribute('src', 'macho_man.mp3');
         xCoord = event.pageX;
         console.log(xCoord);
         console.log(windowWidth);
-        if(xCoord>windowWidth-30&&yCoord>5*windowHeight) {
-          if(firstPass===true){
+        if(scrollPosition>5*windowHeight) {
+          console.log('in disco scroll if');
+          if(xCoord>windowWidth-30&&yCoord>5*windowHeight) {
+            if(firstPass===true){
 
-          }else {
-            disco=true;
-            lightningBoolean=false;
-            audioElement.play();
+            }else {
+              disco=true;
+              lightningBoolean=false;
+              audioElement.play();
 
+            }
           }
-        } else if (xCoord<windowWidth-30||yCoord<5*windowHeight){
-          disco=false;
-          firstPass=false;
-          lightningBoolean=true;
-          purpleLight.color.setHex(originalPurple);
-          greenLight.color.setHex(originalGreen);
-          redLight.color.setHex(originalRed)
-          // audioElement.pause();
-          // audioElement.prop("currentTime",0);
-        }
+          else {
+            disco=false;
+            firstPass=false;
+            lightningBoolean=true
+          }
+        } 
    })
 
  //   if (xCoord>windowWidth-20) {
