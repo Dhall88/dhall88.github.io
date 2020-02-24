@@ -198,8 +198,9 @@ audioElement.setAttribute('src', 'macho_man.mp3');
         purpleLight.color.setHex(discoPurple);
         greenLight.color.setHex(discoGreen);
         redLight.color.setHex(discoRed);
-        ambient.intensity=0;
-        directionalLight.intensity=0;
+        purpleLight.intensity=25;
+        greenLight.intensity=25;
+        redLight.intensity=25;
         firstPass=true;
       }
       setTimeout(()=>{
@@ -212,6 +213,9 @@ audioElement.setAttribute('src', 'macho_man.mp3');
           purpleLight.color.setHex(originalPurple);
           greenLight.color.setHex(originalGreen);
           redLight.color.setHex(originalRed);
+          purpleLight.intensity=10;
+          greenLight.intensity=10;
+          redLight.intensity=10;
           audioElement.pause();
         }else {
           console.log('in run disco');
