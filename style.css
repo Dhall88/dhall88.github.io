@@ -3,6 +3,7 @@
 aside {
   position: absolute;
   width: calc(30vw);
+  height: calc(600vh);
   background-color: #179E9E;
 }
 
@@ -33,6 +34,7 @@ div>p {
 }
 
 a {
+  display: block;
   color: rgba(215,236,219);
   text-decoration: none;
   transition: transform .2s;
