@@ -163,7 +163,7 @@ audioElement.setAttribute('src', 'macho_man.mp3');
             lightningBoolean=true
           }
         }
-   })
+   )
 
  //   if (xCoord>windowWidth-20) {
  //   console.log(yCoord);
