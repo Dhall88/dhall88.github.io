@@ -23,7 +23,6 @@ aside>div {
   display:flex;
   flex-direction: column;
   justify-content: center;
-  red
 }
 div>p {
   font-size: 26px;
@@ -32,13 +31,13 @@ div>p {
   padding:1em;
 }
 
-a{
+a {
   color: rgba(215,236,219);
   text-decoration: none;
   transition: transform .2s;
   font-size: 16px;
   font-family: 'Simonetta', sans-serif;
-  padding: 0 1em 0 1em;
+  margin: 0 1em 0 1em;
 }
 
 a:hover{
