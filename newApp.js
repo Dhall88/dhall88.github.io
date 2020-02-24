@@ -6,6 +6,7 @@ $(() => {
   let lightningBoolean=false;
   let disco=false;
   let backLight=false;
+       let killDisco=false;
   let cloudRotation=0;
   let boolean=false;
   let cloudParticles = [];
@@ -143,7 +144,7 @@ audioElement.setAttribute('src', 'macho_man_snippet.mp3');
 
        lastScrollTop = scrollPosition;
      });
-     let killDisco=false;
+
      let yCoord, xCoord
       $(document).mousemove(function(event){
         yCoord = event.pageY;
