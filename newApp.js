@@ -147,8 +147,6 @@ audioElement.setAttribute('src', 'macho_man.mp3');
       $(document).mousemove(function(event){
         yCoord = event.pageY;
         xCoord = event.pageX;
-        console.log(scrollPosition);
-        console.log(windowHeight);
           if(xCoord>windowWidth-30&&yCoord>5*windowHeight) {
             console.log('in disco turn on');
             if(firstPass===true){
