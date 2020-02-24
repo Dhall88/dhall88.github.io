@@ -36,15 +36,15 @@ audioElement.setAttribute('src', 'macho_man.mp3');
   directionalLight.position.set(0,0,1);
   scene.add(directionalLight);
 
-  purpleLight = new THREE.PointLight(originalPurple,1,450,1.7);
+  purpleLight = new THREE.PointLight(originalPurple,0,450,1.7);
   purpleLight.position.set(50,300,100);
   scene.add(purpleLight);
 
-  greenLight = new THREE.PointLight(originalGreen,1,450,1.7);
+  greenLight = new THREE.PointLight(originalGreen,0,450,1.7);
   greenLight.position.set(50,500,-100);
   scene.add(greenLight);
 
-  redLight = new THREE.PointLight(originalRed,1,450,1.7);
+  redLight = new THREE.PointLight(originalRed,0,450,1.7);
   redLight.position.set(300,300,-100);
   scene.add(redLight);
 
@@ -133,7 +133,7 @@ audioElement.setAttribute('src', 'macho_man.mp3');
            // (scrollPosition-3*windowHeight)/windowHeight*
          }
          if (scrollPosition>4*windowHeight&&scrollPosition<5*windowHeight) {
-          // lightningBoolean=true;
+          lightningBoolean=true;
           console.log('in lightning if');
          }
 
@@ -159,6 +159,8 @@ audioElement.setAttribute('src', 'macho_man.mp3');
         } else {
           disco=false;
           firstPass=false;
+          audioElement.pause();
+          audioElement.prop("currentTime",0);
         }
    })
 
@@ -174,14 +176,14 @@ audioElement.setAttribute('src', 'macho_man.mp3');
         cloud.rotation.z -= cloudRotation
       });
       if(lightningBoolean===true) {
-      if(Math.random() > 0.93 || lightning.intensity > 60) {
+      if(Math.random() > 0.93 || lightning.intensity > 30) {
         if(lightning.intensity < 100)
         lightning.position.set(
                  Math.random()*400,
                  100 + Math.random() *200,
                  100 - Math.random() *100
               );
-      lightning.intensity = 50 + Math.random() * 100;
+      lightning.intensity = 50 + Math.random() * 5000;
     }
   }
 
@@ -207,26 +209,6 @@ audioElement.setAttribute('src', 'macho_man.mp3');
       },1000)
     }
 
-
-
-    // setTimeout(()=> {
-    //   temp=purpleLight.color
-    // })
-
-   //
-   //  if(lightningBoolean===true) {
-   //    console.log('in lightning render');
-   //    if(Math.random() > 0.95 && blueLight.power<100) {
-   //
-   //      blueLight.position.set(
-   //        Math.random()*400,
-   //        100 + Math.random() *200,
-   //        100 + Math.random() *100
-   //      );
-   //      blueLight.power=(Math.random()*300 + 300);
-   //  }
-   //   setTimeout(()=>{blueLight.power = 10;},Math.random()*100)
-   // }
 
   renderer.render(scene,camera)
   requestAnimationFrame(render);
