@@ -118,7 +118,7 @@ audioElement.setAttribute('src', 'macho_man.mp3');
          // downscroll code
          if(cloudParticles[0]!=undefined && scrollPosition>windowHeight && scrollPosition<2*windowHeight) {
            console.log(Math.floor(scrollPosition/windowHeight)*40);
-           cloudParticles[Math.floor(scrollPosition/windowHeight*40)].material.opacity=((40*scrollPosition/windowHeight)-Math.floor(scrollPosition/windowHeight *40))*.2
+           cloudParticles[Math.floor((scrollPosition-windowHeight)/windowHeight*40)].material.opacity=((40*scrollPosition/windowHeight)-Math.floor(scrollPosition/windowHeight *40))*.2
            console.log('in cloud particle if');
          }
          if (scrollPosition>2*windowHeight&&scrollPosition<3*windowHeight) {
