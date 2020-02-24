@@ -63,6 +63,10 @@ a:hover{
   font-size: 60px;
   margin: 0 150px 0 150px;
 }
+
+.contacts>p {
+  padding: 0 0 .5em 2em;
+}
 /* .audios {
   display:none;
 } */
