@@ -121,7 +121,7 @@ audioElement.setAttribute('src', 'macho_man.mp3');
          if(cloudParticles[0]!=undefined&&scrollPosition>windowHeight/2&&scrollPosition<windowHeight) {
            cloudParticles[0].material.opacity=(scrollPosition-windowHeight/2)/(windowHeight/2)*0.2
          }
-         if(scrollPosition>1.5*windowHeight && scrollPosition<2*windowHeight) {
+         if(scrollPosition>(1.5*windowHeight+((windowHeight/2)*40)) && scrollPosition<2*windowHeight) {
            cloudParticles[Math.floor(((scrollPosition-(windowHeight*1.5))/(windowHeight/2))*40)].material.opacity=.2
 
            console.log(Math.floor(((scrollPosition-(windowHeight*1.5))/(windowHeight/2))*40));
