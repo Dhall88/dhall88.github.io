@@ -140,7 +140,7 @@ audioElement.setAttribute('src', 'macho_man.mp3');
 
        lastScrollTop = scrollPosition;
      });
-
+     let killDisco=false;
      let yCoord, xCoord
       $(document).mousemove(function(event){
         yCoord = event.pageY;
@@ -159,8 +159,7 @@ audioElement.setAttribute('src', 'macho_man.mp3');
           }
           else if(xCoord<windowWidth-30&&yCoord<6*windowHeight&&yCoord>4*windowHeight) {
             console.log('in disco turn off');
-            disco=false;
-            firstPass=false;
+            killDisco=true;
             lightningBoolean=true
           }
         }
@@ -206,7 +205,13 @@ audioElement.setAttribute('src', 'macho_man.mp3');
         greenLight.color.setHex(redLight.color.getHex());
         redLight.color.setHex(temp)
         console.log('in disco lights');
+        if(killDisco){
+          disco=false;
+          firstPass=false;
+          killDisco=false;
+        }else {
         disco=true;
+      }
 
       },1000)
     }
