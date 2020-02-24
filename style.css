@@ -4,7 +4,7 @@ aside {
   position: absolute;
   width: calc(30vw);
   height: calc(620vh);
-  right: -10px;
+  left: -10px;
   background-color: #179E9E;
 }
 
