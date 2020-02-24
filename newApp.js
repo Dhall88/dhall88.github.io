@@ -209,6 +209,9 @@ audioElement.setAttribute('src', 'macho_man_snippet.mp3');
         } else {
           discoTimer=920;
         }
+        if (discoCounter===20) {
+          killDisco=true;
+        }
         console.log(discoCounter);
         console.log(discoTimer);
 
@@ -224,6 +227,7 @@ audioElement.setAttribute('src', 'macho_man_snippet.mp3');
           greenLight.intensity=10;
           redLight.intensity=10;
           audioElement.pause();
+          audioElement.currentTime=0;
           discoTimer=0;
         }else {
           console.log('in run disco');
