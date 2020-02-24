@@ -178,6 +178,7 @@ audioElement.setAttribute('src', 'macho_man.mp3');
     cloudParticles.forEach((cloud,index) => {
         cloud.rotation.z -= cloudRotation
       });
+            lightning.intensity = 0;
       if(lightningBoolean===true) {
       if(Math.random() > 0.95 || lightning.intensity > 30) {
         if(lightning.intensity < 30)
@@ -202,12 +203,8 @@ audioElement.setAttribute('src', 'macho_man.mp3');
       }
       setTimeout(()=>{
 
-        let temp = purpleLight.color.getHex();
-        purpleLight.color.setHex(greenLight.color.getHex())
-        greenLight.color.setHex(redLight.color.getHex());
-        redLight.color.setHex(temp)
-        console.log('in disco lights');
         if(killDisco){
+          console.log('in kill disco');
           disco=false;
           firstPass=false;
           killDisco=false;
@@ -215,6 +212,11 @@ audioElement.setAttribute('src', 'macho_man.mp3');
           greenLight.color.setHex(originalGreen);
           redLight.color.setHex(originalRed);
         }else {
+          console.log('in run disco');
+          let temp = purpleLight.color.getHex();
+          purpleLight.color.setHex(greenLight.color.getHex())
+          greenLight.color.setHex(redLight.color.getHex());
+          redLight.color.setHex(temp)
         disco=true;
       }
 
