@@ -2,7 +2,7 @@
 
 aside {
   position: absolute;
-  width: calc(30vw);
+  width: calc(33vw);
   height: calc(720vh);
   left: -10px;
   background-color: #179E9E;
@@ -19,7 +19,6 @@ div {
   width: calc(70vw);
   height: calc(105vw);
   top: -20px;
-  right: 0;
   background: rgb(181,170,170);
 }
 aside>div {
@@ -53,7 +52,7 @@ a:hover{
 .intro {
   position: absolute;
   height: calc(100vh);
-  width: calc(100vw);
+  width: calc(105vw);
   top:-20px;
   background-color: #179E9E;
   z-index: 5;
