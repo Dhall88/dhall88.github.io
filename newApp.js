@@ -72,20 +72,25 @@ audioElement.setAttribute('src', 'macho_man_snippet.mp3');
       transparent: true
     });
   cloud = new THREE.Mesh(cloudGeo, cloudMaterial);
-  cloud.position.set(
-    Math.random()*400 -200,
-    500,
-    Math.random()*300-400
-  );
+  if(p===0) {
+    cloud.material.opacity=0.2
+    cloud.position.set(
+      0,
+      500,
+      100
+    );
+  } else {
+    cloud.material.opacity = 0;
+    cloud.position.set(
+      Math.random()*400 -200,
+      500,
+      Math.random()*300-400
+    );
+  }
   cloud.rotation.x = 1.16;
   cloud.rotation.y = -0.12;
   cloud.rotation.z = Math.random()*2*Math.PI;
-    cloud.material.opacity=0.2
-    if(p===0) {
-      cloud.material.opacity=0.2
-    } else {
-      cloud.material.opacity = 0;
-    }
+    // cloud.material.opacity=0.2
   cloudParticles.push(cloud);
   scene.add(cloud);
   }
@@ -160,7 +165,7 @@ audioElement.setAttribute('src', 'macho_man_snippet.mp3');
               audioElement.play();
             }
           }
-          else if(xCoord<windowWidth-100&&yCoord<6.5*windowHeight&&yCoord>5.5*windowHeight) {
+          else if(xCoord<windowWidth-100&&yCoord<6.3*windowHeight&&yCoord>5.2*windowHeight) {
             console.log('in disco turn off');
             killDisco=true;
             lightningBoolean=true
