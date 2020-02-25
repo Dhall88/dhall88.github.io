@@ -16,9 +16,10 @@ div {
 
 #nebula {
   position: fixed;
-  width: calc(70vw);
+  width: calc(73vw);
   height: calc(105vw);
   top: -20px;
+  right: 0;
   background: rgb(181,170,170);
 }
 aside>div {
