@@ -160,7 +160,7 @@ audioElement.setAttribute('src', 'macho_man_snippet.mp3');
               audioElement.play();
             }
           }
-          else if(xCoord<windowWidth-100&&yCoord<6.2*windowHeight&&yCoord>5.2*windowHeight) {
+          else if(xCoord<windowWidth-100&&yCoord<6.5*windowHeight&&yCoord>5.5*windowHeight) {
             console.log('in disco turn off');
             killDisco=true;
             lightningBoolean=true
@@ -207,7 +207,7 @@ audioElement.setAttribute('src', 'macho_man_snippet.mp3');
       }
       setTimeout(()=>{
         discoCounter++;
-        if(discoCounter>2&&discoCounter<5) {
+        if(discoCounter>1&&discoCounter<4) {
           discoTimer=460;
         } else {
           discoTimer=920;
