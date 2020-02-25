@@ -193,6 +193,7 @@ audioElement.setAttribute('src', 'macho_man_snippet.mp3');
   }
 
     if(disco) {
+      console.log(discoCounter);
       disco=false;
       if(!firstPass) {
         purpleLight.color.setHex(discoPurple);
@@ -213,8 +214,6 @@ audioElement.setAttribute('src', 'macho_man_snippet.mp3');
         if (discoCounter===20) {
           killDisco=true;
         }
-        console.log(discoCounter);
-        console.log(discoTimer);
 
         if(killDisco){
           console.log('in kill disco');
