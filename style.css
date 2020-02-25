@@ -53,7 +53,7 @@ a:hover{
 .intro {
   position: absolute;
   height: calc(105vh);
-  width: calc(105vw);
+  width: calc(101vw);
   top:-20px;
   background-color: #179E9E;
   z-index: 5;
