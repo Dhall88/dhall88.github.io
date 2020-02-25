@@ -77,7 +77,7 @@ audioElement.setAttribute('src', 'macho_man_snippet.mp3');
     cloud.position.set(
       0,
       500,
-      100
+      -250
     );
   } else {
     cloud.material.opacity = 0;
