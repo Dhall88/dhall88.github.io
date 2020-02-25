@@ -2,7 +2,7 @@
 $(() => {
 
   let scene, camera, renderer, blueLight, currentCloudNum, BlueLightPower, greenLightPower, cloud, cloud2,
-  greenLight, purpleLight, redLight, ambient, directionalLight, discoCounter=0, discoTimer;
+  greenLight, purpleLight, redLight, ambient, directionalLight, discoCounter=0, discoTimer=920;
   let lightningBoolean=false;
   let disco=false;
   let backLight=false;
