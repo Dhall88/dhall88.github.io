@@ -68,6 +68,9 @@ a:hover{
   margin:0;
   padding: 0 0 .5em 1em;
 }
+a>p{
+  font-size: 20px;
+}
 /* .audios {
   display:none;
 } */
