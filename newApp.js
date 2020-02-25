@@ -202,6 +202,7 @@ audioElement.setAttribute('src', 'macho_man_snippet.mp3');
         purpleLight.intensity=25;
         greenLight.intensity=25;
         redLight.intensity=25;
+        discoCounter=0
         firstPass=true;
       }
       setTimeout(()=>{
@@ -228,7 +229,6 @@ audioElement.setAttribute('src', 'macho_man_snippet.mp3');
           redLight.intensity=10;
           audioElement.pause();
           audioElement.currentTime=0;
-          discoCounter=0;
         }else {
           console.log('in run disco');
           let temp = purpleLight.color.getHex();
