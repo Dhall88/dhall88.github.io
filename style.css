@@ -2,23 +2,25 @@
 
 aside {
   position: absolute;
-  width: calc(33vw);
+  width: calc(30vw);
   height: calc(720vh);
-  left: -10px;
+  left: 0;
+  top: 0;
   background-color: #179E9E;
 }
 
 div {
   height: calc(100vh);
   margin-bottom: 1em;
+  border-bottom: solid black;
   /* background-color: blue; */
 }
 
 #nebula {
   position: fixed;
-  width: calc(73vw);
-  height: calc(105vh);
-  top: -20px;
+  width: calc(70vw);
+  height: calc(100vh);
+  top: 0;
   right: 0;
   background: rgb(181,170,170);
 }
@@ -51,18 +53,22 @@ a:hover{
 }
 
 .intro {
+  transition: transform 0.6s ease;
   position: absolute;
-  height: calc(105vh);
-  width: calc(101vw);
+  height: calc(102vh);
+  width: calc(100vw);
   top:-20px;
   background-color: #179E9E;
   z-index: 5;
+  border: none;
 }
 
 .intro>p {
   font-size: 60px;
   margin: 0 150px 0 150px;
+  text-align: center;
 }
+
 
 .contacts>p {
   margin:0;
@@ -75,6 +81,11 @@ a>p{
   display:none;
 } */
 
+.intro>.subText {
+  font-size: 30px;
+  bottom: 100px;
+  margin-top: 5em;
+}
 
 
 
