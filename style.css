@@ -52,6 +52,11 @@ a:hover{
     transform: scale(1.05)
 }
 
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+} 
+
 .intro {
   transition: transform 1s ease;
   position: absolute;

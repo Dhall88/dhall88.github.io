@@ -30,6 +30,10 @@ function removeBanner() {
   $intro.css('transform', `translate(0,${-window.innerHeight-100}px)`)
 }
 
+function enableScroll() {
+    $('body').removeClass("stop-scrolling"); 
+}
+
 
   function init() {
     currentCloudNum=1;
@@ -132,23 +136,23 @@ function removeBanner() {
     var lastScrollTop = 0;
       let scrollPosition=$(window).scrollTop();
 
-         if(scrollPosition>(1.5*windowHeight+(windowHeight/80)) && scrollPosition<2*windowHeight) {
+         if(scrollPosition>(.25*windowHeight+(windowHeight/80)) && scrollPosition<1*windowHeight) {
            cloudParticles[Math.floor(((scrollPosition-(windowHeight*1.5))/(windowHeight/2))*40)].material.opacity=.2
 
            console.log(Math.floor(((scrollPosition-(windowHeight*1.5))/(windowHeight/2))*40));
 
          }
-         if (scrollPosition>2*windowHeight&&scrollPosition<3*windowHeight) {
+         if (scrollPosition>1*windowHeight&&scrollPosition<2*windowHeight) {
 
-           cloudRotation=(scrollPosition-2*windowHeight)/windowHeight*0.003
+           cloudRotation=(scrollPosition-1*windowHeight)/windowHeight*0.003
          }
-         if (scrollPosition>3*windowHeight&&scrollPosition<4*windowHeight) {
-           purpleLight.intensity=(scrollPosition-3*windowHeight)/windowHeight*10;
-           greenLight.intensity=(scrollPosition-3*windowHeight)/windowHeight*10;
-           redLight.intensity=(scrollPosition-3*windowHeight)/windowHeight*10;
+         if (scrollPosition>2*windowHeight&&scrollPosition<4*windowHeight) {
+           purpleLight.intensity=(scrollPosition-2*windowHeight)/windowHeight*10;
+           greenLight.intensity=(scrollPosition-2*windowHeight)/windowHeight*10;
+           redLight.intensity=(scrollPosition-2*windowHeight)/windowHeight*10;
            // (scrollPosition-3*windowHeight)/windowHeight*
          }
-         if (scrollPosition>(4*windowHeight+(windowHeight/2))&&scrollPosition<5*windowHeight) {
+         if (scrollPosition>(3*windowHeight+(windowHeight/2))&&scrollPosition<4*windowHeight) {
           lightningBoolean=true;
           // console.log('in lightning if');
          }
