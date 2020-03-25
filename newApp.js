@@ -138,7 +138,7 @@ function enableScroll() {
 
          if(scrollPosition>(.25*windowHeight) && scrollPosition<windowHeight) {
            console.log(Math.floor(((scrollPosition-(windowHeight*.25))/(windowHeight*.75))*40));
-           cloudParticles[Math.floor(((scrollPosition-(windowHeight*1.5))/(windowHeight/2))*40)].material.opacity=.2
+           cloudParticles[Math.floor(((scrollPosition-(windowHeight*.25))/(windowHeight*.75))*40)].material.opacity=.2
 
          }
          if (scrollPosition>1*windowHeight&&scrollPosition<2*windowHeight) {
