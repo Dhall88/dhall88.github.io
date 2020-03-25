@@ -31,7 +31,7 @@ function removeBanner() {
 }
 
 function enableScroll() {
-    $('body').removeClass("stop-scrolling"); 
+    $('body').removeClass("stop-scrolling");
 }
 
 
@@ -136,10 +136,9 @@ function enableScroll() {
     var lastScrollTop = 0;
       let scrollPosition=$(window).scrollTop();
 
-         if(scrollPosition>(.25*windowHeight+(windowHeight/80)) && scrollPosition<1*windowHeight) {
+         if(scrollPosition>(.25*windowHeight) && scrollPosition<windowHeight) {
+           console.log(Math.floor(((scrollPosition-(windowHeight*.25))/(windowHeight*.75))*40));
            cloudParticles[Math.floor(((scrollPosition-(windowHeight*1.5))/(windowHeight/2))*40)].material.opacity=.2
-
-           console.log(Math.floor(((scrollPosition-(windowHeight*1.5))/(windowHeight/2))*40));
 
          }
          if (scrollPosition>1*windowHeight&&scrollPosition<2*windowHeight) {
