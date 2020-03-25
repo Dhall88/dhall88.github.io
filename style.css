@@ -53,7 +53,7 @@ a:hover{
 }
 
 .intro {
-  transition: transform 0.6s ease;
+  transition: transform 1s ease;
   position: absolute;
   height: calc(102vh);
   width: calc(100vw);
