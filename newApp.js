@@ -131,12 +131,12 @@ function enableScroll() {
   render();
   }
 
-  let windowHeight=$(window).height();
-  let windowWidth=$(window).width();
-  let scrollPosition;
+  let $window = $(window)
+  let windowHeight=$window.height();
+  let windowWidth=$window.width();
   $(window).scroll(function(event){
     var lastScrollTop = 0;
-      let scrollPosition=$(window).scrollTop();
+      let scrollPosition=$window.scrollTop();
 
          if(scrollPosition>(.25*windowHeight) && scrollPosition<windowHeight) {
            console.log(Math.floor(((scrollPosition-(windowHeight*.25))/(windowHeight*.75))*40));
