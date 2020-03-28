@@ -22,8 +22,10 @@ $(() => {
 var audioElement = document.createElement('audio');
 audioElement.setAttribute('src', 'macho_man_snippet.mp3');
   let $intro = $(".intro")
+  let $body = $("body")
 
   $intro.click(removeBanner)
+  $body.click(enableScroll)
 
 function removeBanner() {
   console.log('in reomve banner');
@@ -31,7 +33,7 @@ function removeBanner() {
 }
 
 function enableScroll() {
-    $('body').removeClass("stop-scrolling");
+    $body.removeClass("stop-scrolling");
 }
 
 
