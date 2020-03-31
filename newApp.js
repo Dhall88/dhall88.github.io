@@ -145,7 +145,7 @@ function enableScroll() {
          }
          if (scrollPosition>1.25*windowHeight&&scrollPosition<2*windowHeight) {
 
-           cloudRotation=(scrollPosition-1.25*windowHeight)/.75*windowHeight*0.003
+           cloudRotation=(scrollPosition-1.25*windowHeight)/(.75*windowHeight)*0.003
          }
          if (scrollPosition>2*windowHeight&&scrollPosition<4*windowHeight) {
            purpleLight.intensity=(scrollPosition-2*windowHeight)/windowHeight*10;
