@@ -147,13 +147,13 @@ function enableScroll() {
 
            cloudRotation=(scrollPosition-1.25*windowHeight)/(.75*windowHeight)*0.003
          }
-         if (scrollPosition>2*windowHeight&&scrollPosition<4*windowHeight) {
-           purpleLight.intensity=(scrollPosition-2*windowHeight)/windowHeight*10;
-           greenLight.intensity=(scrollPosition-2*windowHeight)/windowHeight*10;
-           redLight.intensity=(scrollPosition-2*windowHeight)/windowHeight*10;
+         if (scrollPosition>2*windowHeight&&scrollPosition<3*windowHeight) {
+           purpleLight.intensity=(scrollPosition-2*windowHeight)/windowHeight*15;
+           greenLight.intensity=(scrollPosition-2*windowHeight)/windowHeight*15;
+           redLight.intensity=(scrollPosition-2*windowHeight)/windowHeight*15;
            // (scrollPosition-3*windowHeight)/windowHeight*
          }
-         if (scrollPosition>(3*windowHeight+(windowHeight/2))&&scrollPosition<4*windowHeight) {
+         if (scrollPosition>3.25*windowHeight&&scrollPosition<4*windowHeight) {
           lightningBoolean=true;
           // console.log('in lightning if');
          }
