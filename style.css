@@ -30,7 +30,7 @@ aside>div {
   justify-content: center;
 }
 div>p {
-  font-size: 5em;
+  font-size: 3em;
   color: white;
   font-family: 'Simonetta', sans-serif;
   padding:1em;
@@ -41,7 +41,7 @@ a {
   color: rgba(215,236,219);
   text-decoration: none;
   transition: transform .2s;
-  font-size: 3em;
+  font-size: 1em;
   font-family: 'Simonetta', sans-serif;
   margin: 0 1em 1em 2em;
   min-width: 30%;
@@ -69,7 +69,7 @@ a:hover{
 }
 
 .intro>p {
-  font-size: 7em;
+  font-size: 3em;
   margin: 0 5em 0 5em;
   text-align: center;
 }
@@ -80,128 +80,14 @@ a:hover{
   padding: 0 0 .5em 1em;
 }
 a>p{
-  font-size: 2em;
+  font-size: 1em;
 }
 /* .audios {
   display:none;
 } */
 
 .intro>.subText {
-  font-size: 4em;
+  font-size: 2em;
   bottom: 5em;
   margin-top: 5em;
 }
-
-
-
-
-
-
-
-/* .app-container {
-  position: relative;
-min-height: 100vh;
-}
-
-.content-wrap {
-  padding-bottom: 4.5rem;
-}
-
-#nebula {
-  position: fixed;
-  margin: 0;
-  z-index:-1;
-}
-
-div {
-  color: white;
-  text-align: center;
-  font-size: 40px;
-  margin: 0 auto;
-}
-
-.name {
-  display: inline-block;
-  color: red;
-  margin: 0;
-  padding: 0;
-}
-
-.links>a {
-  color: rgba(215,236,219);
-  text-decoration: none;
-  transition: transform .2s;
-  padding: 15px;
-}
-
-.links>a:hover {
-  transform: scale(1.05)
-}
-
-
-footer {
-  display: flex;
-  position: absolute;
-  bottom: 2rem;
-  width: 100%;
-  height: 3.5rem;
-}
-
-
-p {
-  color: rgba(215,236,219);
-  padding: 0 1em 0 1em;
-  margin-bottom: 0;
-  font-size: 30px;
-}
-
-footer>p {
-  font-size: 2.5rem;
-}
-
-.button {
-  display: inline-block;
-  width: 200px;
-  margin: auto;
-  border: solid 2px white;
-  font-size: 20px;
-}
-
-a {
-  font-size: 1.5rem;
-  color: rgba(215,236,219);
-}
-
-#greeting {
-  position:absolute;
-  right: 50px;
-  margin-top: 5%;
-  width: 30%;
-  text-align: left;
-}
-.flex{
-  display:flex;
-  justify-content: space-between;
-  height: 50%;
-}
-.content{
-  top: 30px;
-  width: 75%;
-  display: flex;
-  flex-direction: column;
-  border-radius: 25px;
-  background-color: rgba(192,175,199,.4);
-}
-
-.links {
-  display: flex;
-  justify-content: center;
-}
-
-h2, h4 {
-  color: rgba(215,236,219);
-}
-
-h4 {
-  margin-bottom: 1rem;
-} */
