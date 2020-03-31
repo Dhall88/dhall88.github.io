@@ -30,7 +30,7 @@ aside>div {
   justify-content: center;
 }
 div>p {
-  font-size: 26px;
+  font-size: 5em;
   color: white;
   font-family: 'Simonetta', sans-serif;
   padding:1em;
@@ -41,7 +41,7 @@ a {
   color: rgba(215,236,219);
   text-decoration: none;
   transition: transform .2s;
-  font-size: 20px;
+  font-size: 3em;
   font-family: 'Simonetta', sans-serif;
   margin: 0 1em 1em 2em;
   min-width: 30%;
@@ -55,7 +55,7 @@ a:hover{
 .stop-scrolling {
     height: 100%;
     overflow: hidden;
-} 
+}
 
 .intro {
   transition: transform 1s ease;
@@ -69,8 +69,8 @@ a:hover{
 }
 
 .intro>p {
-  font-size: 60px;
-  margin: 0 150px 0 150px;
+  font-size: 7em;
+  margin: 0 5em 0 5em;
   text-align: center;
 }
 
@@ -80,15 +80,15 @@ a:hover{
   padding: 0 0 .5em 1em;
 }
 a>p{
-  font-size: 20px;
+  font-size: 2em;
 }
 /* .audios {
   display:none;
 } */
 
 .intro>.subText {
-  font-size: 30px;
-  bottom: 100px;
+  font-size: 4em;
+  bottom: 5em;
   margin-top: 5em;
 }
 
