@@ -143,9 +143,9 @@ function enableScroll() {
            cloudParticles[Math.floor(((scrollPosition-(windowHeight*.25))/(windowHeight*.75))*40)].material.opacity=.2
 
          }
-         if (scrollPosition>1*windowHeight&&scrollPosition<2*windowHeight) {
+         if (scrollPosition>1.25*windowHeight&&scrollPosition<2*windowHeight) {
 
-           cloudRotation=(scrollPosition-1*windowHeight)/windowHeight*0.003
+           cloudRotation=(scrollPosition-1.25*windowHeight)/.75*windowHeight*0.003
          }
          if (scrollPosition>2*windowHeight&&scrollPosition<4*windowHeight) {
            purpleLight.intensity=(scrollPosition-2*windowHeight)/windowHeight*10;
