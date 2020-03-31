@@ -167,7 +167,7 @@ function enableScroll() {
       $(document).mousemove(function(event){
         yCoord = event.pageY;
         xCoord = event.pageX;
-          if(xCoord>windowWidth-30&&yCoord<6.3*windowHeight&&yCoord>5*windowHeight) {
+          if(xCoord>windowWidth-30&&yCoord<5.3*windowHeight&&yCoord>4*windowHeight) {
             console.log('in disco turn on');
             if(firstPass===true){
 
@@ -178,7 +178,7 @@ function enableScroll() {
               audioElement.play();
             }
           }
-          else if(xCoord<windowWidth-100&&yCoord<6.3*windowHeight&&yCoord>5*windowHeight) {
+          else if(xCoord<windowWidth-100&&yCoord<5.3*windowHeight&&yCoord>4*windowHeight) {
             console.log('in disco turn off');
             killDisco=true;
             lightningBoolean=true
