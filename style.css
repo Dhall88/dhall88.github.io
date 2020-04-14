@@ -11,7 +11,7 @@ aside {
 
 div {
   height: calc(100vh);
-  margin-bottom: 1em;
+  margin-bottom: .5em;
   border-bottom: solid black;
   /* background-color: blue; */
 }
