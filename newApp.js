@@ -67,18 +67,15 @@ function enableScroll() {
   lightning = new THREE.PointLight(0x3677ac,0,450,1.7);
   lightning.position.set(700,300,50);
   scene.add(lightning);
-  // let nebCenter = new THREE.PointLight(0x3677ac,5,450,1.7);
-  // nebCenter.position.set(0,400,0);
-  // scene.add(nebCenter);
     renderer = new THREE.WebGLRenderer({alpha: true});
     renderer.setSize(window.innerWidth/1.2,window.innerHeight/1.2);
     renderer.setClearColor(0x000000,0);
     document.getElementById("nebula").appendChild(renderer.domElement);
 
     let loader = new THREE.TextureLoader();
-    // loader.crossOrigin='anonomys';
+
     loader.load("smoke-1.png", function(texture){
-  //texture is loaded
+
   cloudGeo = new THREE.PlaneBufferGeometry(400,400);
   for(let p=0; p<40; p++) {
     cloudMaterial = new THREE.MeshLambertMaterial({
@@ -104,29 +101,10 @@ function enableScroll() {
   cloud.rotation.x = 1.16;
   cloud.rotation.y = -0.12;
   cloud.rotation.z = Math.random()*2*Math.PI;
-    // cloud.material.opacity=0.2
   cloudParticles.push(cloud);
   scene.add(cloud);
   }
-  // for(let p=0; p<39; p++) {
-  // cloud2 = new THREE.Mesh(cloudGeo, cloudMaterial);
-  // cloud2.position.set(
-  //   Math.random()*400 -200,
-  //   500,
-  //   Math.random()*300-400
-  // );
-  // cloud2.rotation.x = 1.16;
-  // cloud2.rotation.y = -0.12;
-  // cloud2.rotation.z = Math.random()*2*Math.PI;
-  // cloud2.material.opacity = 0;
-  // cloudParticles2.push(cloud2);
-  // scene.add(cloud2);
-  // }
   });
-
-
-
-
 
   render();
   }
@@ -151,11 +129,10 @@ function enableScroll() {
            purpleLight.intensity=(scrollPosition-2*windowHeight)/windowHeight*15;
            greenLight.intensity=(scrollPosition-2*windowHeight)/windowHeight*15;
            redLight.intensity=(scrollPosition-2*windowHeight)/windowHeight*15;
-           // (scrollPosition-3*windowHeight)/windowHeight*
+
          }
          if (scrollPosition>3.25*windowHeight&&scrollPosition<4*windowHeight) {
           lightningBoolean=true;
-          // console.log('in lightning if');
          }
 
 
@@ -185,12 +162,6 @@ function enableScroll() {
           }
         }
    )
-
- //   if (xCoord>windowWidth-20) {
- //   console.log(yCoord);
- //   console.log(5*windowHeight);
- // }
-
 
   function render() {
 
