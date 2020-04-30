@@ -136,7 +136,8 @@ a>p{
   position: absolute;
   z-index: 4;
   width: calc(.5vw);
-  top: calc(.8vh);
+  /* changed from .8 to 8 */
+  top: calc(8vh);
   left: calc(40vw);
 }
 
@@ -147,7 +148,8 @@ a>p{
   position: absolute;
   z-index: 4;
   width: calc(.5vw);
-  top: calc(.5vh);
+  /* changed from .5 to 5 */
+  top: calc(5vh);
   left: calc(55vw);
 }
 
