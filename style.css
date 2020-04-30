@@ -88,7 +88,7 @@ a>p{
   margin-top: 5em;
 }
 
-.line1 {
+#line1 {
   width: 112px;
   height: 47px;
   border-bottom: 1px solid red;
@@ -99,7 +99,7 @@ a>p{
   position: absolute;
   /* top: -20px; */
 }
-.line2 {
+#line2 {
   width: 112px;
   height: 47px;
   border-bottom: 1px solid green;
