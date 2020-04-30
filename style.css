@@ -112,7 +112,7 @@ a>p{
   position: absolute;
   z-index: 4;
   width: calc(.3vw);
-  top: calc(130vh);
+  top: calc(40vh);
   left: calc(5vw);
 }
 
@@ -123,7 +123,7 @@ a>p{
   position: absolute;
   z-index: 4;
   width: calc(.5vw);
-  top: calc(300vh);
+  top: calc(20vh);
   left: calc(20vw);
 }
 
@@ -147,7 +147,7 @@ a>p{
   position: absolute;
   z-index: 4;
   width: calc(.5vw);
-  top: calc(50vh);
+  top: calc(45vh);
   left: calc(55vw);
 }
 
@@ -159,7 +159,7 @@ a>p{
   z-index: 4;
   width: calc(.5vw);
   top: calc(-30vh);
-  left: calc(.3vw);
+  left: calc(30vw);
 }
 
 /* Dark teal lines */
@@ -172,7 +172,7 @@ a>p{
   z-index: 4;
   width: calc(.4vw);
   top: calc(-200vh);
-  left: calc(.4vw);
+  left: calc(40vw);
 }
 
 #line8 {
@@ -183,7 +183,7 @@ a>p{
   z-index: 4;
   width: calc(.7vw);
   top: calc(.2vh);
-  left: calc(.1vw);
+  left: calc(10vw);
 }
 
 #line9 {
@@ -193,7 +193,7 @@ a>p{
   position: absolute; 
   z-index: 4;
   width: calc(.5vw);
-  top: calc(100vh);
-  left: calc(.9vw);
+  top: calc(40vh);
+  left: calc(90vw);
 }
 
