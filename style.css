@@ -87,3 +87,27 @@ a>p{
   bottom: 5em;
   margin-top: 5em;
 }
+
+.line1 {
+  width: 112px;
+  height: 47px;
+  border-bottom: 1px solid red;
+  transform:
+      translateY(-20px)
+      translateX(5px)
+      rotate(27deg); 
+  position: absolute;
+  /* top: -20px; */
+}
+.line2 {
+  width: 112px;
+  height: 47px;
+  border-bottom: 1px solid green;
+  transform:
+      translateY(20px)
+      translateX(5px)
+      rotate(-26deg);
+  position: absolute;
+  top: -33px;
+  left: -13px;
+}
