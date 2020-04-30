@@ -9,30 +9,6 @@ aside {
   background-color: #179E9E;
 }
 
-.teal {
-  border-right: .1em solid rgb(223, 235, 230);
-  border-bottom: none;
-  transform: rotate(27deg); 
-  position: absolute;
-  z-index: 4;
-}
-
-.lightTeal {
-  border-right: .1em solid rgb(4, 17, 12); 
-  border-bottom: none; 
-  transform: rotate(27deg); 
-  position: absolute;
-  z-index: 4;
-}
-
-.darkTeal {
-  border-right: .1em solid rgb(8, 13, 11);   
-  border-bottom: none;
-  transform: rotate(27deg); 
-  position: absolute; 
-  z-index: 4;
-}
-
 div {
   height: calc(100vh);
   margin-bottom: .5em;
@@ -57,6 +33,7 @@ div>p {
   color: white;
   font-family: 'Simonetta', sans-serif;
   padding:1em;
+  z-index: 5;
 }
 
 a {
@@ -112,57 +89,106 @@ a>p{
   margin-top: 5em;
 }
 
-
+/* Teal lines */
 
 #line1 {
+  border-right: .1em solid rgb(19, 221, 137);
+  border-bottom: none;
+  transform: rotate(60deg); 
+  position: absolute;
+  z-index: 4;
   width: calc(.5vw);
   top: calc(.1vh);
   left: calc(10vw);
 }
 
 #line2 {
+  border-right: .1em solid rgb(19, 221, 137);
+  border-bottom: none;
+  transform: rotate(60deg); 
+  position: absolute;
+  z-index: 4;
   width: calc(.3vw);
   top: calc(.3vh);
   left: calc(5vw);
 }
 
 #line3 {
+  border-right: .1em solid rgb(19, 221, 137);
+  border-bottom: none;
+  transform: rotate(60deg); 
+  position: absolute;
+  z-index: 4;
   width: calc(.5vw);
   top: calc(.2vh);
   left: calc(20vw);
 }
 
+/* Light teal lines */
+
 #line4 {
+  border-right: .1em solid rgb(126, 235, 193); 
+  border-bottom: none; 
+  transform: rotate(60deg); 
+  position: absolute;
+  z-index: 4;
   width: calc(.5vw);
   top: calc(.8vh);
   left: calc(40vw);
 }
 
 #line5 {
+  border-right: .1em solid rgb(126, 235, 193); 
+  border-bottom: none; 
+  transform: rotate(60deg); 
+  position: absolute;
+  z-index: 4;
   width: calc(.5vw);
   top: calc(.5vh);
   left: calc(55vw);
 }
 
 #line6 {
+  border-right: .1em solid rgb(126, 235, 193); 
+  border-bottom: none; 
+  transform: rotate(60deg); 
+  position: absolute;
+  z-index: 4;
   width: calc(.5vw);
   top: calc(.2vh);
   left: calc(.3vw);
 }
 
+/* Dark teal lines */
+
 #line7 {
+  border-right: .1em solid rgb(20, 46, 36);   
+  border-bottom: none;
+  transform: rotate(60deg); 
+  position: absolute; 
+  z-index: 4;
   width: calc(.4vw);
   top: calc(.4vh);
   left: calc(.4vw);
 }
 
 #line8 {
+  border-right: .1em solid rgb(20, 46, 36);   
+  border-bottom: none;
+  transform: rotate(60deg); 
+  position: absolute; 
+  z-index: 4;
   width: calc(.7vw);
   top: calc(.2vh);
   left: calc(.1vw);
 }
 
 #line9 {
+  border-right: .1em solid rgb(20, 46, 36);   
+  border-bottom: none;
+  transform: rotate(60deg); 
+  position: absolute; 
+  z-index: 4;
   width: calc(.5vw);
   top: calc(.1vh);
   left: calc(.9vw);
