@@ -13,18 +13,21 @@ aside {
   border-bottom: 1em solid rgb(39, 134, 99);
   transform: rotate(27deg); 
   position: absolute;
+  z-index: 2;
 }
 
 .lightTeal {
   border-bottom: 1em solid rgb(144, 179, 166);  
   transform: rotate(27deg); 
   position: absolute;
+  z-index: 2;
 }
 
 .darkTeal {
   border-bottom: 1em solid rgb(29, 77, 59);   
   transform: rotate(27deg); 
   position: absolute; 
+  z-index: 2;
 }
 
 div {
@@ -81,7 +84,7 @@ a:hover{
   width: calc(100vw);
   top:-20px;
   background-color: #179E9E;
-  z-index: 5;
+  z-index: 1;
   border: none;
 }
 
