@@ -10,24 +10,24 @@ aside {
 }
 
 .teal {
-  border-bottom: 1em solid rgb(39, 134, 99);
+  border-bottom: 1em solid rgb(223, 235, 230);
   transform: rotate(27deg); 
   position: absolute;
-  z-index: 2;
+  z-index: 4;
 }
 
 .lightTeal {
-  border-bottom: 1em solid rgb(144, 179, 166);  
+  border-bottom: 1em solid rgb(4, 17, 12);  
   transform: rotate(27deg); 
   position: absolute;
-  z-index: 2;
+  z-index: 4;
 }
 
 .darkTeal {
-  border-bottom: 1em solid rgb(29, 77, 59);   
+  border-bottom: 1em solid rgb(8, 13, 11);   
   transform: rotate(27deg); 
   position: absolute; 
-  z-index: 2;
+  z-index: 4;
 }
 
 div {
