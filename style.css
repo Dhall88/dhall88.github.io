@@ -33,6 +33,9 @@ div>p {
   color: white;
   font-family: 'Simonetta', sans-serif;
   padding:1em;
+}
+
+.intro>p{
   z-index: 5;
 }
 
