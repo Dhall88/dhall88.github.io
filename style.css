@@ -124,19 +124,19 @@ a>p{
 }
 
 #line3 {
-  width: calc(.8vw);
+  width: calc(20vw);
   top: calc(.2vh);
   left: calc(20vw);
 }
 
 #line4 {
-  width: calc(.5vw);
+  width: calc(15vw);
   top: calc(.8vh);
   left: calc(40vw);
 }
 
 #line5 {
-  width: calc(.1vw);
+  width: calc(30vw);
   top: calc(.5vh);
   left: calc(55vw);
 }
