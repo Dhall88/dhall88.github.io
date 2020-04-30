@@ -10,21 +10,21 @@ aside {
 }
 
 .teal {
-  border-bottom: 1em solid rgb(223, 235, 230);
+  border-bottom: 3em solid rgb(223, 235, 230);
   transform: rotate(27deg); 
   position: absolute;
   z-index: 4;
 }
 
 .lightTeal {
-  border-bottom: 1em solid rgb(4, 17, 12);  
+  border-bottom: 3em solid rgb(4, 17, 12);  
   transform: rotate(27deg); 
   position: absolute;
   z-index: 4;
 }
 
 .darkTeal {
-  border-bottom: 1em solid rgb(8, 13, 11);   
+  border-bottom: 3em solid rgb(8, 13, 11);   
   transform: rotate(27deg); 
   position: absolute; 
   z-index: 4;
@@ -114,31 +114,31 @@ a>p{
 #line1 {
   width: calc(.5vw);
   top: calc(.1vh);
-  left: calc(.1vw);
+  left: calc(10vw);
 }
 
 #line2 {
   width: calc(.3vw);
   top: calc(.3vh);
-  left: calc(.8vw);
+  left: calc(5vw);
 }
 
 #line3 {
   width: calc(.8vw);
   top: calc(.2vh);
-  left: calc(.7vw);
+  left: calc(20vw);
 }
 
 #line4 {
   width: calc(.5vw);
   top: calc(.8vh);
-  left: calc(.8vw);
+  left: calc(40vw);
 }
 
 #line5 {
   width: calc(.1vw);
   top: calc(.5vh);
-  left: calc(.5vw);
+  left: calc(55vw);
 }
 
 #line6 {
