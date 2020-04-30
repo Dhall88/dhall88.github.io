@@ -125,38 +125,38 @@ a>p{
 }
 
 #line4 {
-  width: 112px;
-  top: -33px;
-  left: -13px;
+  width: calc(.5vw);
+  top: calc(.8vh);
+  left: calc(.8vw);
 }
 
 #line5 {
-  width: 112px;
-  top: -33px;
-  left: -13px;
+  width: calc(.1vw);
+  top: calc(.5vh);
+  left: calc(.5vw);
 }
 
 #line6 {
-  width: 112px;
-  top: -33px;
-  left: -13px;
+  width: calc(.5vw);
+  top: calc(.2vh);
+  left: calc(.3vw);
 }
 
 #line7 {
-  width: 112px;
-  top: -33px;
-  left: -13px;
+  width: calc(.4vw);
+  top: calc(.4vh);
+  left: calc(.4vw);
 }
 
 #line8 {
-  width: 112px;
-  top: -33px;
-  left: -13px;
+  width: calc(.7vw);
+  top: calc(.2vh);
+  left: calc(.1vw);
 }
 
 #line9 {
-  width: 112px;
-  top: -33px;
-  left: -13px;
+  width: calc(.5vw);
+  top: calc(.1vh);
+  left: calc(.9vw);
 }
 
