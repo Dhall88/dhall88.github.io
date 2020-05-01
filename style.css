@@ -97,7 +97,6 @@ a>p{
 }
 
 .intro>div {
-  border-bottom: none;
   transform: rotate(60deg); 
   position: absolute;
   z-index: 4;
@@ -122,7 +121,7 @@ a>p{
 
 #line3 {
   border-right: .5em solid rgb(19, 221, 137);
-  width: calc(.5vw);
+  width: calc(.2vw);
   top: calc(20vh);
   left: calc(20vw);
 }
@@ -155,7 +154,7 @@ a>p{
 #line7 {
   border-right: .1em solid rgb(20, 46, 36);   
   width: calc(.4vw);
-  top: calc(-200vh);
+  top: calc(-50vh);
   left: calc(40vw);
 }
 
@@ -190,8 +189,31 @@ a>p{
 }
 
 #line12 {
-  border-right: .4em solid rgb(35, 83, 65);   
+  border-right: .2em solid rgb(35, 83, 65);   
   width: calc(.5vw);
   top: calc(10vh);
   left: calc(90vw);
+}
+
+/* another teal */
+
+#line13 {
+  border-right: .1em solid rgb(91, 233, 181);   
+  width: calc(.4vw);
+  top: calc(-30vh);
+  left: calc(60vw);
+}
+
+#line14 {
+  border-right: .2em solid rgb(91, 233, 181);   
+  width: calc(.7vw);
+  top: calc(-40vh);
+  left: calc(90vw);
+}
+
+#line15 {
+  border-right: .2em solid rgb(91, 233, 181);   
+  width: calc(.5vw);
+  top: calc(-50vh);
+  left: calc(10vw);
 }
