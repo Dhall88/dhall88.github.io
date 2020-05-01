@@ -23,11 +23,13 @@ div {
   right: 0;
   background: rgb(181,170,170);
 }
+
 aside>div {
   display:flex;
   flex-direction: column;
   justify-content: center;
 }
+
 div>p {
   font-size: 1em;
   color: white;
@@ -147,7 +149,7 @@ a>p{
   position: absolute;
   z-index: 4;
   width: calc(.5vw);
-  top: calc(25vh);
+  top: calc(27vh);
   left: calc(55vw);
 }
 
@@ -193,7 +195,7 @@ a>p{
   position: absolute; 
   z-index: 4;
   width: calc(.5vw);
-  top: calc(25vh);
+  top: calc(28vh);
   left: calc(90vw);
 }
 
@@ -206,7 +208,7 @@ a>p{
   position: absolute; 
   z-index: 4;
   width: calc(.4vw);
-  top: calc(25vh);
+  top: calc(-5vh);
   left: calc(60vw);
 }
 
