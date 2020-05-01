@@ -22,6 +22,10 @@ $(() => {
   let $body = $("body")
   let $window = $(window)
 
+  // Reset to top upon refresh
+
+  $window.scrollTop(0)
+
   // Allows scrolling after interacting with screen,
   // critical to allow sound later on
 

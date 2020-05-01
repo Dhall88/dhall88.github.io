@@ -3,7 +3,7 @@
 aside {
   position: absolute;
   width: calc(30vw);
-  height: calc(720vh);
+  height: calc(620vh);
   left: 0;
   top: 0;
   background-color: #179E9E;
@@ -31,7 +31,7 @@ aside>div {
 }
 
 div>p {
-  font-size: 1em;
+  font-size: 1.15em;
   color: white;
   font-family: 'Simonetta', sans-serif;
   padding:.5em;
@@ -195,7 +195,7 @@ a>p{
   position: absolute; 
   z-index: 4;
   width: calc(.5vw);
-  top: calc(28vh);
+  top: calc(27vh);
   left: calc(90vw);
 }
 
