@@ -96,36 +96,32 @@ a>p{
   margin-top: 5em;
 }
 
-/* Teal lines */
-
-#line1 {
-  border-right: .1em solid rgb(19, 221, 137);
+.intro>div {
   border-bottom: none;
   transform: rotate(60deg); 
   position: absolute;
   z-index: 4;
+  border-radius: 50%;
+}
+
+/* Teal lines */
+
+#line1 {
+  border-right: .1em solid rgb(19, 221, 137);
   width: calc(.5vw);
   top: calc(10vh);
   left: calc(10vw);
 }
 
 #line2 {
-  border-right: .1em solid rgb(19, 221, 137);
-  border-bottom: none;
-  transform: rotate(60deg); 
-  position: absolute;
-  z-index: 4;
+  border-right: .2em solid rgb(19, 221, 137);
   width: calc(.3vw);
   top: calc(40vh);
   left: calc(5vw);
 }
 
 #line3 {
-  border-right: .1em solid rgb(19, 221, 137);
-  border-bottom: none;
-  transform: rotate(60deg); 
-  position: absolute;
-  z-index: 4;
+  border-right: .5em solid rgb(19, 221, 137);
   width: calc(.5vw);
   top: calc(20vh);
   left: calc(20vw);
@@ -135,69 +131,43 @@ a>p{
 
 #line4 {
   border-right: .1em solid rgb(126, 235, 193); 
-  border-bottom: none; 
-  transform: rotate(60deg); 
-  position: absolute;
-  z-index: 4;
   width: calc(.5vw);
   top: calc(8vh);
   left: calc(40vw);
 }
 
 #line5 {
-  border-right: .1em solid rgb(126, 235, 193); 
-  border-bottom: none; 
-  transform: rotate(60deg); 
-  position: absolute;
-  z-index: 4;
+  border-right: .3em solid rgb(126, 235, 193); 
   width: calc(.5vw);
   top: calc(27vh);
   left: calc(55vw);
 }
 
 #line6 {
-  border-right: .1em solid rgb(126, 235, 193); 
-  border-bottom: none; 
-  transform: rotate(60deg); 
-  position: absolute;
-  z-index: 4;
+  border-right: .2em solid rgb(126, 235, 193); 
   width: calc(.5vw);
   top: calc(-30vh);
   left: calc(30vw);
-  border-radius: 50%;
 }
 
 /* Dark teal lines */
 
 #line7 {
   border-right: .1em solid rgb(20, 46, 36);   
-  border-bottom: none;
-  transform: rotate(60deg); 
-  position: absolute; 
-  z-index: 4;
   width: calc(.4vw);
   top: calc(-200vh);
   left: calc(40vw);
 }
 
 #line8 {
-  border-right: .1em solid rgb(20, 46, 36);   
-  border-bottom: none;
-  transform: rotate(60deg); 
-  position: absolute; 
-  z-index: 4;
+  border-right: .3em solid rgb(20, 46, 36);   
   width: calc(.7vw);
   top: calc(.2vh);
   left: calc(20vw);
-  border-radius: 50%;
 }
 
 #line9 {
-  border-right: .1em solid rgb(20, 46, 36);   
-  border-bottom: none;
-  transform: rotate(60deg); 
-  position: absolute; 
-  z-index: 4;
+  border-right: .2em solid rgb(20, 46, 36);   
   width: calc(.5vw);
   top: calc(27vh);
   left: calc(90vw);
@@ -207,32 +177,20 @@ a>p{
 
 #line10 {
   border-right: .1em solid rgb(35, 83, 65);   
-  border-bottom: none;
-  transform: rotate(60deg); 
-  position: absolute; 
-  z-index: 4;
   width: calc(.4vw);
   top: calc(-5vh);
   left: calc(60vw);
 }
 
 #line11 {
-  border-right: .1em solid rgb(35, 83, 65);   
-  border-bottom: none;
-  transform: rotate(60deg); 
-  position: absolute; 
-  z-index: 4;
+  border-right: .2em solid rgb(35, 83, 65);   
   width: calc(.7vw);
   top: calc(20vh);
   left: calc(36vw);
 }
 
 #line12 {
-  border-right: .1em solid rgb(35, 83, 65);   
-  border-bottom: none;
-  transform: rotate(60deg); 
-  position: absolute; 
-  z-index: 4;
+  border-right: .4em solid rgb(35, 83, 65);   
   width: calc(.5vw);
   top: calc(10vh);
   left: calc(90vw);
