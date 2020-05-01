@@ -189,6 +189,7 @@ a>p{
   width: calc(.7vw);
   top: calc(.2vh);
   left: calc(20vw);
+  border-radius: 50%;
 }
 
 #line9 {
