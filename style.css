@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Simonetta&display=swap');
 
+body {
+  overflow-x:hidden;
+}
 aside {
   position: absolute;
   width: calc(30vw);
@@ -12,7 +15,6 @@ aside {
 div {
   height: calc(100vh);
   margin-bottom: .5em;
-  /* border-bottom: solid black; */
 }
 
 #nebula {
