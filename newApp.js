@@ -211,7 +211,7 @@ let yCoord, xCoord
         if(discoCounter>1&&discoCounter<4) {
           discoTimer=460;
         } else {
-          discoTimer=920;
+          discoTimer=910;
         }
         if (discoCounter===20) {
           killDisco=true;
