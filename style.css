@@ -164,6 +164,7 @@ a>p{
   width: calc(.5vw);
   top: calc(-30vh);
   left: calc(30vw);
+  border-radius: 50%;
 }
 
 /* Dark teal lines */
