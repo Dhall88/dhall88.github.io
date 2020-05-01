@@ -147,7 +147,7 @@ a>p{
   position: absolute;
   z-index: 4;
   width: calc(.5vw);
-  top: calc(45vh);
+  top: calc(35vh);
   left: calc(55vw);
 }
 
@@ -197,3 +197,37 @@ a>p{
   left: calc(90vw);
 }
 
+/* mid teal */
+
+#line10 {
+  border-right: .1em solid rgb(35, 83, 65);   
+  border-bottom: none;
+  transform: rotate(60deg); 
+  position: absolute; 
+  z-index: 4;
+  width: calc(.4vw);
+  top: calc(30vh);
+  left: calc(60vw);
+}
+
+#line11 {
+  border-right: .1em solid rgb(35, 83, 65);   
+  border-bottom: none;
+  transform: rotate(60deg); 
+  position: absolute; 
+  z-index: 4;
+  width: calc(.7vw);
+  top: calc(20vh);
+  left: calc(10vw);
+}
+
+#line12 {
+  border-right: .1em solid rgb(35, 83, 65);   
+  border-bottom: none;
+  transform: rotate(60deg); 
+  position: absolute; 
+  z-index: 4;
+  width: calc(.5vw);
+  top: calc(10vh);
+  left: calc(90vw);
+}
