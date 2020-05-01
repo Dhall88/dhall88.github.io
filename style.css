@@ -3,7 +3,7 @@
 aside {
   position: absolute;
   width: calc(30vw);
-  height: calc(600vh);
+  height: calc(610vh);
   left: 0;
   top: 0;
   background-color: #179E9E;
@@ -185,7 +185,7 @@ a>p{
   z-index: 4;
   width: calc(.7vw);
   top: calc(.2vh);
-  left: calc(10vw);
+  left: calc(20vw);
 }
 
 #line9 {
@@ -220,7 +220,7 @@ a>p{
   z-index: 4;
   width: calc(.7vw);
   top: calc(20vh);
-  left: calc(10vw);
+  left: calc(36vw);
 }
 
 #line12 {
