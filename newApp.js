@@ -174,6 +174,7 @@ let yCoord, xCoord
   )
 
   // Renders Three JS scene, updates rotation and lights based on scroll events
+  
   function render() {
     cloudParticles.forEach((cloud,index) => {
         cloud.rotation.z -= cloudRotation

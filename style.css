@@ -219,5 +219,11 @@ a>p{
 }
 
 .contact {
-  font-size: 2em;
+  font-size: 1em;
+}
+
+.contacts>h1,h2 {
+  color: white;
+  font-family: 'Simonetta', sans-serif;
+  padding:.5em;
 }
