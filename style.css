@@ -222,7 +222,7 @@ a>p{
   font-size: 1em;
 }
 
-.contacts>h1,h2 {
+.contacts>h1,.contacts>h2 {
   color: white;
   font-family: 'Simonetta', sans-serif;
   padding:.5em;
