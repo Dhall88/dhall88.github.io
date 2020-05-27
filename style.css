@@ -120,7 +120,7 @@ a>p{
 }
 
 #line3 {
-  border-right: .5em solid rgb(19, 221, 137);
+  border-right: .3em solid rgb(19, 221, 137);
   width: calc(.2vw);
   top: calc(20vh);
   left: calc(20vw);
@@ -216,4 +216,8 @@ a>p{
   width: calc(.5vw);
   top: calc(-50vh);
   left: calc(10vw);
+}
+
+.contact {
+  font-size: 2em;
 }
