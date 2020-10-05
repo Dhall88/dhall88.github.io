@@ -4,12 +4,12 @@ body {
   overflow-x:hidden;
   font-family: 'Montserrat', sans-serif;
   width: 100%;
+  background-color: #179E9E;
 }
 aside {
   position: absolute;
   width: 31%;
   height: calc(610vh);
-  left: .4rem;
   top: 0;
   background-color: #179E9E;
 }
@@ -24,7 +24,7 @@ div {
   width: 70%;
   height: calc(100vh);
   top: 0;
-  right: 0;
+  right: -1rem;
   background: rgb(181,170,170);
   z-index: 2;
 }
