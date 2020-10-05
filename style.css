@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Simonetta&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
 body {
   overflow-x:hidden;
+  font-family: 'Montserrat', sans-serif;
 }
 aside {
   position: absolute;
@@ -24,7 +25,9 @@ div {
   top: 0;
   right: 0;
   background: rgb(181,170,170);
+  z-index: 2;
 }
+
 
 aside>div {
   display:flex;
@@ -55,6 +58,10 @@ a {
   width: auto;
 }
 
+.intro, .first, .second, .third, .fourth, .fifth, .contacts {
+  position: relative;
+}
+
 a:hover{
     transform: scale(1.05)
 }
@@ -71,7 +78,7 @@ a:hover{
   width: calc(100vw);
   top:-20px;
   background-color: #179E9E;
-  z-index: 1;
+  z-index: 4;
   border: none;
 }
 
@@ -96,11 +103,19 @@ a>p{
   margin-top: 5em;
 }
 
-.intro>div {
+.rotate {
   transform: rotate(60deg); 
   position: absolute;
-  z-index: 4;
+  z-index: 1;
   border-radius: 50%;
+}
+
+.intro-line {
+  z-index: 4;
+}
+
+.sidebar {
+  overflow-x: hidden;
 }
 
 /* Teal lines */
@@ -226,4 +241,8 @@ a>p{
   color: white;
   font-family: 'Simonetta', sans-serif;
   padding:.5em;
+}
+
+p, a {
+  z-index: 3;
 }
