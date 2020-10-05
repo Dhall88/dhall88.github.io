@@ -3,12 +3,13 @@
 body {
   overflow-x:hidden;
   font-family: 'Montserrat', sans-serif;
+  width: 100%;
 }
 aside {
   position: absolute;
-  width: calc(30vw);
+  width: 31%;
   height: calc(610vh);
-  left: 0;
+  left: .4rem;
   top: 0;
   background-color: #179E9E;
 }
@@ -20,7 +21,7 @@ div {
 
 #nebula {
   position: fixed;
-  width: calc(70vw);
+  width: 70%;
   height: calc(100vh);
   top: 0;
   right: 0;
@@ -74,7 +75,7 @@ a:hover{
 .intro {
   transition: transform 1s ease;
   position: absolute;
-  height: calc(102vh);
+  height: calc(104vh);
   width: calc(100vw);
   top:-20px;
   background-color: #179E9E;
