@@ -35,7 +35,6 @@ $(() => {
   // Removes the landing page banner
 
 function removeBanner() {
-  console.log('in reomve banner');
   $intro.css('transform', `translate(0,${-window.innerHeight-100}px)`)
 }
 
@@ -130,8 +129,8 @@ let windowWidth=$window.width();
       let scrollPosition=$window.scrollTop();
 
          if(scrollPosition>(.25*windowHeight) && scrollPosition<windowHeight) {
-           console.log(Math.floor(((scrollPosition-(windowHeight*.25))/(windowHeight*.75))*40));
            cloudParticles[Math.floor(((scrollPosition-(windowHeight*.25))/(windowHeight*.75))*40)].material.opacity=.2
+           cloudParticles[Math.ceil(((scrollPosition-(windowHeight*.25))/(windowHeight*.75))*40)].material.opacity=.2
          }
 
          if (scrollPosition>1.25*windowHeight&&scrollPosition<2*windowHeight) {
@@ -143,9 +142,12 @@ let windowWidth=$window.width();
            greenLight.intensity=(scrollPosition-2*windowHeight)/windowHeight*15;
            redLight.intensity=(scrollPosition-2*windowHeight)/windowHeight*15;
          }
+         
 
          if (scrollPosition>3.25*windowHeight&&scrollPosition<4*windowHeight) {
           lightningBoolean=true;
+         } else {
+           lightningBoolean=false;
          }
      });
 
@@ -155,7 +157,6 @@ let yCoord, xCoord
     yCoord = event.pageY;
     xCoord = event.pageX;
       if(xCoord>windowWidth-30&&yCoord<5.3*windowHeight&&yCoord>4*windowHeight) {
-        console.log('in disco turn on');
         if(firstPass===true){
 
         }else {
@@ -166,7 +167,6 @@ let yCoord, xCoord
         }
       }
       else if(xCoord<windowWidth-100&&yCoord<5.3*windowHeight&&yCoord>4*windowHeight) {
-        console.log('in disco turn off');
         killDisco=true;
         lightningBoolean=true
       }
@@ -195,7 +195,6 @@ let yCoord, xCoord
     // Controls disco light timing
 
     if(disco) {
-      console.log(discoCounter);
       disco=false;
       if(!firstPass) {
         purpleLight.color.setHex(discoPurple);
@@ -219,7 +218,6 @@ let yCoord, xCoord
         }
 
         if(killDisco){
-          console.log('in kill disco');
           disco=false;
           firstPass=false;
           killDisco=false;
@@ -232,7 +230,6 @@ let yCoord, xCoord
           audioElement.pause();
           audioElement.currentTime=0;
         }else {
-          console.log('in run disco');
           let temp = purpleLight.color.getHex();
           purpleLight.color.setHex(greenLight.color.getHex())
           greenLight.color.setHex(redLight.color.getHex());
