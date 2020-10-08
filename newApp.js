@@ -146,7 +146,7 @@ let windowWidth=$window.width();
 
          if (scrollPosition>3.25*windowHeight&&scrollPosition<4*windowHeight) {
           lightningBoolean=true;
-         } else if (schrollPosition<3.25*windowHeight) {
+         } else if (scrollPosition<3.25*windowHeight) {
            lightningBoolean=false;
          }
      });
