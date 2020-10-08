@@ -20,7 +20,7 @@ $(() => {
 
   let $intro = $(".intro")
   let $body = $("body")
-  let $window = $(window)
+  let $window = $("window")
 
   // Reset to top upon refresh
 
@@ -146,7 +146,7 @@ let windowWidth=$window.width();
 
          if (scrollPosition>3.25*windowHeight&&scrollPosition<4*windowHeight) {
           lightningBoolean=true;
-         } else {
+         } else if (schrollPosition<3.25*windowHeight) {
            lightningBoolean=false;
          }
      });
