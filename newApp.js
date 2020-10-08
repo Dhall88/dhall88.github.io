@@ -20,7 +20,7 @@ $(() => {
 
   let $intro = $(".intro")
   let $body = $("body")
-  let $window = $("window")
+  let $window = $(window)
 
   // Reset to top upon refresh
 
