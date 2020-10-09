@@ -4,7 +4,7 @@ $(() => {
   // ThreeJS varibales
 
   let scene, camera, renderer, cloud, greenLight, purpleLight, redLight, ambient, directionalLight, discoCounter=0, discoTimer=920,
-  lightningBoolean=false, disco=false, killDisco=false, cloudRotation=0, cloudParticles = [], firstPass=false
+  lightningBoolean=false, disco=false, killDisco=false, cloudRotation=0, cloudParticles = [], firstPass=false;
 
   // light color variables
 
@@ -18,9 +18,8 @@ $(() => {
 
   // Define jQuery variables
 
-  let $intro = $(".intro")
-  let $body = $("body")
-  let $window = $(window)
+  let $intro = $(".intro"), $body = $("body"), $window = $(window), yCoord, xCoord, 
+  windowHeight=$window.height(), windowWidth=$window.width();
 
   // Reset to top upon refresh
 
@@ -34,20 +33,20 @@ $(() => {
 
   // Removes the landing page banner
 
-function removeBanner() {
+  removeBanner = () => {
   $intro.css('transform', `translate(0,${-window.innerHeight-100}px)`)
-}
+  }
 
   // Scrolling is initally disabled. Turns on scrolling
   // by removing css class
 
-function enableScroll() {
+  enableScroll = () => {
     $body.removeClass("stop-scrolling");
-}
+  }
 
   // Three JS initialization using previously defined variables
 
-function init() {
+  init = () => {
   scene = new THREE.Scene();
   camera = new THREE.PerspectiveCamera(60,window.innerWidth / window.innerHeight,1,1000);
   camera.position.z = 1;
@@ -122,10 +121,7 @@ function init() {
   render();
 }
 
-let windowHeight=$window.height();
-let windowWidth=$window.width();
-
-  $(window).scroll(function(event){
+  $window.scroll(function(event){
       let scrollPosition=$window.scrollTop();
 
          if(scrollPosition>(.25*windowHeight) && scrollPosition<windowHeight) {
@@ -150,8 +146,6 @@ let windowWidth=$window.width();
            lightningBoolean=false;
          }
      });
-
-let yCoord, xCoord
 
   $(document).mousemove(function(event){
     yCoord = event.pageY;
@@ -206,6 +200,7 @@ let yCoord, xCoord
         discoCounter=0
         firstPass=true;
       }
+
       setTimeout(()=>{
         discoCounter++;
         if(discoCounter>1&&discoCounter<4) {
