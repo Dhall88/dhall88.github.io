@@ -30,12 +30,6 @@ $(() => {
   removeBanner = () => {
     $intro.css('transform', `translate(0,${-window.innerHeight-100}px)`)
   }
-  
-  // Allows scrolling after interacting with screen,
-  // critical to allow sound later on
-
-  $intro.click(removeBanner)
-  $body.click(enableScroll)
 
   // Scrolling is initally disabled. Turns on scrolling
   // by removing css class
@@ -43,6 +37,12 @@ $(() => {
   enableScroll = () => {
     $body.removeClass("stop-scrolling");
   }
+
+  // Allows scrolling after interacting with screen,
+  // critical to allow sound later on
+
+  $intro.click(removeBanner)
+  $body.click(enableScroll)
 
   // Three JS initialization using previously defined variables
 
