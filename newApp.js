@@ -24,18 +24,18 @@ $(() => {
   // Reset to top upon refresh
 
   $window.scrollTop(0)
-
+  
+  // Removes the landing page banner
+  
+  removeBanner = () => {
+    $intro.css('transform', `translate(0,${-window.innerHeight-100}px)`)
+  }
+  
   // Allows scrolling after interacting with screen,
   // critical to allow sound later on
 
   $intro.click(removeBanner)
   $body.click(enableScroll)
-
-  // Removes the landing page banner
-
-  removeBanner = () => {
-  $intro.css('transform', `translate(0,${-window.innerHeight-100}px)`)
-  }
 
   // Scrolling is initally disabled. Turns on scrolling
   // by removing css class
