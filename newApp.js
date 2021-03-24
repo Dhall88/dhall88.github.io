@@ -1,6 +1,10 @@
 
 $(() => {
 
+  $(document).ready(function(){
+    $(this).scrollTop(0);
+});
+
   // ThreeJS varibales
 
   let scene, camera, renderer, cloud, greenLight, purpleLight, redLight, ambient, directionalLight, discoCounter=0, discoTimer=920,
