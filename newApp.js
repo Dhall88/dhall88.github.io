@@ -32,6 +32,7 @@ $(() => {
   // Removes the landing page banner
   
   removeBanner = () => {
+    console.log('in removebanner')
     $intro.css('transform', `translate(0,${-window.innerHeight-100}px)`)
   }
 
