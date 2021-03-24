@@ -19,7 +19,7 @@ $(() => {
 
   let audioElement = document.createElement('audio');
   audioElement.setAttribute('src', 'macho_man_snippet.mp3')
-  audioElement.play().stop();
+
 
   // Define jQuery variables
 
@@ -34,7 +34,9 @@ $(() => {
   
   removeBanner = () => {
     console.log('in removebanner')
-    $intro.css('transform', `translate(0,${-window.innerHeight-100}px)`)
+    $intro.css('transform', `translate(0,${-window.innerHeight-100}px)`);
+    audioElement.play().pause();
+    audioElement.currentTime=0;
   }
 
   // Scrolling is initally disabled. Turns on scrolling
