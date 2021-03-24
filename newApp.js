@@ -35,7 +35,8 @@ $(() => {
   removeBanner = () => {
     console.log('in removebanner')
     $intro.css('transform', `translate(0,${-window.innerHeight-100}px)`);
-    audioElement.play().pause();
+    audioElement.play()
+    audioElement.pause();
     audioElement.currentTime=0;
   }
 
