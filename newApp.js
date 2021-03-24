@@ -1,9 +1,9 @@
 
 $(() => {
 
-//   $(document).ready(function(){
-//     $(this).scrollTop(0);
-// });
+  $(document).ready(function(){
+    $(this).scrollTop(0);
+});
 
   // ThreeJS varibales
 
