@@ -18,7 +18,8 @@ $(() => {
   // Disco music setup
 
   let audioElement = document.createElement('audio');
-  audioElement.setAttribute('src', 'macho_man_snippet.mp3').play().stop();
+  audioElement.setAttribute('src', 'macho_man_snippet.mp3')
+  audioElement.play().stop();
 
   // Define jQuery variables
 
